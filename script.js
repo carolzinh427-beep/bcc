@@ -7,7 +7,7 @@
      (o número abaixo é o telefone fixo divulgado; troque pelo WhatsApp oficial).
   ------------------------------------------------------------------ */
   const CONFIG = {
-    whatsapp: '556133633062',
+    whatsapp: '5561992193011',
     greeting: 'Olá, gostaria de reservar uma mesa no Bloco C.'
   };
 
