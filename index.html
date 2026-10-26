@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gooey-nav.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,13 +43,7 @@
 
   <header class="nav" id="nav">
     <a class="logo" href="#inicio" aria-label="Bloco C, início">Bloco C</a>
-    <nav class="nav-links" aria-label="Principal">
-      <a href="#restaurante">Restaurante</a>
-      <a href="#pratos">Pratos</a>
-      <button type="button" data-open-menu>Cardápio</button>
-      <a href="#visite">Visite</a>
-      <a href="#reservas">Reservas</a>
-    </nav>
+    <div class="gooey-nav-desktop-container" id="gooeyNavContainer"></div>
     <a class="btn btn-line btn-sm nav-cta" href="#reservas" data-wa>Reservar</a>
     <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
       <span></span><span></span>
@@ -234,6 +229,7 @@
     </div>
   </div>
 
+  <script src="gooey-nav.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

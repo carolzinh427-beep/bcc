@@ -320,4 +320,68 @@
     if (obs) lines.push(`Observações: ${obs}`);
     window.open(waLink(lines.join('\n')), '_blank', 'noopener');
   });
+
+  /* ------------------------------------------------------------------
+     GooeyNav (React Bits) - Apenas Desktop
+  ------------------------------------------------------------------ */
+  const gooeyContainer = $('#gooeyNavContainer');
+  if (gooeyContainer && typeof window.createGooeyNav === 'function') {
+    const gooeyItems = [
+      { label: 'Restaurante', href: '#restaurante' },
+      { label: 'Pratos', href: '#pratos' },
+      { label: 'Cardápio', href: '#', attrs: { 'data-open-menu': '' } },
+      { label: 'Visite', href: '#visite' },
+      { label: 'Reservas', href: '#reservas' }
+    ];
+
+    let ignoreScroll = false;
+    let scrollTimeout;
+
+    const gooeyNav = window.createGooeyNav(gooeyContainer, {
+      items: gooeyItems,
+      initialActiveIndex: 0,
+      theme: 'dark',
+      size: 'md',
+      frame: true,
+      particleCount: 15,
+      spread: 56,
+      animationTime: 600,
+      timeVariance: 300,
+      gooeyness: 0.5,
+      wobble: 0.5,
+      hoverEffect: true,
+      color: '#f3f0ea',
+      activeTextColor: '#0a0a0a',
+      onChange: (index, item, e) => {
+        ignoreScroll = true;
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => { ignoreScroll = false; }, 900);
+
+        if (item.label === 'Cardápio') {
+          if (e) e.preventDefault();
+          openMenu();
+        }
+      }
+    });
+
+    // Sincroniza a pílula do GooeyNav ao rolar as seções no Desktop
+    const navSections = [
+      { id: 'restaurante', idx: 0 },
+      { id: 'pratos', idx: 1 },
+      { id: 'visite', idx: 3 },
+      { id: 'reservas', idx: 4 }
+    ];
+
+    window.addEventListener('scroll', () => {
+      if (ignoreScroll || window.innerWidth <= 900) return;
+      const pos = window.scrollY + 200;
+      for (let i = navSections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(navSections[i].id);
+        if (el && pos >= el.offsetTop) {
+          gooeyNav?.setActive(navSections[i].idx);
+          break;
+        }
+      }
+    }, { passive: true });
+  }
 })();
