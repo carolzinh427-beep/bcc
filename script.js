@@ -1192,8 +1192,12 @@
     nav.classList.toggle('is-solid', y > 40);
     const drawerOpen = drawer.classList.contains('is-open');
     if (!drawerOpen) {
-      if (y > 500 && y > lastY + 6) nav.classList.add('is-hidden');
-      else if (y < lastY - 6 || y <= 500) nav.classList.remove('is-hidden');
+      if (window.innerWidth <= 900) {
+        if (y > 500 && y > lastY + 6) nav.classList.add('is-hidden');
+        else if (y < lastY - 6 || y <= 500) nav.classList.remove('is-hidden');
+      } else {
+        nav.classList.remove('is-hidden');
+      }
     }
     lastY = y;
 
@@ -1236,8 +1240,32 @@
   $$('a', drawer).forEach(a => a.addEventListener('click', () => setDrawer(false)));
 
   /* Cardápio completo */
+  const tabsContainer = $('#tabsContainer');
+  const tabsPrev = $('#tabsPrev');
+  const tabsNext = $('#tabsNext');
   let activeTab = MENU[0].id;
   let lastFocus = null;
+
+  let isTabsDragging = false;
+  let tabsStartX = 0;
+  let tabsScrollLeft = 0;
+  let tabsMoved = false;
+
+  function updateTabArrows() {
+    if (!tabsEl) return;
+    const maxScroll = Math.max(0, tabsEl.scrollWidth - tabsEl.clientWidth);
+    const sl = tabsEl.scrollLeft;
+    if (tabsContainer) {
+      tabsContainer.style.setProperty('--fade-left', sl > 12 ? '1' : '0');
+      tabsContainer.style.setProperty('--fade-right', sl < maxScroll - 12 ? '1' : '0');
+    }
+    if (tabsPrev) {
+      tabsPrev.classList.toggle('is-visible', sl > 12);
+    }
+    if (tabsNext) {
+      tabsNext.classList.toggle('is-visible', sl < maxScroll - 12);
+    }
+  }
 
   MENU.forEach(cat => {
     const b = document.createElement('button');
@@ -1247,9 +1275,66 @@
     b.setAttribute('role', 'tab');
     b.setAttribute('aria-controls', 'menuList');
     b.textContent = cat.title;
-    b.addEventListener('click', () => { activeTab = cat.id; renderMenu(0); });
+    b.addEventListener('click', (e) => {
+      if (tabsMoved) {
+        e.preventDefault();
+        return;
+      }
+      activeTab = cat.id;
+      renderMenu(0);
+      b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
     tabsEl.appendChild(b);
   });
+
+  if (tabsEl) {
+    // Mouse drag para deslizar as abas no desktop
+    tabsEl.addEventListener('mousedown', (e) => {
+      isTabsDragging = true;
+      tabsMoved = false;
+      tabsEl.classList.add('is-dragging');
+      tabsStartX = e.pageX - tabsEl.offsetLeft;
+      tabsScrollLeft = tabsEl.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isTabsDragging) return;
+      isTabsDragging = false;
+      tabsEl.classList.remove('is-dragging');
+      setTimeout(() => { tabsMoved = false; }, 60);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isTabsDragging) return;
+      const x = e.pageX - tabsEl.offsetLeft;
+      const walk = (x - tabsStartX) * 1.4;
+      if (Math.abs(walk) > 4) tabsMoved = true;
+      tabsEl.scrollLeft = tabsScrollLeft - walk;
+      updateTabArrows();
+    });
+
+    // Converte roda do mouse vertical para deslizamento horizontal
+    tabsEl.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        tabsEl.scrollLeft += e.deltaY * 0.9;
+        updateTabArrows();
+      }
+    }, { passive: false });
+
+    tabsEl.addEventListener('scroll', updateTabArrows);
+  }
+
+  if (tabsPrev) {
+    tabsPrev.addEventListener('click', () => {
+      tabsEl.scrollBy({ left: -260, behavior: 'smooth' });
+    });
+  }
+  if (tabsNext) {
+    tabsNext.addEventListener('click', () => {
+      tabsEl.scrollBy({ left: 260, behavior: 'smooth' });
+    });
+  }
 
   function renderMenu(baseDelay) {
     const cat = MENU.find(c => c.id === activeTab);
@@ -1313,7 +1398,10 @@
     menu.classList.add('is-open');
     menu.setAttribute('aria-hidden', 'false');
     document.body.classList.add('is-locked');
-    setTimeout(() => menuClose.focus({ preventScroll: true }), 900);
+    setTimeout(() => {
+      updateTabArrows();
+      menuClose.focus({ preventScroll: true });
+    }, 400);
   }
   function closeMenu() {
     menu.classList.remove('is-open');
