@@ -749,7 +749,20 @@ ul { list-style: none; }
 ------------------------------------------------------------------ */
 body.welcome-open {
   overflow: hidden !important;
-  height: 100vh;
+}
+
+@media (max-width: 860px) {
+  body.welcome-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+}
+
+.welcome-quick-pills {
+  display: none;
 }
 
 .welcome-screen {
@@ -1078,33 +1091,110 @@ body.welcome-open {
 /* Responsividade Mobile da Welcome Screen */
 @media (max-width: 860px) {
   .welcome-screen {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+    overscroll-behavior-y: contain !important;
   }
   .welcome-top {
-    position: relative;
-    background: var(--ink);
-    padding: 1.8rem 1.25rem 1.4rem;
+    position: relative !important;
+    flex: 0 0 auto !important;
+    background: var(--ink) !important;
+    padding: clamp(1rem, 2.5vh, 1.4rem) 1.25rem 0.85rem !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    pointer-events: auto !important;
+  }
+  .welcome-brand {
+    margin-bottom: 0.35rem !important;
+  }
+  .welcome-logo-img {
+    height: 28px !important;
+  }
+  .welcome-title {
+    font-size: 1.45rem !important;
+    margin-bottom: 0.15rem !important;
+  }
+  .welcome-sub {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  .welcome-quick-pills {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.2rem;
+    pointer-events: auto;
+  }
+  .welcome-quick-pill {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: rgba(243, 240, 234, 0.08);
+    border: 1px solid rgba(200, 183, 155, 0.35);
+    color: var(--paper);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .welcome-quick-pill:active,
+  .welcome-quick-pill:hover {
+    background: var(--sand);
+    color: var(--ink);
+    border-color: var(--sand);
   }
   .welcome-split {
-    flex-direction: column;
-    height: auto;
-    min-height: calc(100vh - 140px);
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 5rem !important;
   }
   .welcome-panel {
-    flex: none;
-    min-height: 52vh;
-    padding: 2.2rem 1.5rem;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(280px, 45vh, 400px) !important;
+    padding: 2.2rem 1.4rem 2rem !important;
+    overflow: hidden !important;
+    touch-action: pan-y !important;
+    user-select: auto !important;
+    -webkit-user-select: auto !important;
+    cursor: pointer;
   }
   .welcome-divider {
-    display: none;
+    display: none !important;
   }
   .welcome-panel-name {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 7vw, 2.5rem) !important;
+  }
+  .welcome-panel-location {
+    font-size: 0.92rem !important;
+    margin-bottom: 0.65rem !important;
   }
   .welcome-panel-desc {
-    font-size: 0.88rem;
-    margin-bottom: 1.3rem;
+    font-size: 0.84rem !important;
+    line-height: 1.48 !important;
+    margin-bottom: 1.2rem !important;
+    max-width: 100% !important;
+  }
+  .welcome-cta-btn {
+    padding: 0.65rem 1.4rem !important;
+    font-size: 0.76rem !important;
   }
 }
 

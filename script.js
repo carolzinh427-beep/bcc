@@ -1443,6 +1443,16 @@
         }
       });
     });
+
+    // Botões de escolha rápida na Welcome Screen (Mobile)
+    $$('[data-quick-unit]', welcomeScreen).forEach(btn => {
+      const unitId = btn.getAttribute('data-quick-unit');
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        applyUnit(unitId, true);
+        closeWelcomeScreen(unitId);
+      });
+    });
   }
 
   // Botões de "Trocar Unidade" (navbar, drawer, reservas, footer)
