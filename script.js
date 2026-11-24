@@ -12,48 +12,1105 @@
   };
 
   const MENU = [
-    {
-      id: 'executivo', title: 'Menu Executivo',
-      items: [
-        { n: 'Picadinho Bloco C', d: 'Cubos de filé mignon ao molho demi-glace, ovo pochê, banana caramelizada, arroz e farofinha', img: 'images/pratos/picadinho.jpg' },
-        { n: 'Peixe do Dia Grelhado', d: 'Manteiga clarificada de ervas sobre risoto cremoso de limão siciliano', img: 'images/pratos/peixe-branco.jpg' },
-        { n: 'Escalope ao Poivre', d: 'Mignon grelhado ao molho de pimentas verdes e aligot clássico de batatas', img: 'images/pratos/escalope-poivre.jpg' },
-        { n: 'Massa Artesanal do Chef', d: 'Fettuccine com fonduta de queijos da Canastra, filé e cogumelos Paris', img: 'images/pratos/massa-artesanal.jpg' },
-        { n: 'Mini Churros Bloco C', d: 'Churros artesanais crocantes com doce de leite caseiro cremoso morno', img: 'images/pratos/churros.jpg' }
-      ]
-    },
-    {
-      id: 'entradas', title: 'Entradas',
-      items: [
-        { n: 'Carpaccio de filé', d: 'Grana Padano, praliné de amêndoas e molho de mostarda', img: 'images/pratos/carpaccio-tradicional.jpg' },
-        { n: 'Burrata', d: 'Passata de tomate, pesto de manjericão e redução cítrica', img: 'images/pratos/burrata.jpg' },
-        { n: 'Camarões na fonduta de brie', d: 'Com risoto de banana caramelizada', img: 'images/pratos/camarao-fonduta.jpg' },
-        { n: 'Brie em massa folhada', d: 'Com caramelo de nuts e torradas da casa', img: 'images/pratos/brie-folhado.jpg' },
-        { n: 'Pastel de queijo cremoso', d: 'Massa fininha e crocante com toque de mel trufado', img: 'images/pratos/pastel-queijo.jpg' },
-        { n: 'Croquetes de brisket', d: 'Com aioli secreto do chef', img: 'images/pratos/croquete-brisket.jpg' }
-      ]
-    },
-    {
-      id: 'principais', title: 'Pratos principais',
-      items: [
-        { n: 'Filé em crosta de cebola caramelizada', d: 'Risoto de queijo brie', img: 'images/pratos/file-crosta.jpg' },
-        { n: 'Mignon', d: 'Polenta, pipoca e roquefort', img: 'images/pratos/mignon-roquefort.jpg' },
-        { n: 'Milanese, pomodoro & aligot', d: 'Prato da Boa Lembrança 2025', img: 'images/pratos/milanese-aligot.jpg' },
-        { n: 'Riso Maremonti', d: 'Prato da Boa Lembrança 2026 com camarão e presunto de Parma', img: 'images/pratos/riso-maremonti.jpg' },
-        { n: 'Carbonara', d: 'Creme de queijo, farofinha de pancetta e ovo de gema mole', img: 'images/pratos/carbonara.jpg' },
-        { n: 'Strogonoff do chef', d: 'Filet mignon com arroz cremoso e batata palha caseira trufada', img: 'images/pratos/strogonoff.jpg' }
-      ]
-    },
-    {
-      id: 'sobremesas', title: 'Sobremesas',
-      items: [
-        { n: 'Bolo de brigadeiro', d: 'Com calda de brigadeiro de colher e sorvete', img: 'images/pratos/bolo-chocolate.jpg' },
-        { n: 'Churros de banana', d: 'Doce de leite caseiro cremoso ou brigadeiro de leite Ninho', img: 'images/pratos/churros.jpg' },
-        { n: 'Mousse de chocolate', d: 'Com calda de caramelo e flor de sal', img: 'images/pratos/pudim-baunilha.jpg' },
-        { n: 'Crostata de amêndoas', d: 'Com sorvete de pistache e calda de chocolate', img: 'images/pratos/crostata-amendoas.jpg' }
-      ]
-    }
-  ];
+  {
+    "id": "executivo",
+    "title": "Menu Executivo",
+    "items": [
+      {
+        "n": "Sequência Completa em 3 Tempos",
+        "d": "Entrada + Prato Principal + Sobremesa · Servido de segunda a sexta, das 12h às 15h30",
+        "p": "",
+        "img": "images/pratos/picadinho.jpg"
+      },
+      {
+        "n": "Picadinho Bloco C",
+        "d": "Cubos de filé mignon ao molho demi-glace especial, ovo pochê, banana caramelizada, arroz e farofinha crocante",
+        "p": "",
+        "img": "images/pratos/picadinho.jpg"
+      },
+      {
+        "n": "Peixe do Dia Grelhado",
+        "d": "Pescado fresco grelhado na manteiga clarificada de ervas, risoto cremoso de limão siciliano e azeite aromático",
+        "p": "",
+        "img": "images/pratos/peixe-branco.jpg"
+      },
+      {
+        "n": "Escalope ao Poivre",
+        "d": "Escalope de mignon grelhado, redução aveludada de pimentas verdes e aligot clássico de batatas",
+        "p": "",
+        "img": "images/pratos/escalope-poivre.jpg"
+      },
+      {
+        "n": "Massa Artesanal do Chef",
+        "d": "Fettuccine fresco com fonduta de queijos da Canastra, tiras de mignon e cogumelos Paris salteados",
+        "p": "",
+        "img": "images/pratos/massa-artesanal.jpg"
+      },
+      {
+        "n": "Mini Churros Bloco C",
+        "d": "Churros artesanais crocantes com doce de leite caseiro cremoso morno",
+        "p": "",
+        "img": "images/pratos/churros.jpg"
+      }
+    ]
+  },
+  {
+    "id": "entradas",
+    "title": "Entradas",
+    "items": [
+      {
+        "n": "Carpaccio de Filé Tradicional",
+        "d": "Com molho de mostarda, Grana Padano e alcaparras",
+        "p": "R$ 9.600",
+        "img": "images/cardapio/f2368cd0-7a11-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Carpaccio de Filé da Casa",
+        "d": "Com molho de mostarda, Grana Padano, alcaparras e mel trufado",
+        "p": "R$ 9.900",
+        "img": "images/cardapio/103a9230-7a12-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Cubos de Filé",
+        "d": "Ao roti com Grana Padano maçaricado",
+        "p": "R$ 9.600",
+        "img": "images/cardapio/38a651a0-7a12-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Burrata com Passata de Tomate (La Bufalina)",
+        "d": "com pesto de manjericão e redução citríca",
+        "p": "R$ 9.600",
+        "img": "images/cardapio/2208c770-5c6f-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Burrata ao Forno ( La Bufalina )",
+        "d": "com ragout de linguicinha  blumenau",
+        "p": "R$ 9.900",
+        "img": null
+      },
+      {
+        "n": "Pastel de Queijo Cremoso",
+        "d": "Com mel trufado",
+        "p": "R$ 6.600",
+        "img": "images/cardapio/9b4bc470-7a12-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Brie em Massa Folhada",
+        "d": "com caramelo de nuts",
+        "p": "R$ 9.900",
+        "img": "images/cardapio/aa868a60-7a12-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bruschettas da Casa",
+        "d": "pomodoro, cogumelos trufados e queijos de cabra",
+        "p": "R$ 9.600",
+        "img": "images/cardapio/ba8367d0-7a12-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Steak de Tartar",
+        "d": "Com mini salada e batatas crocantes",
+        "p": "R$ 9.900",
+        "img": null
+      },
+      {
+        "n": "Croquete de Brisket",
+        "d": "Com Aioli Secreto",
+        "p": "R$ 8.900",
+        "img": "images/cardapio/01175670-7a13-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bacalhau Desfiado, ovas",
+        "d": "E fondue de grana padano trufado",
+        "p": "R$ 12.900",
+        "img": "images/cardapio/03a5a2a0-7a38-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Seleção de Queijos do Chef",
+        "d": "Com redução de balsâmico e mel trufado",
+        "p": "R$ 11.900",
+        "img": "images/cardapio/2fc28300-7a13-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Cesta de Pão",
+        "d": "",
+        "p": "R$ 1.600",
+        "img": null
+      },
+      {
+        "n": "TARTAR DE SALMÃO,OVAS",
+        "d": "e fonduta de grana padano e azeite verde",
+        "p": "R$ 12.900",
+        "img": "images/cardapio/5808b910-7a13-11f1-88c0-3350d9e629f0.jpg"
+      }
+    ]
+  },
+  {
+    "id": "saladas",
+    "title": "Saladas",
+    "items": [
+      {
+        "n": "Salada do Chef",
+        "d": "Mix de folhas verdes, queijo cremoso, redução cítrica e farofa secreta",
+        "p": "R$ 7.900",
+        "img": null
+      },
+      {
+        "n": "Salada de Figo Fresco",
+        "d": "Mix de folhas, queijo de cabra, mel e farofa secreta",
+        "p": "R$ 8.900",
+        "img": null
+      },
+      {
+        "n": "Salada de Bloco C",
+        "d": "mix de folhas, molho de parmesão, palmito, tomate cereja, cenoura e batata palha",
+        "p": "R$ 7.900",
+        "img": null
+      },
+      {
+        "n": "Salada de Carpaccio",
+        "d": "Mix de folhas, molho de mostarda, grana padano, redução balsânico e alcaparones",
+        "p": "R$ 8.500",
+        "img": "images/cardapio/bc064960-7a35-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Salada da Carol",
+        "d": "Queijo de cabra, rúcula, tomate cereja, damasmo e pesto",
+        "p": "R$ 13.200",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "classicos",
+    "title": "Clássicos",
+    "items": [
+      {
+        "n": "Filet ao Dijon",
+        "d": "Com nhoque frito, mel e grana padano",
+        "p": "R$ 16.500",
+        "img": null
+      },
+      {
+        "n": "Polvo Grelhado",
+        "d": "com arroz negro e aioli",
+        "p": "R$ 19.900",
+        "img": null
+      },
+      {
+        "n": "Camarão na Fonduta de Brie",
+        "d": "Com risoto de banana caramelizada",
+        "p": "R$ 22.000",
+        "img": "images/cardapio/be791bb0-5c6e-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Bacalhau em crosta de doce de leite",
+        "d": "Com aligot de mandioquinha",
+        "p": "R$ 19.900",
+        "img": null
+      },
+      {
+        "n": "Bacalhoada do Chef",
+        "d": "Em nata com batata, brócolis, ovo e arroz de amêndoas",
+        "p": "R$ 19.900",
+        "img": "images/cardapio/b568a3c0-7a42-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Filet Mignon  ao Roquefort",
+        "d": "Com maçã caramelizada e arroz de roti ao forno",
+        "p": "R$ 13.900",
+        "img": "images/cardapio/017490d0-7a43-11f1-88c0-3350d9e629f0.jpg"
+      }
+    ]
+  },
+  {
+    "id": "almoco",
+    "title": "Almoço",
+    "items": [
+      {
+        "n": "PF do Chef",
+        "d": "bife acebolado, feijão gordo, batata frita, ovo frito e arroz branco.",
+        "p": "R$ 9.800",
+        "img": "images/cardapio/2fb1a330-7a4c-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Picadinho de Filet Mignon",
+        "d": "Com ovo pochê, arroz branco, farofa crocante e banana caramelizada",
+        "p": "R$ 9.800",
+        "img": "images/cardapio/e0bd4060-7a44-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Denver Steak, Vinagrete de tomate",
+        "d": "Com farofa de ovos e arroz com brócolis",
+        "p": "R$ 18.900",
+        "img": "images/cardapio/4d6da310-7a4c-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Nhoque Caipira",
+        "d": "Com ovo frito, farofa de bacon e couve crispy",
+        "p": "R$ 9.600",
+        "img": "images/cardapio/66e08bc0-7a45-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bobó de Camarão",
+        "d": "Com banana assada, arroz de amêndoas e farofa do chef",
+        "p": "R$ 21.000",
+        "img": "images/cardapio/86d2f3a0-7a45-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Salmão Grelhado",
+        "d": "Com mix de quinoa e saladinha de brotos e azeite de limão siciliano",
+        "p": "R$ 14.900",
+        "img": "images/cardapio/d7f70480-7a48-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Peixe Branco Grelhado",
+        "d": "com molho de limão e couscous marroquino",
+        "p": "R$ 14.900",
+        "img": "images/cardapio/dd83a6f0-7a49-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Carne de Panela",
+        "d": "Com baião de dois, queijo coalho e farofa do chef",
+        "p": "R$ 9.600",
+        "img": "images/cardapio/0332de70-7a4a-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Paillard de Frango",
+        "d": "Com legumes grelhados e creme de milho",
+        "p": "R$ 9.900",
+        "img": "images/cardapio/312b83e0-7a4a-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Tagliata de Angus",
+        "d": "Com nhoque ao brie, crispy de parma e pesto de manjericão",
+        "p": "R$ 11.900",
+        "img": "images/cardapio/56453220-7a4a-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Moquequinha de Peixe ao Curry",
+        "d": "Com couscous marroquino e banana caramelizada",
+        "p": "R$ 12.900",
+        "img": "images/cardapio/9e8b64a0-7a4a-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Peixe Branco Tempurá",
+        "d": "Com mousseline de batata com limão e tomate assado",
+        "p": "R$ 14.900",
+        "img": "images/cardapio/8591ced0-7a4a-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Filet Migon ao Roti",
+        "d": "Com Risoni Trufado",
+        "p": "R$ 16.500",
+        "img": null
+      },
+      {
+        "n": "Risoto de Picadinho",
+        "d": "com banana caramelizada, ovo pochê e farofa de panko",
+        "p": "R$ 11.900",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "principais",
+    "title": "Principais & Jantar",
+    "items": [
+      {
+        "n": "Filet com Rapadura",
+        "d": "Ao molho roti e risoto de Grana Padano com rapadura",
+        "p": "R$ 15.500",
+        "img": "images/cardapio/4919d8e0-5c6f-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Filet em Crosta de Pão",
+        "d": "com cebola caramelizada e risoto de brie",
+        "p": "R$ 15.900",
+        "img": "images/cardapio/510c3bb0-7a4e-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Camarão Spicy",
+        "d": "Com arroz cremoso de curry e manga",
+        "p": "R$ 22.000",
+        "img": "images/cardapio/a8441d30-7a4e-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Cotoletta Alla  Milanese",
+        "d": "Com presunto de parma, parmesão e risoto de basilico",
+        "p": "R$ 15.900",
+        "img": "images/cardapio/52ee13b0-7a51-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Ancho em Crosta de Roquefort",
+        "d": "Com risoto de cebola caramelizada",
+        "p": "R$ 15.900",
+        "img": "images/cardapio/49a5be40-7a4f-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bacalhau com tomate assado",
+        "d": "Batata sauté e azeitonas pretas",
+        "p": "R$ 19.900",
+        "img": "images/cardapio/6dad6040-7a4f-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Peixe Branco com Ovas, Beurre Blanc",
+        "d": "E capelline na manteiga",
+        "p": "R$ 14.900",
+        "img": "images/cardapio/8a2399b0-7a4f-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Magret de Canard ao Cassis",
+        "d": "Com linguine ao roquefort",
+        "p": "R$ 15.500",
+        "img": "images/cardapio/a18a3370-7a4f-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Costela 18 Horas, Defumada",
+        "d": "Com nhoque frito na fonduta de queijo vale do testo",
+        "p": "R$ 15.900",
+        "img": "images/cardapio/16c55700-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Risoto de Frutos do Mar",
+        "d": "Lula, Camarão, Mexilhão e Polvo",
+        "p": "R$ 19.900",
+        "img": null
+      },
+      {
+        "n": "Stinco de cordeiro",
+        "d": "com risoto de açafrão",
+        "p": "R$ 18.900",
+        "img": null
+      },
+      {
+        "n": "Carré de cordeiro",
+        "d": "em crosta de pistache com arroz cremoso de dijon",
+        "p": "R$ 18.900",
+        "img": null
+      },
+      {
+        "n": "Tortelli de lagosta ao limone",
+        "d": "",
+        "p": "R$ 19.900",
+        "img": null
+      },
+      {
+        "n": "Cottoleta à milanesa",
+        "d": "com nhoque ao pomodoro",
+        "p": "R$ 18.900",
+        "img": null
+      },
+      {
+        "n": "Baby beef ao poivre",
+        "d": "com risoto de parmesão",
+        "p": "R$ 18.900",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "massas-arrozes",
+    "title": "Massas & Arrozes",
+    "items": [
+      {
+        "n": "Ravióli de Queijo de Cabra",
+        "d": "Com cebola caramelizada",
+        "p": "R$ 11.900",
+        "img": "images/cardapio/66d9f7e0-7a4c-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Ravióli de Burrata",
+        "d": "Ao pomodoro com pesto de manjerição e confit de limão siciliano",
+        "p": "R$ 10.900",
+        "img": "images/cardapio/9fc950f0-7a4c-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Ravioloni de Compota de Figo",
+        "d": "Na fonduta de Queijo tulha",
+        "p": "R$ 10.900",
+        "img": null
+      },
+      {
+        "n": "Macarrão do Petrarca",
+        "d": "Spaguetti na manteiga, ovo frito, pecorino e pimenta do reino",
+        "p": "R$ 9.800",
+        "img": "images/cardapio/3a4e8190-7a4d-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Spaguetti ao Limone",
+        "d": "",
+        "p": "R$ 9.900",
+        "img": null
+      },
+      {
+        "n": "Arroz de Confit de Pato",
+        "d": "com ovo pochê, linguicinha blumenal e batata palha caseira",
+        "p": "R$ 13.900",
+        "img": "images/cardapio/5a934f30-7a4d-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Arroz de Rabada",
+        "d": "com ailoli de agrião, ovo frito e batata palha caseira",
+        "p": "R$ 11.900",
+        "img": "images/cardapio/964aa1e0-7a4d-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Arroz de Polvo",
+        "d": "com tapenade de azeitonas pretas",
+        "p": "R$ 14.900",
+        "img": "images/cardapio/7b3c5ce0-7a4d-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Arroz de Bacalhau",
+        "d": "com ovo pochê e  batata palha caseiro",
+        "p": "R$ 16.900",
+        "img": null
+      },
+      {
+        "n": "Arroz Caldoso de Camarão",
+        "d": "com mascarpone, farofa de presunto de Parma e ceboullete",
+        "p": "R$ 23.900",
+        "img": "images/cardapio/38836910-7a4e-11f1-88c0-3350d9e629f0.jpg"
+      }
+    ]
+  },
+  {
+    "id": "estrogonofes",
+    "title": "Estrogonofes",
+    "items": [
+      {
+        "n": "Filet Mignon",
+        "d": "Com arroz cremoso e batata palha caseira trufada",
+        "p": "R$ 9.900",
+        "img": "images/cardapio/4e33c850-7a43-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Frango",
+        "d": "Com arroz cremoso e batata palha caseira trufada",
+        "p": "R$ 8.900",
+        "img": "images/cardapio/5b5e24d0-7a43-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Camarão",
+        "d": "Com arroz cremoso e batata palha caseira trufada",
+        "p": "R$ 18.900",
+        "img": "images/cardapio/76921a40-7a43-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Cogumelos",
+        "d": "Com arroz cremoso e batata palha caseira trufada",
+        "p": "R$ 9.400",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "sobremesas",
+    "title": "Sobremesas",
+    "items": [
+      {
+        "n": "Churros de Banana",
+        "d": "Com doce de leite caseiro ou brigadeiro de leite ninho",
+        "p": "R$ 4.900",
+        "img": "images/cardapio/b0423bc0-5c6f-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Crostata de Amêndoas",
+        "d": "Com sorvete de pistache e calda de chocolate",
+        "p": "R$ 4.900",
+        "img": "images/cardapio/469a0f70-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bolinho de Chuva de Cenoura",
+        "d": "Com calda de chocolate",
+        "p": "R$ 4.900",
+        "img": "images/cardapio/605e6f50-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Crepe Soufflê",
+        "d": "Com creme de baunilha e caramelo de laranja",
+        "p": "R$ 4.900",
+        "img": null
+      },
+      {
+        "n": "Casadinho de Colher",
+        "d": "Brigadeiro branco e preto",
+        "p": "R$ 4.900",
+        "img": "images/cardapio/7f7a4d50-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bolo de Cenoura",
+        "d": "Com calda de brigadeiro de colher",
+        "p": "R$ 4.700",
+        "img": "images/cardapio/8d4f68c0-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Bolo de Chocolate",
+        "d": "Com calda de brigadeiro e sorvete de macadâmia",
+        "p": "R$ 4.700",
+        "img": "images/cardapio/9c841430-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Rabanada Tradicional",
+        "d": "Com sorvete de baunilha e calda de doce de leite",
+        "p": "R$ 4.700",
+        "img": "images/cardapio/dafd4600-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Mousse de Chocolate",
+        "d": "Com Calda de caramelo e flor de sal",
+        "p": "R$ 4.600",
+        "img": "images/cardapio/fe567f90-7a50-11f1-88c0-3350d9e629f0.jpg"
+      },
+      {
+        "n": "Nossos Sorvetes",
+        "d": "Consultar o garçom",
+        "p": "R$ 4.600",
+        "img": null
+      },
+      {
+        "n": "Churros Dueto de Banana",
+        "d": "Com doce de leite caseiro e brigadeiro de leite ninho",
+        "p": "R$ 6.500",
+        "img": null
+      },
+      {
+        "n": "Romeu e Julieta",
+        "d": "bombom de goiabada com mousse de queijo e farofa de amêndoas",
+        "p": "R$ 4.900",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "bebidas",
+    "title": "Bebidas",
+    "items": [
+      {
+        "n": "Água Prata sem gás",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/f045a6b0-f433-11ee-bca4-6b665f53f9f1.jpg"
+      },
+      {
+        "n": "Água Prata com gás",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/35194630-5bae-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "San Pellegrino com Gás",
+        "d": "",
+        "p": "R$ 2.990",
+        "img": "images/cardapio/7c1852b0-5bae-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Acqua Perrier",
+        "d": "",
+        "p": "R$ 2.600",
+        "img": "images/cardapio/9ad288b0-5bae-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Cambuquira",
+        "d": "",
+        "p": "R$ 1.500",
+        "img": "images/cardapio/cb468e60-5bae-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Acqua Panna",
+        "d": "",
+        "p": "R$ 2.890",
+        "img": "images/cardapio/e85473f0-5bae-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Pedras Salgadas",
+        "d": "",
+        "p": "R$ 4.890",
+        "img": "images/cardapio/415f8ed0-5baf-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Água Voss Sem Gás",
+        "d": "",
+        "p": "R$ 6.500",
+        "img": null
+      },
+      {
+        "n": "Sucos Naturais",
+        "d": "",
+        "p": "R$ 1.890",
+        "img": null
+      },
+      {
+        "n": "Sucos Especiais",
+        "d": "",
+        "p": "R$ 2.390",
+        "img": null
+      },
+      {
+        "n": "Suco de Tomate Temperado",
+        "d": "",
+        "p": "R$ 2.900",
+        "img": null
+      },
+      {
+        "n": "Suco de Uva Integral",
+        "d": "",
+        "p": "R$ 2.300",
+        "img": null
+      },
+      {
+        "n": "Coca Cola",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/8e74aeb0-5bd4-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Coca Cola Zero",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/9bcbe790-5bd4-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Guaraná Antártica",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/aae60620-5bd4-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Guaraná Antárctica Zero",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/8a1110d0-5bb0-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Energético Red Bull",
+        "d": "",
+        "p": "R$ 2.800",
+        "img": "images/cardapio/e9af8530-5bb0-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Água Tônica",
+        "d": "",
+        "p": "R$ 1.300",
+        "img": "images/cardapio/d12a78c0-5bd4-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Pepsi Black",
+        "d": "",
+        "p": "R$ 990",
+        "img": "images/cardapio/d9dc2750-eeb1-11ee-90d3-e52bf092db84.jpg"
+      },
+      {
+        "n": "Café 3 Corações",
+        "d": "",
+        "p": "R$ 900",
+        "img": null
+      },
+      {
+        "n": "Chás",
+        "d": "",
+        "p": "R$ 1.400",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "drinks",
+    "title": "Drinks & Coquetéis",
+    "items": [
+      {
+        "n": "Kir Royal",
+        "d": "Espumante, creme de cassis e cereja",
+        "p": "R$ 3.300",
+        "img": null
+      },
+      {
+        "n": "Aperol Spritz",
+        "d": "Aperol, espumante e água gaseificada",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Cosmopolitan",
+        "d": "Vodka, Cramberry, Cointreau e Suco de Limão",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Dry Martini",
+        "d": "Gin Tanqueray, Martiny Dry e Azeitona verde",
+        "p": "R$ 3.800",
+        "img": null
+      },
+      {
+        "n": "Mojito Tradicional",
+        "d": "Bacardi prata, Hortelã, Suco de limão e Club Soda",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Blood Mary",
+        "d": "Suco de tomate temperado, Vodka, Salsão e Limão",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Negroni",
+        "d": "Gim Tanqueray, Carpano e Campari",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Margarita",
+        "d": "Tequila Jose Cuervo, Cointreau, Suco de limão e Curaçau Blue",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Apple Martini",
+        "d": "Vodka, Martiny Dry e Creme de Maçã Verde",
+        "p": "R$ 3.600",
+        "img": null
+      },
+      {
+        "n": "Whisky Souer",
+        "d": "Jack Daniel’s e Sour Mix",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Moscow Mule",
+        "d": "Vodka Absolut, Xarope de Gengibre e Suco de Limão",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Manhattan",
+        "d": "Jack Daniel’s, Carpano, Angustura Bitter e Cereja",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Sex On The Beach",
+        "d": "Vodka, Licor de Pêssego Suco de Laranja e Granadine",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Refresco de Vinho do Porto",
+        "d": "Vinho do Porto, Suco de Limão e Club Soda",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Sensação",
+        "d": "Suco de Laranja, Suco de Morango, Creme de Maçã Verde e Frutas Vermelhas",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Mandarini",
+        "d": "Creme de Tangerina, Creme de Maçã Verde, Club Soda e Cereja",
+        "p": "R$ 3.900",
+        "img": null
+      },
+      {
+        "n": "Balão Mágico",
+        "d": "Vodka Ciroc, Peach Tree, Sour Mix, Espumante e Granadine",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Orange Fizz",
+        "d": "Vodka Ciroc, Crème de Tangerina, Calda de Frutas Vermelhas e Espumante",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "ZuKa",
+        "d": "Vodka Ciroc, Xarope Maçã Verde, Peach Tree, Suco de Laranja e Club Soda",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Norde’s Espanha",
+        "d": "Uva Verde, Twist de Limão Siciliano",
+        "p": "R$ 8.800",
+        "img": null
+      },
+      {
+        "n": "Monkey 47, Alemanha",
+        "d": "Limão Taiti Desidratado Zimbro",
+        "p": "R$ 7.900",
+        "img": null
+      },
+      {
+        "n": "Hendricks, Inglaterra",
+        "d": "Zimbro. Pepino e Alecrim",
+        "p": "R$ 6.900",
+        "img": null
+      },
+      {
+        "n": "Bulldog, Inglaterra",
+        "d": "Limão Siciliano Desidratado e Baunilha",
+        "p": "R$ 6.900",
+        "img": null
+      },
+      {
+        "n": "Tanqueray Ten, Inglaterra",
+        "d": "Laranja Limão. Limão Taitit",
+        "p": "R$ 6.400",
+        "img": null
+      },
+      {
+        "n": "Tanqueray Servilla, Inglaterra",
+        "d": "Laranja Bahia, Alecrim, Xarope de Tangerina e Zimbro",
+        "p": "R$ 5.900",
+        "img": null
+      },
+      {
+        "n": "Tanqueray, Inglaterra",
+        "d": "Limão Taiti. Limão Siciliano Desidratado. Canela",
+        "p": "R$ 5.900",
+        "img": null
+      },
+      {
+        "n": "Tanqueray, Inglaterra",
+        "d": "Limão Taiti. Limão Siciliano Desidratado. Canela",
+        "p": "R$ 5.900",
+        "img": null
+      },
+      {
+        "n": "Beefeater, Inglaterra",
+        "d": "Flor de Hibisco e Limão Thaiti Desidratado",
+        "p": "R$ 4.900",
+        "img": null
+      },
+      {
+        "n": "The Botanist, Escócia",
+        "d": "Limão Desidratado. Limão Taiti",
+        "p": "R$ 7.900",
+        "img": null
+      },
+      {
+        "n": "Beefeater 24, Inglaterra",
+        "d": "Abacaxi Desidratado e Zimbro",
+        "p": "R$ 5.400",
+        "img": null
+      },
+      {
+        "n": "Malfy com Limone, Itália",
+        "d": "Casca de Limão Siciliano. Hortelã",
+        "p": "R$ 7.900",
+        "img": null
+      },
+      {
+        "n": "Gordon ́s, Brasil",
+        "d": "Frutas Vermelhas e Hortelã",
+        "p": "R$ 4.900",
+        "img": null
+      },
+      {
+        "n": "F. Vermelhas, Lichia, Lima da Pérsia, Kiwi Uva c/ limão e Uva c/ manjericão",
+        "d": "",
+        "p": "R$ 3.700",
+        "img": null
+      },
+      {
+        "n": "Vodka Smirnoff",
+        "d": "",
+        "p": "R$ 3.300",
+        "img": null
+      },
+      {
+        "n": "Vodka Cirôc",
+        "d": "",
+        "p": "R$ 4.200",
+        "img": null
+      },
+      {
+        "n": "Vodka Grey Goose",
+        "d": "",
+        "p": "R$ 4.700",
+        "img": null
+      },
+      {
+        "n": "Vodka Absolut",
+        "d": "",
+        "p": "R$ 3.500",
+        "img": null
+      },
+      {
+        "n": "Vodka Pravda",
+        "d": "",
+        "p": "R$ 4.900",
+        "img": null
+      },
+      {
+        "n": "Belvedere",
+        "d": "",
+        "p": "R$ 5.000",
+        "img": null
+      },
+      {
+        "n": "Importada",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "cervejas-doses",
+    "title": "Cervejas & Doses",
+    "items": [
+      {
+        "n": "Stella Artois",
+        "d": "",
+        "p": "R$ 2.100",
+        "img": "images/cardapio/0b169640-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Stella Artois Pure Gold",
+        "d": "",
+        "p": "R$ 1.900",
+        "img": "images/cardapio/2a263f40-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Spaten",
+        "d": "",
+        "p": "R$ 1.700",
+        "img": "images/cardapio/4530b3b0-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Corona",
+        "d": "",
+        "p": "R$ 2.200",
+        "img": "images/cardapio/87eff3a0-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Corona Zero Álcool",
+        "d": "",
+        "p": "R$ 2.200",
+        "img": "images/cardapio/909479f0-67d5-11f0-84e1-fde0ff81eaaa.jpg"
+      },
+      {
+        "n": "Absolut",
+        "d": "",
+        "p": "R$ 3.500",
+        "img": "images/cardapio/a190c5f0-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Smirnoff",
+        "d": "",
+        "p": "R$ 2.600",
+        "img": "images/cardapio/baa44c60-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Grey Goose",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/d61a7af0-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Cirôc",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/ead1fa40-5bb2-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Belvedere",
+        "d": "",
+        "p": "R$ 4.500",
+        "img": "images/cardapio/08cf6ff0-5bb3-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Pravda",
+        "d": "",
+        "p": "R$ 4.300",
+        "img": "images/cardapio/c9dc3e40-5bd5-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Absolut Elyx",
+        "d": "",
+        "p": "R$ 4.000",
+        "img": "images/cardapio/f28f3fe0-5bd5-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Amarula",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/432cd7f0-5bb3-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Licor 43",
+        "d": "",
+        "p": "R$ 4.490",
+        "img": "images/cardapio/dec2dc50-5bb3-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Cointreau",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/f490fbc0-5bb3-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Drambuie",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/0d4d1360-5bb4-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Baileys",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/28c62820-5bb4-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Limoncello",
+        "d": "",
+        "p": "R$ 3.900",
+        "img": "images/cardapio/2cf9a030-5bd6-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Frangélico",
+        "d": "",
+        "p": "R$ 4.490",
+        "img": "images/cardapio/6b071170-0cb3-11f0-87aa-979aa62eeeb8.jpg"
+      },
+      {
+        "n": "Chartreuse Amarelo",
+        "d": "",
+        "p": "R$ 8.900",
+        "img": "images/cardapio/f950bbd0-5bb5-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Chartreuse Verde",
+        "d": "",
+        "p": "R$ 9.900",
+        "img": "images/cardapio/19107af0-5bb6-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Anísio Santiago",
+        "d": "",
+        "p": "R$ 7.800",
+        "img": "images/cardapio/98440e70-5bd6-11ee-8123-0fcc262027e0.jpg"
+      },
+      {
+        "n": "Cachaça de Banana",
+        "d": "",
+        "p": "R$ 3.300",
+        "img": null
+      },
+      {
+        "n": "Sagatiba",
+        "d": "",
+        "p": "R$ 2.500",
+        "img": "images/cardapio/bfef15f0-5bd6-11ee-8123-0fcc262027e0.jpg"
+      }
+    ]
+  }
+];
 
   /* Horários: [início, fim] em minutos desde 00:00 */
   const SERVICE = {
@@ -218,13 +1275,30 @@
 
       const info = document.createElement('div');
       info.className = 'item-info';
+
+      const top = document.createElement('div');
+      top.className = 'item-top';
       const n = document.createElement('span');
       n.className = 'item-name';
       n.textContent = it.n;
-      const d = document.createElement('span');
-      d.className = 'item-desc';
-      d.textContent = it.d;
-      info.append(n, d);
+      top.appendChild(n);
+
+      if (it.p) {
+        const price = document.createElement('span');
+        price.className = 'item-price';
+        price.textContent = it.p;
+        top.appendChild(price);
+      }
+
+      info.appendChild(top);
+
+      if (it.d) {
+        const d = document.createElement('span');
+        d.className = 'item-desc';
+        d.textContent = it.d;
+        info.appendChild(d);
+      }
+
       li.appendChild(info);
 
       listEl.appendChild(li);
