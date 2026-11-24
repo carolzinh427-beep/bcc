@@ -13,31 +13,44 @@
 
   const MENU = [
     {
+      id: 'executivo', title: 'Menu Executivo',
+      items: [
+        { n: 'Picadinho Bloco C', d: 'Cubos de filé mignon ao molho demi-glace, ovo pochê, banana caramelizada, arroz e farofinha', img: 'images/pratos/picadinho.jpg' },
+        { n: 'Peixe do Dia Grelhado', d: 'Manteiga clarificada de ervas sobre risoto cremoso de limão siciliano', img: 'images/pratos/peixe-branco.jpg' },
+        { n: 'Escalope ao Poivre', d: 'Mignon grelhado ao molho de pimentas verdes e aligot clássico de batatas', img: 'images/pratos/escalope-poivre.jpg' },
+        { n: 'Massa Artesanal do Chef', d: 'Fettuccine com fonduta de queijos da Canastra, filé e cogumelos Paris', img: 'images/pratos/massa-artesanal.jpg' },
+        { n: 'Mini Churros Bloco C', d: 'Churros artesanais crocantes com doce de leite caseiro cremoso morno', img: 'images/pratos/churros.jpg' }
+      ]
+    },
+    {
       id: 'entradas', title: 'Entradas',
       items: [
-        { n: 'Carpaccio de filé', d: 'Grana Padano, praliné de amêndoas e molho de mostarda' },
-        { n: 'Burrata', d: '' },
-        { n: 'Camarões crocantes', d: 'Maionese agridoce levemente picante' },
-        { n: 'Queijo Morro Azul', d: 'Geleia de frutas vermelhas e torradas' },
-        { n: 'Croquetes de brisket', d: '' }
+        { n: 'Carpaccio de filé', d: 'Grana Padano, praliné de amêndoas e molho de mostarda', img: 'images/pratos/carpaccio-tradicional.jpg' },
+        { n: 'Burrata', d: 'Passata de tomate, pesto de manjericão e redução cítrica', img: 'images/pratos/burrata.jpg' },
+        { n: 'Camarões na fonduta de brie', d: 'Com risoto de banana caramelizada', img: 'images/pratos/camarao-fonduta.jpg' },
+        { n: 'Brie em massa folhada', d: 'Com caramelo de nuts e torradas da casa', img: 'images/pratos/brie-folhado.jpg' },
+        { n: 'Pastel de queijo cremoso', d: 'Massa fininha e crocante com toque de mel trufado', img: 'images/pratos/pastel-queijo.jpg' },
+        { n: 'Croquetes de brisket', d: 'Com aioli secreto do chef', img: 'images/pratos/croquete-brisket.jpg' }
       ]
     },
     {
       id: 'principais', title: 'Pratos principais',
       items: [
-        { n: 'Filé em crosta de cebola caramelizada', d: 'Risoto de queijo brie' },
-        { n: 'Mignon', d: 'Polenta, pipoca e roquefort' },
-        { n: 'Milanese, pomodoro & aligot', d: '' },
-        { n: 'Riso Maremonti', d: '' },
-        { n: 'Carbonara', d: 'Creme de queijo, farofinha de pancetta e ovo de gema mole' },
-        { n: 'Strogonoff do chef', d: '' }
+        { n: 'Filé em crosta de cebola caramelizada', d: 'Risoto de queijo brie', img: 'images/pratos/file-crosta.jpg' },
+        { n: 'Mignon', d: 'Polenta, pipoca e roquefort', img: 'images/pratos/mignon-roquefort.jpg' },
+        { n: 'Milanese, pomodoro & aligot', d: 'Prato da Boa Lembrança 2025', img: 'images/pratos/milanese-aligot.jpg' },
+        { n: 'Riso Maremonti', d: 'Prato da Boa Lembrança 2026 com camarão e presunto de Parma', img: 'images/pratos/riso-maremonti.jpg' },
+        { n: 'Carbonara', d: 'Creme de queijo, farofinha de pancetta e ovo de gema mole', img: 'images/pratos/carbonara.jpg' },
+        { n: 'Strogonoff do chef', d: 'Filet mignon com arroz cremoso e batata palha caseira trufada', img: 'images/pratos/strogonoff.jpg' }
       ]
     },
     {
       id: 'sobremesas', title: 'Sobremesas',
       items: [
-        { n: 'Bolo de brigadeiro', d: '' },
-        { n: 'Churros de banana', d: 'Doce de leite caseiro ou brigadeiro de leite Ninho' }
+        { n: 'Bolo de brigadeiro', d: 'Com calda de brigadeiro de colher e sorvete', img: 'images/pratos/bolo-chocolate.jpg' },
+        { n: 'Churros de banana', d: 'Doce de leite caseiro cremoso ou brigadeiro de leite Ninho', img: 'images/pratos/churros.jpg' },
+        { n: 'Mousse de chocolate', d: 'Com calda de caramelo e flor de sal', img: 'images/pratos/pudim-baunilha.jpg' },
+        { n: 'Crostata de amêndoas', d: 'Com sorvete de pistache e calda de chocolate', img: 'images/pratos/crostata-amendoas.jpg' }
       ]
     }
   ];
@@ -191,13 +204,29 @@
       const li = document.createElement('li');
       li.className = 'item';
       li.style.setProperty('--i', i);
+
+      if (it.img) {
+        const media = document.createElement('div');
+        media.className = 'item-media';
+        const img = document.createElement('img');
+        img.src = it.img;
+        img.alt = it.n;
+        img.loading = 'lazy';
+        media.appendChild(img);
+        li.appendChild(media);
+      }
+
+      const info = document.createElement('div');
+      info.className = 'item-info';
       const n = document.createElement('span');
       n.className = 'item-name';
       n.textContent = it.n;
       const d = document.createElement('span');
       d.className = 'item-desc';
       d.textContent = it.d;
-      li.append(n, d);
+      info.append(n, d);
+      li.appendChild(info);
+
       listEl.appendChild(li);
     });
   }
@@ -327,11 +356,12 @@
   const gooeyContainer = $('#gooeyNavContainer');
   if (gooeyContainer && typeof window.createGooeyNav === 'function') {
     const gooeyItems = [
-      { label: 'Restaurante', href: '#restaurante' },
+      { label: 'Executivo', href: '#executivo' },
       { label: 'Pratos', href: '#pratos' },
       { label: 'Cardápio', href: '#', attrs: { 'data-open-menu': '' } },
       { label: 'Visite', href: '#visite' },
-      { label: 'Reservas', href: '#reservas' }
+      { label: 'Reservas', href: '#reservas' },
+      { label: 'Restaurante', href: '#restaurante' }
     ];
 
     let ignoreScroll = false;
@@ -366,10 +396,11 @@
 
     // Sincroniza a pílula do GooeyNav ao rolar as seções no Desktop
     const navSections = [
-      { id: 'restaurante', idx: 0 },
+      { id: 'executivo', idx: 0 },
       { id: 'pratos', idx: 1 },
       { id: 'visite', idx: 3 },
-      { id: 'reservas', idx: 4 }
+      { id: 'reservas', idx: 4 },
+      { id: 'restaurante', idx: 5 }
     ];
 
     window.addEventListener('scroll', () => {

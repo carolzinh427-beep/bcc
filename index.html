@@ -52,11 +52,12 @@
 
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav aria-label="Menu móvel">
-      <a href="#restaurante">Restaurante</a>
+      <a href="#executivo">Menu Executivo</a>
       <a href="#pratos">Pratos</a>
       <button type="button" data-open-menu>Cardápio</button>
       <a href="#visite">Visite</a>
       <a href="#reservas">Reservas</a>
+      <a href="#restaurante">Restaurante</a>
     </nav>
   </div>
 
@@ -76,18 +77,167 @@
       </div>
     </section>
 
-    <!-- Restaurante -->
-    <section class="section light" id="restaurante">
-      <h2 class="visually-hidden">O restaurante</h2>
-      <p class="statement" id="statement">Pratos de inspiração afetiva, no melhor estilo comfort food e contemporâneo, com pitadas de elegância e discreta sofisticação.</p>
+    <!-- Menu Executivo -->
+    <section class="section light" id="executivo">
+      <div class="exec-header">
+        <div class="exec-header-left">
+          <span class="section-tag" data-reveal>Almoço de Segunda a Sexta · 12h às 15h30</span>
+          <h2 class="display" data-reveal style="--d:.08s">Menu Executivo</h2>
+          <p class="exec-lead" data-reveal style="--d:.15s">A alta gastronomia contemporânea do chef Marcelo Petrarca em uma sequência de três tempos pensada para o seu almoço.</p>
+        </div>
+        <div class="exec-header-right" data-reveal style="--d:.18s">
+          <dl class="exec-meta">
+            <div>
+              <dt>Horário</dt>
+              <dd>12h às 15h30</dd>
+            </div>
+            <div>
+              <dt>Dias</dt>
+              <dd>Seg a Sex</dd>
+            </div>
+            <div>
+              <dt>Sequência</dt>
+              <dd>3 Tempos</dd>
+            </div>
+            <div>
+              <dt>Serviço</dt>
+              <dd>Presencial</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
 
-      <div class="about-grid">
-        <dl class="facts" data-reveal>
-          <div><dt>Chef</dt><dd>Marcelo Petrarca</dd></div>
-          <div><dt>Desde</dt><dd>2015</dd></div>
-          <div><dt>Cozinha</dt><dd>Contemporânea</dd></div>
-        </dl>
-        <p class="about-text" data-reveal style="--d:.15s">Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.</p>
+      <div class="exec-courses">
+        <!-- 01 Entrada -->
+        <div class="exec-col" data-reveal style="--d:.1s">
+          <div class="exec-step">
+            <span class="exec-step-num">01</span>
+            <h3 class="exec-step-title">Entradas</h3>
+            <span class="exec-step-badge">Escolha uma</span>
+          </div>
+          <ul class="exec-items">
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/salada-casa.jpg" alt="Saladinha da Casa" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Saladinha da Casa</span>
+                <span class="exec-item-desc">Folhas nobres, vinagrete Dijon com mel de laranjeira, praliné de castanhas e lascas de Grana Padano.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/carpaccio-tradicional.jpg" alt="Carpaccio Rústico" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Carpaccio Rústico</span>
+                <span class="exec-item-desc">Fatias finas de filé mignon, molho suave de mostarda em grãos, alcaparras e fatias de pão artesanal tostado.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/pastel-queijo.jpg" alt="Pastel de Queijo Brie" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Pastel de Queijo Brie</span>
+                <span class="exec-item-desc">Massa crocante artesanal recheada com queijo brie cremoso e fio de mel trufado.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 02 Prato Principal -->
+        <div class="exec-col" data-reveal style="--d:.18s">
+          <div class="exec-step">
+            <span class="exec-step-num">02</span>
+            <h3 class="exec-step-title">Principais</h3>
+            <span class="exec-step-badge">Escolha um</span>
+          </div>
+          <ul class="exec-items">
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/picadinho.jpg" alt="Picadinho Bloco C" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Picadinho Bloco C</span>
+                <span class="exec-item-desc">Cubos de filé mignon ao molho demi-glace especial, ovo pochê, banana caramelizada, arroz e farofinha crocante.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/peixe-branco.jpg" alt="Peixe do Dia Grelhado" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Peixe do Dia Grelhado</span>
+                <span class="exec-item-desc">Pescado fresco grelhado na manteiga clarificada de ervas, risoto cremoso de limão siciliano e azeite aromático.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/escalope-poivre.jpg" alt="Escalope ao Poivre" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Escalope ao Poivre</span>
+                <span class="exec-item-desc">Escalope de mignon grelhado, redução aveludada de pimentas verdes e aligot clássico de batatas.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/massa-artesanal.jpg" alt="Massa Artesanal do Chef" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Massa Artesanal do Chef</span>
+                <span class="exec-item-desc">Fettuccine fresco envolvido em fonduta de queijos da Serra da Canastra, tiras de mignon e cogumelos Paris salteados.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 03 Sobremesa -->
+        <div class="exec-col" data-reveal style="--d:.26s">
+          <div class="exec-step">
+            <span class="exec-step-num">03</span>
+            <h3 class="exec-step-title">Sobremesas</h3>
+            <span class="exec-step-badge">Escolha uma</span>
+          </div>
+          <ul class="exec-items">
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/churros.jpg" alt="Mini Churros Bloco C" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Mini Churros Bloco C</span>
+                <span class="exec-item-desc">Churros quentinhos e sequinhos servidos com doce de leite caseiro cremoso morno.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/pudim-baunilha.jpg" alt="Pudim de Fava de Baunilha" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Pudim de Fava de Baunilha</span>
+                <span class="exec-item-desc">Pudim de textura ultra aveludada com calda de caramelo dourado brilhante.</span>
+              </div>
+            </li>
+            <li class="exec-item">
+              <div class="exec-item-media">
+                <img src="images/pratos/crostata-amendoas.jpg" alt="Crostata & Frutas Selecionadas" loading="lazy">
+              </div>
+              <div class="exec-item-info">
+                <span class="exec-item-title">Crostata &amp; Frutas</span>
+                <span class="exec-item-desc">Lâminas de frutas e crostata artesanal com sorbet e raspas cítricas.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exec-foot" data-reveal style="--d:.3s">
+        <p class="exec-foot-note">O Menu Executivo inclui couvert da casa, uma entrada, um prato principal e uma sobremesa. Servido exclusivamente de segunda a sexta-feira, das 12h às 15h30 (exceto feriados). Consulte opções vegetarianas com nossa equipe.</p>
+        <div class="exec-actions">
+          <a class="btn btn-dark" href="#reservas">Reservar mesa para almoço</a>
+          <button class="btn btn-ghost" type="button" data-open-menu>Ver cardápio completo</button>
+        </div>
       </div>
     </section>
 
@@ -97,26 +247,41 @@
       <ul class="dishes">
         <li class="dish" data-reveal>
           <span class="dish-n">01</span>
+          <div class="dish-media">
+            <img src="images/pratos/file-crosta.jpg" alt="Filé em crosta de cebola caramelizada" loading="lazy">
+          </div>
           <span class="dish-name">Filé em crosta de cebola caramelizada</span>
           <span class="dish-desc">Risoto de queijo brie</span>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">02</span>
+          <div class="dish-media">
+            <img src="images/pratos/mignon-roquefort.jpg" alt="Mignon" loading="lazy">
+          </div>
           <span class="dish-name">Mignon</span>
           <span class="dish-desc">Polenta, pipoca e roquefort</span>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">03</span>
+          <div class="dish-media">
+            <img src="images/pratos/milanese-aligot.jpg" alt="Milanese, pomodoro & aligot" loading="lazy">
+          </div>
           <span class="dish-name">Milanese, pomodoro &amp; aligot</span>
           <span class="dish-desc">Boa Lembrança 2025</span>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">04</span>
+          <div class="dish-media">
+            <img src="images/pratos/riso-maremonti.jpg" alt="Riso Maremonti" loading="lazy">
+          </div>
           <span class="dish-name">Riso Maremonti</span>
           <span class="dish-desc">Boa Lembrança 2026</span>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">05</span>
+          <div class="dish-media">
+            <img src="images/pratos/carbonara.jpg" alt="Carbonara" loading="lazy">
+          </div>
           <span class="dish-name">Carbonara</span>
           <span class="dish-desc">Creme de queijo, farofinha de pancetta e ovo de gema mole</span>
         </li>
@@ -199,6 +364,22 @@
           <p class="form-note" id="formNote" role="alert"></p>
           <button class="btn btn-light btn-block" type="submit">Enviar reserva pelo WhatsApp</button>
         </form>
+      </div>
+    </section>
+
+    <!-- Restaurante -->
+    <section class="section light" id="restaurante">
+      <span class="section-tag" data-reveal>História & Conceito</span>
+      <h2 class="display" data-reveal style="--d:.08s; margin-bottom: clamp(2rem, 5vw, 3.5rem);">O Restaurante</h2>
+      <p class="statement" id="statement">Pratos de inspiração afetiva, no melhor estilo comfort food e contemporâneo, com pitadas de elegância e discreta sofisticação.</p>
+
+      <div class="about-grid">
+        <dl class="facts" data-reveal>
+          <div><dt>Chef</dt><dd>Marcelo Petrarca</dd></div>
+          <div><dt>Desde</dt><dd>2015</dd></div>
+          <div><dt>Cozinha</dt><dd>Contemporânea</dd></div>
+        </dl>
+        <p class="about-text" data-reveal style="--d:.15s">Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.</p>
       </div>
     </section>
   </main>

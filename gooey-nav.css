@@ -162,6 +162,14 @@
   }
 }
 
+@media (min-width: 901px) and (max-width: 1180px) {
+  .gooey-nav {
+    --gn-x: 12px;
+    --gn-gap: 2px;
+    --gn-font: 0.72rem;
+  }
+}
+
 /* Exclusivo para Desktop: Esconde em telas <= 900px */
 @media (max-width: 900px) {
   .gooey-nav-desktop-container {
