@@ -1112,30 +1112,97 @@
   }
 ];
 
-  /* Horários: [início, fim] em minutos desde 00:00 */
-  const SERVICE = {
-    week: { lunch: [720, 930], dinner: [1170, 1440] },   // seg a qui
-    weekend: { lunch: [720, 960], dinner: [1170, 1500] } // sex e sáb
+  /* ------------------------------------------------------------------
+     UNIDADES DO BLOCO C (Asa Sul & Park Shopping)
+  ------------------------------------------------------------------ */
+  const UNIDADES = {
+    'asa-sul': {
+      id: 'asa-sul',
+      name: 'Asa Sul',
+      fullName: 'Bloco C · Asa Sul',
+      badge: 'Unidade Matriz · Asa Sul',
+      addressShort: 'CLS 211, Bloco C, Lote 17, Loja 17 · Asa Sul',
+      addressHtml: 'CLS 211, Bloco C, Lote 17, Loja 17<br>Asa Sul, Brasília – DF',
+      phoneDisplay: '(61) 99219-3011',
+      whatsapp: '5561992193011',
+      fixedDisplay: '(61) 3363-3062',
+      fixedTel: '+556133633062',
+      mapsSearch: 'https://www.google.com/maps/search/?api=1&query=Bloco+C+Restaurante+CLS+211+Asa+Sul+Brasilia',
+      mapsEmbed: 'https://www.google.com/maps?q=Bloco+C+Restaurante+CLS+211+Asa+Sul+Brasilia&output=embed',
+      heroTag: 'Unidade Matriz · Asa Sul',
+      heroSubtitle: 'Cozinha contemporânea de inspiração afetiva.<br>CLS 211 Sul, Brasília.',
+      visiteTitle: 'Visite o Bloco C · Asa Sul',
+      hoursRows: [
+        { label: 'Segunda a quinta', time: '12h às 15h30 · 19h30 às 00h', dataDays: '1 2 3 4' },
+        { label: 'Sexta e sábado', time: '12h às 16h · 19h30 à 01h', dataDays: '5 6' },
+        { label: 'Domingo', time: 'Fechado', dataDays: '0' }
+      ],
+      service: {
+        week: { lunch: [720, 930], dinner: [1170, 1440] },
+        weekend: { lunch: [720, 960], dinner: [1170, 1500] },
+        sunday: null
+      },
+      closedMessage: 'O restaurante fecha aos domingos nesta unidade. Escolha outra data.',
+      execTag: 'Almoço de Segunda a Sexta · 12h às 15h30',
+      execLead: 'A alta gastronomia contemporânea do chef Marcelo Petrarca em uma sequência de três tempos pensada para o seu almoço.',
+      execHorario: '12h às 15h30',
+      execDias: 'Seg a Sex',
+      execSeq: '3 Tempos',
+      execFootNote: 'O Menu Executivo inclui couvert da casa, uma entrada, um prato principal e uma sobremesa. Servido exclusivamente de segunda a sexta-feira, das 12h às 15h30 (exceto feriados). Consulte opções vegetarianas com nossa equipe.',
+      aboutTag: 'História & Conceito · Asa Sul',
+      aboutAno: '2015',
+      aboutStatement: 'Pratos de inspiração afetiva, no melhor estilo comfort food e contemporâneo, com pitadas de elegância e discreta sofisticação.',
+      aboutText: 'Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.',
+      greeting: 'Olá, gostaria de reservar uma mesa no Bloco C Asa Sul.'
+    },
+    'park-shopping': {
+      id: 'park-shopping',
+      name: 'Park Shopping',
+      fullName: 'Bloco C · Park Shopping',
+      badge: 'Nova Unidade · ParkShopping',
+      addressShort: 'ParkShopping – 1º Piso, LUC E01-07 · Boulevard Gastronômico',
+      addressHtml: 'ParkShopping – 1º Piso, LUC E01-07<br>Boulevard Gastronômico da Expansão · SAI/SO Área 6580, Brasília – DF',
+      phoneDisplay: '(61) 99219-3011',
+      whatsapp: '5561992193011',
+      fixedDisplay: '(61) 3362-1301',
+      fixedTel: '+556133621301',
+      mapsSearch: 'https://www.google.com/maps/search/?api=1&query=ParkShopping+Brasilia+SAI+SO+Area+6580',
+      mapsEmbed: 'https://www.google.com/maps?q=ParkShopping+Brasilia+SAI+SO+Area+6580&output=embed',
+      heroTag: 'Nova Unidade · ParkShopping',
+      heroSubtitle: 'A nova atmosfera do Bloco C na expansão do ParkShopping.<br>Boulevard Gastronômico, 1º Piso.',
+      visiteTitle: 'Visite o Bloco C · Park Shopping',
+      hoursRows: [
+        { label: 'Segunda a sábado', time: '12h às 23h (ininterrupto)', dataDays: '1 2 3 4 5 6' },
+        { label: 'Domingo e feriados', time: '12h às 22h (ininterrupto)', dataDays: '0' }
+      ],
+      service: {
+        week: { lunch: [720, 960], dinner: [1140, 1380] },
+        weekend: { lunch: [720, 960], dinner: [1140, 1380] },
+        sunday: { lunch: [720, 960], dinner: [1140, 1320] }
+      },
+      closedMessage: null,
+      execTag: 'Almoço no ParkShopping · Todos os dias a partir das 12h',
+      execLead: 'Mesa sofisticada de antepastos artesanais, saladas e frios combinada a nobres cortes de carne na brasa e clássicos executivos.',
+      execHorario: 'A partir das 12h',
+      execDias: 'Seg a Dom',
+      execSeq: 'Antepastos & Cortes',
+      execFootNote: 'No almoço do ParkShopping, desfrute da nossa sofisticada mesa de antepastos e carnes nobres grelhadas, além dos clássicos do chef Marcelo Petrarca. Servido todos os dias a partir das 12h.',
+      aboutTag: 'Nova Unidade · Boulevard Gastronômico',
+      aboutAno: '2026',
+      aboutStatement: 'A expansão do Bloco C: arquitetura contemporânea, iluminação natural e uma experiência gastronômica completa no ParkShopping.',
+      aboutText: 'Localizado no novo Boulevard Gastronômico da 10ª expansão do ParkShopping, o Bloco C chega com salão contemporâneo, lounge integrado e proposta inovadora: no almoço, aclamada mesa de antepastos com cortes nobres; à tarde e no jantar, os consagrados clássicos autorais do chef Marcelo Petrarca e coquetelaria exclusiva.',
+      greeting: 'Olá, gostaria de reservar uma mesa no Bloco C Park Shopping.'
+    }
   };
+
+  let currentUnit = 'asa-sul';
   const LAST_SEATING_BEFORE_CLOSE = 90; // minutos
 
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const waLink = (text) => `https://wa.me/${CONFIG.whatsapp}${text ? '?text=' + encodeURIComponent(text) : ''}`;
-
-  /* Links de WhatsApp */
-  $$('[data-wa]').forEach(a => {
-    a.href = waLink(CONFIG.greeting);
-    a.target = '_blank';
-    a.rel = 'noopener';
-  });
-  // Os botões "Reservar" principais levam ao formulário; o flutuante e o do cardápio abrem o WhatsApp direto.
-  $$('.nav-cta, .hero-actions [data-wa]').forEach(a => {
-    a.href = '#reservas';
-    a.removeAttribute('target');
-  });
+  const waLink = (text, phone) => `https://wa.me/${phone || CONFIG.whatsapp}${text ? '?text=' + encodeURIComponent(text) : ''}`;
 
   /* Elementos */
   const nav = $('#nav');
@@ -1149,13 +1216,16 @@
   const menuClose = $('#menuClose');
   const tabsEl = $('#tabs');
   const listEl = $('#menuList');
+  const welcomeScreen = $('#welcomeScreen');
 
   /* Frase com palavras que acendem no scroll */
   const statement = $('#statement');
   const words = [];
-  if (statement) {
-    const text = statement.textContent.trim();
+
+  function updateStatementWords(text) {
+    if (!statement) return;
     statement.textContent = '';
+    words.length = 0;
     text.split(/\s+/).forEach((w, i, arr) => {
       const s = document.createElement('span');
       s.className = 'w';
@@ -1165,6 +1235,224 @@
       words.push(s);
     });
   }
+  if (statement) {
+    updateStatementWords(statement.textContent.trim());
+  }
+
+  /* Aplicação dos dados da unidade selecionada */
+  function applyUnit(unitId, updateUrl = true) {
+    const data = UNIDADES[unitId] || UNIDADES['asa-sul'];
+    currentUnit = data.id;
+
+    // Persistência
+    try {
+      localStorage.setItem('bloco_c_unidade', currentUnit);
+    } catch(e) {}
+
+    // Atualização de URL
+    if (updateUrl && window.history && window.history.replaceState) {
+      const url = new URL(window.location);
+      url.searchParams.set('unidade', currentUnit);
+      window.history.replaceState({}, '', url);
+    }
+
+    // Título e Meta
+    document.title = `Bloco C Restaurante | ${data.name}, Brasília`;
+
+    // Indicadores Navbar & Drawer & Footer
+    const navUnitName = $('#navUnitName');
+    if (navUnitName) navUnitName.textContent = data.name;
+
+    const drawerUnitName = $('#drawerUnitName');
+    if (drawerUnitName) drawerUnitName.textContent = data.name;
+
+    const footerUnitName = $('#footerUnitName');
+    if (footerUnitName) footerUnitName.textContent = `Unidade ${data.name}`;
+
+    const footerAddress = $('#footerAddress');
+    if (footerAddress) footerAddress.textContent = data.addressShort + ' · Brasília – DF';
+
+    const reserveUnitName = $('#reserveUnitName');
+    if (reserveUnitName) reserveUnitName.textContent = data.name;
+
+    // Hero
+    const heroTag = $('#heroUnitTag');
+    if (heroTag) heroTag.textContent = data.heroTag;
+
+    const heroSubtitle = $('#heroSubtitle');
+    if (heroSubtitle) heroSubtitle.innerHTML = data.heroSubtitle;
+
+    // Menu Executivo
+    const execTag = $('#executivoTag');
+    if (execTag) execTag.textContent = data.execTag;
+
+    const execLead = $('#executivoLead');
+    if (execLead) execLead.textContent = data.execLead;
+
+    const execHorario = $('#execMetaHorario');
+    if (execHorario) execHorario.textContent = data.execHorario;
+
+    const execDias = $('#execMetaDias');
+    if (execDias) execDias.textContent = data.execDias;
+
+    const execSeq = $('#execMetaSeq');
+    if (execSeq) execSeq.textContent = data.execSeq;
+
+    const execFootNote = $('#executivoFootNote');
+    if (execFootNote) execFootNote.textContent = data.execFootNote;
+
+    // Visite
+    const visiteTitle = $('#visiteTitle');
+    if (visiteTitle) visiteTitle.textContent = data.visiteTitle;
+
+    const visiteAddress = $('#visiteAddress');
+    if (visiteAddress) visiteAddress.innerHTML = data.addressHtml;
+
+    const visitePhone = $('#visitePhone');
+    if (visitePhone) {
+      visitePhone.textContent = data.phoneDisplay;
+      visitePhone.href = `https://wa.me/${data.whatsapp}`;
+    }
+
+    const visitePhoneFixed = $('#visitePhoneFixed');
+    if (visitePhoneFixed) {
+      visitePhoneFixed.textContent = data.fixedDisplay;
+      visitePhoneFixed.href = `tel:${data.fixedTel}`;
+    }
+
+    // Horários
+    const hoursEl = $('#hours');
+    if (hoursEl) {
+      hoursEl.innerHTML = data.hoursRows.map(row =>
+        `<div class="hrow" data-days="${row.dataDays}"><span>${row.label}</span><span>${row.time}</span></div>`
+      ).join('');
+    }
+
+    // Maps
+    const mapsLink = $('#mapsLink');
+    if (mapsLink) mapsLink.href = data.mapsSearch;
+
+    const mapIframe = $('#mapIframe');
+    if (mapIframe) mapIframe.src = data.mapsEmbed;
+
+    // Restaurante / História
+    const aboutTag = $('#aboutTag');
+    if (aboutTag) aboutTag.textContent = data.aboutTag;
+
+    const factAnoVal = $('#factAnoVal');
+    if (factAnoVal) factAnoVal.textContent = data.aboutAno;
+
+    const aboutText = $('#aboutText');
+    if (aboutText) aboutText.textContent = data.aboutText;
+
+    if (statement) {
+      updateStatementWords(data.aboutStatement);
+    }
+
+    // Atualiza links de WhatsApp com o greeting específico da unidade
+    $$('[data-wa]').forEach(a => {
+      a.href = waLink(data.greeting, data.whatsapp);
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+    // Botões que levam ao formulário de reserva
+    $$('.nav-cta, .hero-actions [data-wa]').forEach(a => {
+      a.href = '#reservas';
+      a.removeAttribute('target');
+    });
+
+    // Se a data já estiver selecionada no form, recalcula slots para a nova unidade
+    const dateInput = $('#data');
+    if (dateInput && dateInput.value) {
+      dateInput.dispatchEvent(new Event('change'));
+    }
+  }
+
+  /* Controle da Welcome Screen */
+  function openWelcomeScreen() {
+    if (!welcomeScreen) return;
+    welcomeScreen.classList.remove('is-hidden');
+    void welcomeScreen.offsetWidth; // Força reflow
+    welcomeScreen.classList.remove('is-exiting');
+    document.body.classList.add('welcome-open');
+
+    $$('.welcome-panel', welcomeScreen).forEach(p => {
+      p.classList.remove('is-selected', 'is-dimmed');
+    });
+  }
+
+  function closeWelcomeScreen(selectedUnitId) {
+    if (!welcomeScreen) return;
+    if (selectedUnitId) {
+      const selectedPanel = $(`.welcome-panel[data-unit="${selectedUnitId}"]`, welcomeScreen);
+      const otherPanels = $$(`.welcome-panel:not([data-unit="${selectedUnitId}"])`, welcomeScreen);
+      if (selectedPanel) selectedPanel.classList.add('is-selected');
+      otherPanels.forEach(p => p.classList.add('is-dimmed'));
+    }
+
+    welcomeScreen.classList.add('is-exiting');
+    document.body.classList.remove('welcome-open');
+
+    setTimeout(() => {
+      welcomeScreen.classList.add('is-hidden');
+      welcomeScreen.classList.remove('is-exiting');
+      $$('.welcome-panel', welcomeScreen).forEach(p => {
+        p.classList.remove('is-selected', 'is-dimmed');
+      });
+    }, 550);
+  }
+
+  // Inicialização da Unidade via URL ou Storage
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramUnit = urlParams.get('unidade');
+  let savedUnit = null;
+  try {
+    savedUnit = localStorage.getItem('bloco_c_unidade');
+  } catch(e) {}
+
+  if (paramUnit && UNIDADES[paramUnit]) {
+    // Acessou com parâmetro direto na URL: abre o site da unidade diretamente
+    applyUnit(paramUnit, false);
+    if (welcomeScreen) {
+      welcomeScreen.classList.add('is-hidden');
+      document.body.classList.remove('welcome-open');
+    }
+  } else {
+    // Acesso ao domínio principal sem parâmetro: exibir a Welcome Screen
+    document.body.classList.add('welcome-open');
+    if (savedUnit && UNIDADES[savedUnit]) {
+      applyUnit(savedUnit, false);
+    } else {
+      applyUnit('asa-sul', false);
+    }
+  }
+
+  // Event Listeners nos Painéis da Welcome Screen
+  if (welcomeScreen) {
+    $$('.welcome-panel', welcomeScreen).forEach(panel => {
+      const unitId = panel.getAttribute('data-unit');
+      const onSelect = () => {
+        applyUnit(unitId, true);
+        closeWelcomeScreen(unitId);
+      };
+      panel.addEventListener('click', onSelect);
+      panel.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onSelect();
+        }
+      });
+    });
+  }
+
+  // Botões de "Trocar Unidade" (navbar, drawer, reservas, footer)
+  $$('[data-switch-unit]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (typeof setDrawer === 'function') setDrawer(false);
+      openWelcomeScreen();
+    });
+  });
 
   /* Reveal por IntersectionObserver */
   const revealEls = $$('[data-reveal]');
@@ -1455,8 +1743,17 @@
   function dayOf(value) { return new Date(`${value}T12:00:00`).getDay(); }
 
   function slotsFor(day) {
-    if (day === 0) return [];
-    const s = day >= 5 ? SERVICE.weekend : SERVICE.week;
+    const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+    if (day === 0) {
+      if (!unit.service.sunday) return [];
+      const s = unit.service.sunday;
+      const out = [];
+      [s.lunch, s.dinner].forEach(([start, end]) => {
+        for (let t = start; t <= end - LAST_SEATING_BEFORE_CLOSE; t += 30) out.push(t);
+      });
+      return out;
+    }
+    const s = day >= 5 ? unit.service.weekend : unit.service.week;
     const out = [];
     [s.lunch, s.dinner].forEach(([start, end]) => {
       for (let t = start; t <= end - LAST_SEATING_BEFORE_CLOSE; t += 30) out.push(t);
@@ -1472,11 +1769,13 @@
       timeEl.add(new Option('Escolha a data', ''));
       return;
     }
-    const slots = slotsFor(dayOf(dateEl.value));
+    const day = dayOf(dateEl.value);
+    const slots = slotsFor(day);
     if (!slots.length) {
       timeEl.disabled = true;
       timeEl.add(new Option('Fechado neste dia', ''));
-      noteEl.textContent = 'O restaurante fecha aos domingos. Escolha outra data.';
+      const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+      noteEl.textContent = unit.closedMessage || 'O restaurante não abre neste dia. Escolha outra data.';
       return;
     }
     timeEl.disabled = false;
@@ -1492,7 +1791,14 @@
     const nome = $('#nome').value.trim();
     if (!nome) { noteEl.textContent = 'Informe seu nome.'; $('#nome').focus(); return; }
     if (!dateEl.value) { noteEl.textContent = 'Escolha a data.'; dateEl.focus(); return; }
-    if (dayOf(dateEl.value) === 0) { noteEl.textContent = 'O restaurante fecha aos domingos. Escolha outra data.'; dateEl.focus(); return; }
+    const day = dayOf(dateEl.value);
+    const slots = slotsFor(day);
+    if (!slots.length) {
+      const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+      noteEl.textContent = unit.closedMessage || 'O restaurante não abre neste dia. Escolha outra data.';
+      dateEl.focus();
+      return;
+    }
     if (!timeEl.value) { noteEl.textContent = 'Escolha o horário.'; timeEl.focus(); return; }
     noteEl.textContent = '';
 
@@ -1500,16 +1806,18 @@
       weekday: 'long', day: '2-digit', month: 'long', year: 'numeric'
     });
     const obs = $('#obs').value.trim();
+    const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
     const lines = [
-      CONFIG.greeting,
+      unit.greeting,
       '',
+      `Unidade: ${unit.name}`,
       `Nome: ${nome}`,
       `Data: ${dateLabel}`,
       `Horário: ${timeEl.value}`,
       `Pessoas: ${people}`
     ];
     if (obs) lines.push(`Observações: ${obs}`);
-    window.open(waLink(lines.join('\n')), '_blank', 'noopener');
+    window.open(waLink(lines.join('\n'), unit.whatsapp), '_blank', 'noopener');
   });
 
   /* ------------------------------------------------------------------

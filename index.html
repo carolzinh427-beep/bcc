@@ -45,10 +45,80 @@
   </script>
 </head>
 <body>
+  <!-- Welcome Screen (Seleção de Unidade) -->
+  <aside class="welcome-screen" id="welcomeScreen" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <header class="welcome-top">
+      <div class="welcome-brand">
+        <img src="images/bloco-c-logo-original.png" alt="Bloco C" class="welcome-logo-img" width="130" height="38">
+        <span class="welcome-tagline">Restaurante · Brasília</span>
+      </div>
+      <h1 class="welcome-title" id="welcomeTitle">Selecione sua Experiência</h1>
+      <p class="welcome-sub">Escolha uma de nossas unidades para acessar cardápio, horários e reservas</p>
+    </header>
+
+    <div class="welcome-split">
+      <!-- Unidade Asa Sul -->
+      <article class="welcome-panel welcome-panel-asa" data-unit="asa-sul" tabindex="0" role="button" aria-label="Entrar na Unidade Asa Sul">
+        <div class="welcome-panel-bg" style="background-image: url('images/unidade-asa-sul.jpg');"></div>
+        <div class="welcome-panel-overlay"></div>
+        <div class="welcome-panel-content">
+          <div class="welcome-panel-badge">
+            <span class="badge-dot"></span>
+            <span>Unidade Matriz · Desde 2015</span>
+          </div>
+          <h2 class="welcome-panel-name">Asa Sul</h2>
+          <p class="welcome-panel-location">CLS 211, Bloco C · Asa Sul</p>
+          <p class="welcome-panel-desc">A atmosfera autoral do chef Marcelo Petrarca entre cobogós modernistas, luz acolhedora, almoço executivo em 3 tempos e jantares memoráveis.</p>
+          <div class="welcome-panel-cta">
+            <span class="welcome-cta-btn">
+              <span>Entrar na Unidade</span>
+              <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Divisor Decorativo Desktop -->
+      <div class="welcome-divider" aria-hidden="true">
+        <span class="welcome-divider-line"></span>
+        <span class="welcome-divider-mark">C</span>
+        <span class="welcome-divider-line"></span>
+      </div>
+
+      <!-- Unidade Park Shopping -->
+      <article class="welcome-panel welcome-panel-pks" data-unit="park-shopping" tabindex="0" role="button" aria-label="Entrar na Unidade Park Shopping">
+        <div class="welcome-panel-bg" style="background-image: url('images/unidade-park-shopping.jpg');"></div>
+        <div class="welcome-panel-overlay"></div>
+        <div class="welcome-panel-content">
+          <div class="welcome-panel-badge">
+            <span class="badge-dot badge-dot-accent"></span>
+            <span>Nova Unidade · Boulevard</span>
+          </div>
+          <h2 class="welcome-panel-name">Park Shopping</h2>
+          <p class="welcome-panel-location">Boulevard Gastronômico · 1º Piso</p>
+          <p class="welcome-panel-desc">A nova atmosfera do Bloco C na expansão do ParkShopping. Mesa de antepastos refinada, nobres cortes na parrilla e clássicos autorais em horário ininterrupto.</p>
+          <div class="welcome-panel-cta">
+            <span class="welcome-cta-btn">
+              <span>Entrar na Unidade</span>
+              <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </aside>
+
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
-    <a class="logo" href="#inicio" aria-label="Bloco C, início">Bloco C</a>
+    <div class="nav-left">
+      <a class="logo" href="#inicio" aria-label="Bloco C, início">Bloco C</a>
+      <button class="unit-pill" id="unitPill" type="button" aria-label="Trocar unidade do restaurante" data-switch-unit>
+        <span class="unit-pill-dot"></span>
+        <span class="unit-pill-name" id="navUnitName">Asa Sul</span>
+        <span class="unit-pill-badge">Trocar</span>
+      </button>
+    </div>
     <div class="gooey-nav-desktop-container" id="gooeyNavContainer"></div>
     <a class="btn btn-line btn-sm nav-cta" href="#reservas" data-wa>Reservar</a>
     <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
@@ -57,6 +127,13 @@
   </header>
 
   <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-unit-bar">
+      <span class="drawer-unit-label">Unidade Selecionada:</span>
+      <button class="drawer-unit-switch" type="button" data-switch-unit>
+        <span class="drawer-unit-name" id="drawerUnitName">Asa Sul</span>
+        <span class="drawer-unit-action">Trocar unidade &rarr;</span>
+      </button>
+    </div>
     <nav aria-label="Menu móvel">
       <a href="#executivo">Menu Executivo</a>
       <a href="#pratos">Pratos</a>
@@ -74,7 +151,8 @@
       <div class="hero-inner" id="heroInner">
         <h1 class="mask"><span>Bloco C</span></h1>
         <div class="hero-foot">
-          <p data-reveal style="--d:.5s">Cozinha contemporânea de inspiração afetiva.<br>CLS 211 Sul, Brasília.</p>
+          <div class="hero-unit-tag" id="heroUnitTag" data-reveal style="--d:.4s">Unidade Matriz · Asa Sul</div>
+          <p id="heroSubtitle" data-reveal style="--d:.5s">Cozinha contemporânea de inspiração afetiva.<br>CLS 211 Sul, Brasília.</p>
           <div class="hero-actions" data-reveal style="--d:.65s">
             <a class="btn btn-light" href="#reservas" data-wa>Reservar pelo WhatsApp</a>
             <button class="btn btn-line" type="button" data-open-menu>Ver cardápio completo</button>
@@ -87,23 +165,23 @@
     <section class="section light" id="executivo">
       <div class="exec-header">
         <div class="exec-header-left">
-          <span class="section-tag" data-reveal>Almoço de Segunda a Sexta · 12h às 15h30</span>
+          <span class="section-tag" id="executivoTag" data-reveal>Almoço de Segunda a Sexta · 12h às 15h30</span>
           <h2 class="display" data-reveal style="--d:.08s">Menu Executivo</h2>
-          <p class="exec-lead" data-reveal style="--d:.15s">A alta gastronomia contemporânea do chef Marcelo Petrarca em uma sequência de três tempos pensada para o seu almoço.</p>
+          <p class="exec-lead" id="executivoLead" data-reveal style="--d:.15s">A alta gastronomia contemporânea do chef Marcelo Petrarca em uma sequência de três tempos pensada para o seu almoço.</p>
         </div>
         <div class="exec-header-right" data-reveal style="--d:.18s">
           <dl class="exec-meta">
             <div>
               <dt>Horário</dt>
-              <dd>12h às 15h30</dd>
+              <dd id="execMetaHorario">12h às 15h30</dd>
             </div>
             <div>
               <dt>Dias</dt>
-              <dd>Seg a Sex</dd>
+              <dd id="execMetaDias">Seg a Sex</dd>
             </div>
             <div>
               <dt>Sequência</dt>
-              <dd>3 Tempos</dd>
+              <dd id="execMetaSeq">3 Tempos</dd>
             </div>
             <div>
               <dt>Serviço</dt>
@@ -239,7 +317,7 @@
       </div>
 
       <div class="exec-foot" data-reveal style="--d:.3s">
-        <p class="exec-foot-note">O Menu Executivo inclui couvert da casa, uma entrada, um prato principal e uma sobremesa. Servido exclusivamente de segunda a sexta-feira, das 12h às 15h30 (exceto feriados). Consulte opções vegetarianas com nossa equipe.</p>
+        <p class="exec-foot-note" id="executivoFootNote">O Menu Executivo inclui couvert da casa, uma entrada, um prato principal e uma sobremesa. Servido exclusivamente de segunda a sexta-feira, das 12h às 15h30 (exceto feriados). Consulte opções vegetarianas com nossa equipe.</p>
         <div class="exec-actions">
           <a class="btn btn-dark" href="#reservas">Reservar mesa para almoço</a>
           <button class="btn btn-ghost" type="button" data-open-menu>Ver cardápio completo</button>
@@ -299,17 +377,17 @@
 
     <!-- Visite -->
     <section class="section light" id="visite">
-      <h2 class="display" data-reveal>Visite o Bloco C</h2>
+      <h2 class="display" id="visiteTitle" data-reveal>Visite o Bloco C · Asa Sul</h2>
       <div class="visit-grid">
         <div class="info">
           <div data-reveal>
             <h3>Endereço</h3>
-            <p class="big">CLS 211, Bloco C, Lote 17, Loja 17<br>Asa Sul, Brasília – DF</p>
+            <p class="big" id="visiteAddress">CLS 211, Bloco C, Lote 17, Loja 17<br>Asa Sul, Brasília – DF</p>
           </div>
           <div data-reveal style="--d:.1s">
-            <h3>WhatsApp & Telefone</h3>
-            <p class="big"><a class="ulink" href="https://wa.me/5561992193011" target="_blank" rel="noopener">(61) 99219-3011</a></p>
-            <p style="font-size: 0.95rem; color: var(--stone); margin-top: 0.35rem;">Fixo: <a class="ulink" href="tel:+556133633062">(61) 3363-3062</a></p>
+            <h3>WhatsApp &amp; Telefone</h3>
+            <p class="big"><a class="ulink" id="visitePhone" href="https://wa.me/5561992193011" target="_blank" rel="noopener">(61) 99219-3011</a></p>
+            <p style="font-size: 0.95rem; color: var(--stone); margin-top: 0.35rem;" id="visitePhoneFixedRow">Fixo: <a class="ulink" id="visitePhoneFixed" href="tel:+556133633062">(61) 3363-3062</a></p>
           </div>
           <div data-reveal style="--d:.2s">
             <h3>Horários</h3>
@@ -325,7 +403,7 @@
           </div>
         </div>
         <div class="map" data-reveal style="--d:.15s">
-          <iframe title="Mapa com a localização do Bloco C" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          <iframe id="mapIframe" title="Mapa com a localização do Bloco C" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Bloco+C+Restaurante+CLS+211+Asa+Sul+Brasilia&amp;output=embed"></iframe>
         </div>
       </div>
@@ -336,7 +414,12 @@
       <div class="reserve-grid">
         <div>
           <h2 class="display" data-reveal>Reservas</h2>
-          <p class="lead" data-reveal style="--d:.1s">Escolha data, horário e número de pessoas. Você será direcionado ao WhatsApp do restaurante com a mensagem pronta para enviar.</p>
+          <p class="lead" id="reserveLead" data-reveal style="--d:.1s">Escolha data, horário e número de pessoas. Você será direcionado ao WhatsApp do restaurante com a mensagem pronta para enviar.</p>
+          <div class="reserve-unit-pill" data-reveal style="--d:.14s">
+            <span class="reserve-unit-label">Unidade selecionada:</span>
+            <span class="reserve-unit-val" id="reserveUnitName">Asa Sul</span>
+            <button class="reserve-unit-btn" type="button" data-switch-unit>Trocar</button>
+          </div>
         </div>
         <form class="form" id="reserveForm" novalidate data-reveal style="--d:.15s">
           <div class="field">
@@ -375,24 +458,30 @@
 
     <!-- Restaurante -->
     <section class="section light" id="restaurante">
-      <span class="section-tag" data-reveal>História & Conceito</span>
+      <span class="section-tag" id="aboutTag" data-reveal>História &amp; Conceito</span>
       <h2 class="display" data-reveal style="--d:.08s; margin-bottom: clamp(2rem, 5vw, 3.5rem);">O Restaurante</h2>
       <p class="statement" id="statement">Pratos de inspiração afetiva, no melhor estilo comfort food e contemporâneo, com pitadas de elegância e discreta sofisticação.</p>
 
       <div class="about-grid">
         <dl class="facts" data-reveal>
           <div><dt>Chef</dt><dd>Marcelo Petrarca</dd></div>
-          <div><dt>Desde</dt><dd>2015</dd></div>
+          <div id="factAno"><dt>Desde</dt><dd id="factAnoVal">2015</dd></div>
           <div><dt>Cozinha</dt><dd>Contemporânea</dd></div>
         </dl>
-        <p class="about-text" data-reveal style="--d:.15s">Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.</p>
+        <p class="about-text" id="aboutText" data-reveal style="--d:.15s">Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <a class="logo" href="#inicio">Bloco C</a>
-    <p>CLS 211, Bloco C, Lote 17, Loja 17 · Asa Sul · Brasília – DF</p>
+    <div class="footer-top">
+      <a class="logo" href="#inicio">Bloco C</a>
+      <div class="footer-unit-selector">
+        <span class="footer-unit-txt" id="footerUnitName">Unidade Asa Sul</span>
+        <button class="footer-unit-btn" type="button" data-switch-unit>Trocar unidade</button>
+      </div>
+    </div>
+    <p id="footerAddress">CLS 211, Bloco C, Lote 17, Loja 17 · Asa Sul · Brasília – DF</p>
     <a class="ulink" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener">@restauranteblococ</a>
   </footer>
 
