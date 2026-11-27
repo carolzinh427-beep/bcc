@@ -188,6 +188,18 @@
     "title": "Clássicos",
     "items": [
       {
+        "n": "Milanese, Pomodoro & Aligot",
+        "d": "Filé empanado crocante, pomodoro rústico artesanal e aligot aveludado de queijos · Boa Lembrança 2025",
+        "p": "R$ 189",
+        "img": "images/pratos/milanese-aligot.jpg"
+      },
+      {
+        "n": "Riso Maremonti",
+        "d": "Arroz caldoso aromático com camarões grelhados e cogumelos frescos ao azeite de ervas · Boa Lembrança 2026",
+        "p": "R$ 199",
+        "img": "images/pratos/riso-maremonti.jpg"
+      },
+      {
         "n": "Filet ao Dijon",
         "d": "Com nhoque frito, mel e grana padano",
         "p": "R$ 165",
@@ -1736,7 +1748,10 @@
     });
   }
 
-  function openMenu() {
+  function openMenu(initialCategory) {
+    if (typeof initialCategory === 'string' && MENU.some(c => c.id === initialCategory)) {
+      activeTab = initialCategory;
+    }
     lastFocus = document.activeElement;
     setDrawer(false);
     renderMenu(650);
@@ -1745,6 +1760,10 @@
     menu.setAttribute('aria-hidden', 'false');
     document.body.classList.add('is-locked');
     setTimeout(() => {
+      const activeTabEl = document.getElementById(`tab-${activeTab}`);
+      if (activeTabEl && tabsEl) {
+        activeTabEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
       updateTabArrows();
       menuClose.focus({ preventScroll: true });
     }, 400);
@@ -1756,7 +1775,14 @@
     if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus({ preventScroll: true });
   }
 
-  $$('[data-open-menu]').forEach(b => b.addEventListener('click', openMenu));
+  $$('[data-open-menu]').forEach(b => b.addEventListener('click', () => openMenu()));
+  $$('[data-open-category]').forEach(b => {
+    b.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cat = b.getAttribute('data-open-category');
+      openMenu(cat);
+    });
+  });
   menuClose.addEventListener('click', closeMenu);
   $$('[data-close-menu]', menu).forEach(a => a.addEventListener('click', closeMenu));
 
