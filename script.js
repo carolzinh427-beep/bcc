@@ -26,7 +26,8 @@
         "n": "Picadinho Bloco C",
         "d": "Cubos de filé mignon ao molho demi-glace especial, ovo pochê, banana caramelizada, arroz e farofinha crocante",
         "p": "",
-        "img": "images/pratos/picadinho.jpg"
+        "img": "images/pratos/picadinho.jpg",
+        "badge": "Clássico da Casa"
       },
       {
         "n": "Peixe do Dia Grelhado",
@@ -50,9 +51,11 @@
         "n": "Mini Churros Bloco C",
         "d": "Churros artesanais crocantes com doce de leite caseiro cremoso morno",
         "p": "",
-        "img": "images/pratos/churros.jpg"
+        "img": "images/pratos/churros.jpg",
+        "badge": "Sobremesa Clássica"
       }
-    ]
+    ],
+    "desc": "Almoço executivo em 3 tempos exclusivo para dias úteis · Entrada, Prato Principal e Sobremesa"
   },
   {
     "id": "entradas",
@@ -61,88 +64,96 @@
       {
         "n": "Carpaccio de Filé Tradicional",
         "d": "Com molho de mostarda, Grana Padano e alcaparras",
-        "p": "R$ 9.600",
-        "img": "images/cardapio/f2368cd0-7a11-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 96",
+        "img": "images/cardapio/f2368cd0-7a11-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Clássico"
       },
       {
         "n": "Carpaccio de Filé da Casa",
         "d": "Com molho de mostarda, Grana Padano, alcaparras e mel trufado",
-        "p": "R$ 9.900",
-        "img": "images/cardapio/103a9230-7a12-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 99",
+        "img": "images/cardapio/103a9230-7a12-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Favorito da Casa"
       },
       {
         "n": "Cubos de Filé",
         "d": "Ao roti com Grana Padano maçaricado",
-        "p": "R$ 9.600",
+        "p": "R$ 96",
         "img": "images/cardapio/38a651a0-7a12-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Burrata com Passata de Tomate (La Bufalina)",
         "d": "com pesto de manjericão e redução citríca",
-        "p": "R$ 9.600",
-        "img": "images/cardapio/2208c770-5c6f-11ee-8123-0fcc262027e0.jpg"
+        "p": "R$ 96",
+        "img": "images/cardapio/2208c770-5c6f-11ee-8123-0fcc262027e0.jpg",
+        "badge": "La Bufalina"
       },
       {
         "n": "Burrata ao Forno ( La Bufalina )",
         "d": "com ragout de linguicinha  blumenau",
-        "p": "R$ 9.900",
+        "p": "R$ 99",
         "img": null
       },
       {
         "n": "Pastel de Queijo Cremoso",
         "d": "Com mel trufado",
-        "p": "R$ 6.600",
+        "p": "R$ 66",
         "img": "images/cardapio/9b4bc470-7a12-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Brie em Massa Folhada",
         "d": "com caramelo de nuts",
-        "p": "R$ 9.900",
-        "img": "images/cardapio/aa868a60-7a12-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 99",
+        "img": "images/cardapio/aa868a60-7a12-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Destaque"
       },
       {
         "n": "Bruschettas da Casa",
         "d": "pomodoro, cogumelos trufados e queijos de cabra",
-        "p": "R$ 9.600",
+        "p": "R$ 96",
         "img": "images/cardapio/ba8367d0-7a12-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Steak de Tartar",
         "d": "Com mini salada e batatas crocantes",
-        "p": "R$ 9.900",
+        "p": "R$ 99",
         "img": null
       },
       {
         "n": "Croquete de Brisket",
         "d": "Com Aioli Secreto",
-        "p": "R$ 8.900",
-        "img": "images/cardapio/01175670-7a13-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 89",
+        "img": "images/cardapio/01175670-7a13-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Para Compartilhar"
       },
       {
         "n": "Bacalhau Desfiado, ovas",
         "d": "E fondue de grana padano trufado",
-        "p": "R$ 12.900",
-        "img": "images/cardapio/03a5a2a0-7a38-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 129",
+        "img": "images/cardapio/03a5a2a0-7a38-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Destaque"
       },
       {
         "n": "Seleção de Queijos do Chef",
         "d": "Com redução de balsâmico e mel trufado",
-        "p": "R$ 11.900",
+        "p": "R$ 119",
         "img": "images/cardapio/2fc28300-7a13-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Cesta de Pão",
         "d": "",
-        "p": "R$ 1.600",
+        "p": "R$ 16",
         "img": null
       },
       {
         "n": "TARTAR DE SALMÃO,OVAS",
         "d": "e fonduta de grana padano e azeite verde",
-        "p": "R$ 12.900",
-        "img": "images/cardapio/5808b910-7a13-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 129",
+        "img": "images/cardapio/5808b910-7a13-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Destaque"
       }
-    ]
+    ],
+    "desc": "Seleção para iniciar a experiência: carpaccios, queijos nobres e antepastos autorais"
   },
   {
     "id": "saladas",
@@ -151,34 +162,35 @@
       {
         "n": "Salada do Chef",
         "d": "Mix de folhas verdes, queijo cremoso, redução cítrica e farofa secreta",
-        "p": "R$ 7.900",
+        "p": "R$ 79",
         "img": null
       },
       {
         "n": "Salada de Figo Fresco",
         "d": "Mix de folhas, queijo de cabra, mel e farofa secreta",
-        "p": "R$ 8.900",
+        "p": "R$ 89",
         "img": null
       },
       {
         "n": "Salada de Bloco C",
         "d": "mix de folhas, molho de parmesão, palmito, tomate cereja, cenoura e batata palha",
-        "p": "R$ 7.900",
+        "p": "R$ 79",
         "img": null
       },
       {
         "n": "Salada de Carpaccio",
         "d": "Mix de folhas, molho de mostarda, grana padano, redução balsânico e alcaparones",
-        "p": "R$ 8.500",
+        "p": "R$ 85",
         "img": "images/cardapio/bc064960-7a35-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Salada da Carol",
         "d": "Queijo de cabra, rúcula, tomate cereja, damasmo e pesto",
-        "p": "R$ 13.200",
+        "p": "R$ 132",
         "img": null
       }
-    ]
+    ],
+    "desc": "Folhas frescas selecionadas, vinagretes artesanais e combinações contemporâneas"
   },
   {
     "id": "classicos",
@@ -187,40 +199,45 @@
       {
         "n": "Filet ao Dijon",
         "d": "Com nhoque frito, mel e grana padano",
-        "p": "R$ 16.500",
-        "img": null
+        "p": "R$ 165",
+        "img": null,
+        "badge": "Favorito"
       },
       {
         "n": "Polvo Grelhado",
         "d": "com arroz negro e aioli",
-        "p": "R$ 19.900",
-        "img": null
+        "p": "R$ 199",
+        "img": null,
+        "badge": "Destaque"
       },
       {
         "n": "Camarão na Fonduta de Brie",
         "d": "Com risoto de banana caramelizada",
-        "p": "R$ 22.000",
-        "img": "images/cardapio/be791bb0-5c6e-11ee-8123-0fcc262027e0.jpg"
+        "p": "R$ 220",
+        "img": "images/cardapio/be791bb0-5c6e-11ee-8123-0fcc262027e0.jpg",
+        "badge": "Clássico da Casa"
       },
       {
         "n": "Bacalhau em crosta de doce de leite",
         "d": "Com aligot de mandioquinha",
-        "p": "R$ 19.900",
-        "img": null
+        "p": "R$ 199",
+        "img": null,
+        "badge": "Autoral do Chef"
       },
       {
         "n": "Bacalhoada do Chef",
         "d": "Em nata com batata, brócolis, ovo e arroz de amêndoas",
-        "p": "R$ 19.900",
+        "p": "R$ 199",
         "img": "images/cardapio/b568a3c0-7a42-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Filet Mignon  ao Roquefort",
         "d": "Com maçã caramelizada e arroz de roti ao forno",
-        "p": "R$ 13.900",
+        "p": "R$ 139",
         "img": "images/cardapio/017490d0-7a43-11f1-88c0-3350d9e629f0.jpg"
       }
-    ]
+    ],
+    "desc": "As criações autorais consagradas que definiram a história do Bloco C"
   },
   {
     "id": "almoco",
@@ -229,88 +246,90 @@
       {
         "n": "PF do Chef",
         "d": "bife acebolado, feijão gordo, batata frita, ovo frito e arroz branco.",
-        "p": "R$ 9.800",
+        "p": "R$ 98",
         "img": "images/cardapio/2fb1a330-7a4c-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Picadinho de Filet Mignon",
         "d": "Com ovo pochê, arroz branco, farofa crocante e banana caramelizada",
-        "p": "R$ 9.800",
-        "img": "images/cardapio/e0bd4060-7a44-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 98",
+        "img": "images/cardapio/e0bd4060-7a44-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Clássico da Casa"
       },
       {
         "n": "Denver Steak, Vinagrete de tomate",
         "d": "Com farofa de ovos e arroz com brócolis",
-        "p": "R$ 18.900",
+        "p": "R$ 189",
         "img": "images/cardapio/4d6da310-7a4c-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Nhoque Caipira",
         "d": "Com ovo frito, farofa de bacon e couve crispy",
-        "p": "R$ 9.600",
+        "p": "R$ 96",
         "img": "images/cardapio/66e08bc0-7a45-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Bobó de Camarão",
         "d": "Com banana assada, arroz de amêndoas e farofa do chef",
-        "p": "R$ 21.000",
+        "p": "R$ 210",
         "img": "images/cardapio/86d2f3a0-7a45-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Salmão Grelhado",
         "d": "Com mix de quinoa e saladinha de brotos e azeite de limão siciliano",
-        "p": "R$ 14.900",
+        "p": "R$ 149",
         "img": "images/cardapio/d7f70480-7a48-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Peixe Branco Grelhado",
         "d": "com molho de limão e couscous marroquino",
-        "p": "R$ 14.900",
+        "p": "R$ 149",
         "img": "images/cardapio/dd83a6f0-7a49-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Carne de Panela",
         "d": "Com baião de dois, queijo coalho e farofa do chef",
-        "p": "R$ 9.600",
+        "p": "R$ 96",
         "img": "images/cardapio/0332de70-7a4a-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Paillard de Frango",
         "d": "Com legumes grelhados e creme de milho",
-        "p": "R$ 9.900",
+        "p": "R$ 99",
         "img": "images/cardapio/312b83e0-7a4a-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Tagliata de Angus",
         "d": "Com nhoque ao brie, crispy de parma e pesto de manjericão",
-        "p": "R$ 11.900",
+        "p": "R$ 119",
         "img": "images/cardapio/56453220-7a4a-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Moquequinha de Peixe ao Curry",
         "d": "Com couscous marroquino e banana caramelizada",
-        "p": "R$ 12.900",
+        "p": "R$ 129",
         "img": "images/cardapio/9e8b64a0-7a4a-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Peixe Branco Tempurá",
         "d": "Com mousseline de batata com limão e tomate assado",
-        "p": "R$ 14.900",
+        "p": "R$ 149",
         "img": "images/cardapio/8591ced0-7a4a-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Filet Migon ao Roti",
         "d": "Com Risoni Trufado",
-        "p": "R$ 16.500",
+        "p": "R$ 165",
         "img": null
       },
       {
         "n": "Risoto de Picadinho",
         "d": "com banana caramelizada, ovo pochê e farofa de panko",
-        "p": "R$ 11.900",
+        "p": "R$ 119",
         "img": null
       }
-    ]
+    ],
+    "desc": "Pratos de conforto e clássicos do chef pensados para um almoço memorável"
   },
   {
     "id": "principais",
@@ -319,94 +338,99 @@
       {
         "n": "Filet com Rapadura",
         "d": "Ao molho roti e risoto de Grana Padano com rapadura",
-        "p": "R$ 15.500",
-        "img": "images/cardapio/4919d8e0-5c6f-11ee-8123-0fcc262027e0.jpg"
+        "p": "R$ 155",
+        "img": "images/cardapio/4919d8e0-5c6f-11ee-8123-0fcc262027e0.jpg",
+        "badge": "Autoral do Chef"
       },
       {
         "n": "Filet em Crosta de Pão",
         "d": "com cebola caramelizada e risoto de brie",
-        "p": "R$ 15.900",
-        "img": "images/cardapio/510c3bb0-7a4e-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 159",
+        "img": "images/cardapio/510c3bb0-7a4e-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Assinatura do Chef"
       },
       {
         "n": "Camarão Spicy",
         "d": "Com arroz cremoso de curry e manga",
-        "p": "R$ 22.000",
+        "p": "R$ 220",
         "img": "images/cardapio/a8441d30-7a4e-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Cotoletta Alla  Milanese",
         "d": "Com presunto de parma, parmesão e risoto de basilico",
-        "p": "R$ 15.900",
-        "img": "images/cardapio/52ee13b0-7a51-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 159",
+        "img": "images/cardapio/52ee13b0-7a51-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Especialidade"
       },
       {
         "n": "Ancho em Crosta de Roquefort",
         "d": "Com risoto de cebola caramelizada",
-        "p": "R$ 15.900",
+        "p": "R$ 159",
         "img": "images/cardapio/49a5be40-7a4f-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Bacalhau com tomate assado",
         "d": "Batata sauté e azeitonas pretas",
-        "p": "R$ 19.900",
+        "p": "R$ 199",
         "img": "images/cardapio/6dad6040-7a4f-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Peixe Branco com Ovas, Beurre Blanc",
         "d": "E capelline na manteiga",
-        "p": "R$ 14.900",
+        "p": "R$ 149",
         "img": "images/cardapio/8a2399b0-7a4f-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Magret de Canard ao Cassis",
         "d": "Com linguine ao roquefort",
-        "p": "R$ 15.500",
+        "p": "R$ 155",
         "img": "images/cardapio/a18a3370-7a4f-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Costela 18 Horas, Defumada",
         "d": "Com nhoque frito na fonduta de queijo vale do testo",
-        "p": "R$ 15.900",
+        "p": "R$ 159",
         "img": "images/cardapio/16c55700-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Risoto de Frutos do Mar",
         "d": "Lula, Camarão, Mexilhão e Polvo",
-        "p": "R$ 19.900",
+        "p": "R$ 199",
         "img": null
       },
       {
         "n": "Stinco de cordeiro",
         "d": "com risoto de açafrão",
-        "p": "R$ 18.900",
+        "p": "R$ 189",
         "img": null
       },
       {
         "n": "Carré de cordeiro",
         "d": "em crosta de pistache com arroz cremoso de dijon",
-        "p": "R$ 18.900",
+        "p": "R$ 189",
         "img": null
       },
       {
         "n": "Tortelli de lagosta ao limone",
         "d": "",
-        "p": "R$ 19.900",
+        "p": "R$ 199",
         "img": null
       },
       {
         "n": "Cottoleta à milanesa",
         "d": "com nhoque ao pomodoro",
-        "p": "R$ 18.900",
-        "img": null
+        "p": "R$ 189",
+        "img": null,
+        "badge": "Especialidade"
       },
       {
         "n": "Baby beef ao poivre",
         "d": "com risoto de parmesão",
-        "p": "R$ 18.900",
+        "p": "R$ 189",
         "img": null
       }
-    ]
+    ],
+    "desc": "Cortes nobres, pescados do dia e carnes grelhadas com guarnições sofisticadas"
   },
   {
     "id": "massas-arrozes",
@@ -415,61 +439,62 @@
       {
         "n": "Ravióli de Queijo de Cabra",
         "d": "Com cebola caramelizada",
-        "p": "R$ 11.900",
+        "p": "R$ 119",
         "img": "images/cardapio/66d9f7e0-7a4c-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Ravióli de Burrata",
         "d": "Ao pomodoro com pesto de manjerição e confit de limão siciliano",
-        "p": "R$ 10.900",
+        "p": "R$ 109",
         "img": "images/cardapio/9fc950f0-7a4c-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Ravioloni de Compota de Figo",
         "d": "Na fonduta de Queijo tulha",
-        "p": "R$ 10.900",
+        "p": "R$ 109",
         "img": null
       },
       {
         "n": "Macarrão do Petrarca",
         "d": "Spaguetti na manteiga, ovo frito, pecorino e pimenta do reino",
-        "p": "R$ 9.800",
-        "img": "images/cardapio/3a4e8190-7a4d-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 98",
+        "img": "images/cardapio/3a4e8190-7a4d-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Receita do Chef"
       },
       {
         "n": "Spaguetti ao Limone",
         "d": "",
-        "p": "R$ 9.900",
+        "p": "R$ 99",
         "img": null
       },
       {
         "n": "Arroz de Confit de Pato",
         "d": "com ovo pochê, linguicinha blumenal e batata palha caseira",
-        "p": "R$ 13.900",
+        "p": "R$ 139",
         "img": "images/cardapio/5a934f30-7a4d-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Arroz de Rabada",
         "d": "com ailoli de agrião, ovo frito e batata palha caseira",
-        "p": "R$ 11.900",
+        "p": "R$ 119",
         "img": "images/cardapio/964aa1e0-7a4d-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Arroz de Polvo",
         "d": "com tapenade de azeitonas pretas",
-        "p": "R$ 14.900",
+        "p": "R$ 149",
         "img": "images/cardapio/7b3c5ce0-7a4d-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Arroz de Bacalhau",
         "d": "com ovo pochê e  batata palha caseiro",
-        "p": "R$ 16.900",
+        "p": "R$ 169",
         "img": null
       },
       {
         "n": "Arroz Caldoso de Camarão",
         "d": "com mascarpone, farofa de presunto de Parma e ceboullete",
-        "p": "R$ 23.900",
+        "p": "R$ 239",
         "img": "images/cardapio/38836910-7a4e-11f1-88c0-3350d9e629f0.jpg"
       }
     ]
@@ -481,28 +506,29 @@
       {
         "n": "Filet Mignon",
         "d": "Com arroz cremoso e batata palha caseira trufada",
-        "p": "R$ 9.900",
+        "p": "R$ 99",
         "img": "images/cardapio/4e33c850-7a43-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Frango",
         "d": "Com arroz cremoso e batata palha caseira trufada",
-        "p": "R$ 8.900",
+        "p": "R$ 89",
         "img": "images/cardapio/5b5e24d0-7a43-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Camarão",
         "d": "Com arroz cremoso e batata palha caseira trufada",
-        "p": "R$ 18.900",
+        "p": "R$ 189",
         "img": "images/cardapio/76921a40-7a43-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Cogumelos",
         "d": "Com arroz cremoso e batata palha caseira trufada",
-        "p": "R$ 9.400",
+        "p": "R$ 94",
         "img": null
       }
-    ]
+    ],
+    "desc": "A consagrada receita de estrogonofe do Bloco C, com batata palha fininha caseira"
   },
   {
     "id": "sobremesas",
@@ -511,76 +537,79 @@
       {
         "n": "Churros de Banana",
         "d": "Com doce de leite caseiro ou brigadeiro de leite ninho",
-        "p": "R$ 4.900",
-        "img": "images/cardapio/b0423bc0-5c6f-11ee-8123-0fcc262027e0.jpg"
+        "p": "R$ 49",
+        "img": "images/cardapio/b0423bc0-5c6f-11ee-8123-0fcc262027e0.jpg",
+        "badge": "Sobremesa Clássica"
       },
       {
         "n": "Crostata de Amêndoas",
         "d": "Com sorvete de pistache e calda de chocolate",
-        "p": "R$ 4.900",
-        "img": "images/cardapio/469a0f70-7a50-11f1-88c0-3350d9e629f0.jpg"
+        "p": "R$ 49",
+        "img": "images/cardapio/469a0f70-7a50-11f1-88c0-3350d9e629f0.jpg",
+        "badge": "Favorito"
       },
       {
         "n": "Bolinho de Chuva de Cenoura",
         "d": "Com calda de chocolate",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": "images/cardapio/605e6f50-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Crepe Soufflê",
         "d": "Com creme de baunilha e caramelo de laranja",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": null
       },
       {
         "n": "Casadinho de Colher",
         "d": "Brigadeiro branco e preto",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": "images/cardapio/7f7a4d50-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Bolo de Cenoura",
         "d": "Com calda de brigadeiro de colher",
-        "p": "R$ 4.700",
+        "p": "R$ 47",
         "img": "images/cardapio/8d4f68c0-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Bolo de Chocolate",
         "d": "Com calda de brigadeiro e sorvete de macadâmia",
-        "p": "R$ 4.700",
+        "p": "R$ 47",
         "img": "images/cardapio/9c841430-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Rabanada Tradicional",
         "d": "Com sorvete de baunilha e calda de doce de leite",
-        "p": "R$ 4.700",
+        "p": "R$ 47",
         "img": "images/cardapio/dafd4600-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Mousse de Chocolate",
         "d": "Com Calda de caramelo e flor de sal",
-        "p": "R$ 4.600",
+        "p": "R$ 46",
         "img": "images/cardapio/fe567f90-7a50-11f1-88c0-3350d9e629f0.jpg"
       },
       {
         "n": "Nossos Sorvetes",
         "d": "Consultar o garçom",
-        "p": "R$ 4.600",
+        "p": "R$ 46",
         "img": null
       },
       {
         "n": "Churros Dueto de Banana",
         "d": "Com doce de leite caseiro e brigadeiro de leite ninho",
-        "p": "R$ 6.500",
+        "p": "R$ 65",
         "img": null
       },
       {
         "n": "Romeu e Julieta",
         "d": "bombom de goiabada com mousse de queijo e farofa de amêndoas",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": null
       }
-    ]
+    ],
+    "desc": "Criações doces com texturas envolventes, chocolates nobres e frutas da estação"
   },
   {
     "id": "bebidas",
@@ -589,130 +618,131 @@
       {
         "n": "Água Prata sem gás",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/f045a6b0-f433-11ee-bca4-6b665f53f9f1.jpg"
       },
       {
         "n": "Água Prata com gás",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/35194630-5bae-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "San Pellegrino com Gás",
         "d": "",
-        "p": "R$ 2.990",
+        "p": "R$ 29,90",
         "img": "images/cardapio/7c1852b0-5bae-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Acqua Perrier",
         "d": "",
-        "p": "R$ 2.600",
+        "p": "R$ 26",
         "img": "images/cardapio/9ad288b0-5bae-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Cambuquira",
         "d": "",
-        "p": "R$ 1.500",
+        "p": "R$ 15",
         "img": "images/cardapio/cb468e60-5bae-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Acqua Panna",
         "d": "",
-        "p": "R$ 2.890",
+        "p": "R$ 28,90",
         "img": "images/cardapio/e85473f0-5bae-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Pedras Salgadas",
         "d": "",
-        "p": "R$ 4.890",
+        "p": "R$ 48,90",
         "img": "images/cardapio/415f8ed0-5baf-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Água Voss Sem Gás",
         "d": "",
-        "p": "R$ 6.500",
+        "p": "R$ 65",
         "img": null
       },
       {
         "n": "Sucos Naturais",
         "d": "",
-        "p": "R$ 1.890",
+        "p": "R$ 18,90",
         "img": null
       },
       {
         "n": "Sucos Especiais",
         "d": "",
-        "p": "R$ 2.390",
+        "p": "R$ 23,90",
         "img": null
       },
       {
         "n": "Suco de Tomate Temperado",
         "d": "",
-        "p": "R$ 2.900",
+        "p": "R$ 29",
         "img": null
       },
       {
         "n": "Suco de Uva Integral",
         "d": "",
-        "p": "R$ 2.300",
+        "p": "R$ 23",
         "img": null
       },
       {
         "n": "Coca Cola",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/8e74aeb0-5bd4-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Coca Cola Zero",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/9bcbe790-5bd4-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Guaraná Antártica",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/aae60620-5bd4-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Guaraná Antárctica Zero",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/8a1110d0-5bb0-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Energético Red Bull",
         "d": "",
-        "p": "R$ 2.800",
+        "p": "R$ 28",
         "img": "images/cardapio/e9af8530-5bb0-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Água Tônica",
         "d": "",
-        "p": "R$ 1.300",
+        "p": "R$ 13",
         "img": "images/cardapio/d12a78c0-5bd4-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Pepsi Black",
         "d": "",
-        "p": "R$ 990",
+        "p": "R$ 9,90",
         "img": "images/cardapio/d9dc2750-eeb1-11ee-90d3-e52bf092db84.jpg"
       },
       {
         "n": "Café 3 Corações",
         "d": "",
-        "p": "R$ 900",
+        "p": "R$ 9",
         "img": null
       },
       {
         "n": "Chás",
         "d": "",
-        "p": "R$ 1.400",
+        "p": "R$ 14",
         "img": null
       }
-    ]
+    ],
+    "desc": "Águas especiais, refrigerantes e opções não alcoólicas"
   },
   {
     "id": "drinks",
@@ -721,244 +751,245 @@
       {
         "n": "Kir Royal",
         "d": "Espumante, creme de cassis e cereja",
-        "p": "R$ 3.300",
+        "p": "R$ 33",
         "img": null
       },
       {
         "n": "Aperol Spritz",
         "d": "Aperol, espumante e água gaseificada",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Cosmopolitan",
         "d": "Vodka, Cramberry, Cointreau e Suco de Limão",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Dry Martini",
         "d": "Gin Tanqueray, Martiny Dry e Azeitona verde",
-        "p": "R$ 3.800",
+        "p": "R$ 38",
         "img": null
       },
       {
         "n": "Mojito Tradicional",
         "d": "Bacardi prata, Hortelã, Suco de limão e Club Soda",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Blood Mary",
         "d": "Suco de tomate temperado, Vodka, Salsão e Limão",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Negroni",
         "d": "Gim Tanqueray, Carpano e Campari",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Margarita",
         "d": "Tequila Jose Cuervo, Cointreau, Suco de limão e Curaçau Blue",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Apple Martini",
         "d": "Vodka, Martiny Dry e Creme de Maçã Verde",
-        "p": "R$ 3.600",
+        "p": "R$ 36",
         "img": null
       },
       {
         "n": "Whisky Souer",
         "d": "Jack Daniel’s e Sour Mix",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Moscow Mule",
         "d": "Vodka Absolut, Xarope de Gengibre e Suco de Limão",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Manhattan",
         "d": "Jack Daniel’s, Carpano, Angustura Bitter e Cereja",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Sex On The Beach",
         "d": "Vodka, Licor de Pêssego Suco de Laranja e Granadine",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Refresco de Vinho do Porto",
         "d": "Vinho do Porto, Suco de Limão e Club Soda",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Sensação",
         "d": "Suco de Laranja, Suco de Morango, Creme de Maçã Verde e Frutas Vermelhas",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Mandarini",
         "d": "Creme de Tangerina, Creme de Maçã Verde, Club Soda e Cereja",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       },
       {
         "n": "Balão Mágico",
         "d": "Vodka Ciroc, Peach Tree, Sour Mix, Espumante e Granadine",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Orange Fizz",
         "d": "Vodka Ciroc, Crème de Tangerina, Calda de Frutas Vermelhas e Espumante",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "ZuKa",
         "d": "Vodka Ciroc, Xarope Maçã Verde, Peach Tree, Suco de Laranja e Club Soda",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Norde’s Espanha",
         "d": "Uva Verde, Twist de Limão Siciliano",
-        "p": "R$ 8.800",
+        "p": "R$ 88",
         "img": null
       },
       {
         "n": "Monkey 47, Alemanha",
         "d": "Limão Taiti Desidratado Zimbro",
-        "p": "R$ 7.900",
+        "p": "R$ 79",
         "img": null
       },
       {
         "n": "Hendricks, Inglaterra",
         "d": "Zimbro. Pepino e Alecrim",
-        "p": "R$ 6.900",
+        "p": "R$ 69",
         "img": null
       },
       {
         "n": "Bulldog, Inglaterra",
         "d": "Limão Siciliano Desidratado e Baunilha",
-        "p": "R$ 6.900",
+        "p": "R$ 69",
         "img": null
       },
       {
         "n": "Tanqueray Ten, Inglaterra",
         "d": "Laranja Limão. Limão Taitit",
-        "p": "R$ 6.400",
+        "p": "R$ 64",
         "img": null
       },
       {
         "n": "Tanqueray Servilla, Inglaterra",
         "d": "Laranja Bahia, Alecrim, Xarope de Tangerina e Zimbro",
-        "p": "R$ 5.900",
+        "p": "R$ 59",
         "img": null
       },
       {
         "n": "Tanqueray, Inglaterra",
         "d": "Limão Taiti. Limão Siciliano Desidratado. Canela",
-        "p": "R$ 5.900",
+        "p": "R$ 59",
         "img": null
       },
       {
         "n": "Tanqueray, Inglaterra",
         "d": "Limão Taiti. Limão Siciliano Desidratado. Canela",
-        "p": "R$ 5.900",
+        "p": "R$ 59",
         "img": null
       },
       {
         "n": "Beefeater, Inglaterra",
         "d": "Flor de Hibisco e Limão Thaiti Desidratado",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": null
       },
       {
         "n": "The Botanist, Escócia",
         "d": "Limão Desidratado. Limão Taiti",
-        "p": "R$ 7.900",
+        "p": "R$ 79",
         "img": null
       },
       {
         "n": "Beefeater 24, Inglaterra",
         "d": "Abacaxi Desidratado e Zimbro",
-        "p": "R$ 5.400",
+        "p": "R$ 54",
         "img": null
       },
       {
         "n": "Malfy com Limone, Itália",
         "d": "Casca de Limão Siciliano. Hortelã",
-        "p": "R$ 7.900",
+        "p": "R$ 79",
         "img": null
       },
       {
         "n": "Gordon ́s, Brasil",
         "d": "Frutas Vermelhas e Hortelã",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": null
       },
       {
         "n": "F. Vermelhas, Lichia, Lima da Pérsia, Kiwi Uva c/ limão e Uva c/ manjericão",
         "d": "",
-        "p": "R$ 3.700",
+        "p": "R$ 37",
         "img": null
       },
       {
         "n": "Vodka Smirnoff",
         "d": "",
-        "p": "R$ 3.300",
+        "p": "R$ 33",
         "img": null
       },
       {
         "n": "Vodka Cirôc",
         "d": "",
-        "p": "R$ 4.200",
+        "p": "R$ 42",
         "img": null
       },
       {
         "n": "Vodka Grey Goose",
         "d": "",
-        "p": "R$ 4.700",
+        "p": "R$ 47",
         "img": null
       },
       {
         "n": "Vodka Absolut",
         "d": "",
-        "p": "R$ 3.500",
+        "p": "R$ 35",
         "img": null
       },
       {
         "n": "Vodka Pravda",
         "d": "",
-        "p": "R$ 4.900",
+        "p": "R$ 49",
         "img": null
       },
       {
         "n": "Belvedere",
         "d": "",
-        "p": "R$ 5.000",
+        "p": "R$ 50",
         "img": null
       },
       {
         "n": "Importada",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": null
       }
-    ]
+    ],
+    "desc": "Coquetelaria clássica e autoral preparada pelos nossos bartenders"
   },
   {
     "id": "cervejas-doses",
@@ -967,145 +998,145 @@
       {
         "n": "Stella Artois",
         "d": "",
-        "p": "R$ 2.100",
+        "p": "R$ 21",
         "img": "images/cardapio/0b169640-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Stella Artois Pure Gold",
         "d": "",
-        "p": "R$ 1.900",
+        "p": "R$ 19",
         "img": "images/cardapio/2a263f40-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Spaten",
         "d": "",
-        "p": "R$ 1.700",
+        "p": "R$ 17",
         "img": "images/cardapio/4530b3b0-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Corona",
         "d": "",
-        "p": "R$ 2.200",
+        "p": "R$ 22",
         "img": "images/cardapio/87eff3a0-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Corona Zero Álcool",
         "d": "",
-        "p": "R$ 2.200",
+        "p": "R$ 22",
         "img": "images/cardapio/909479f0-67d5-11f0-84e1-fde0ff81eaaa.jpg"
       },
       {
         "n": "Absolut",
         "d": "",
-        "p": "R$ 3.500",
+        "p": "R$ 35",
         "img": "images/cardapio/a190c5f0-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Smirnoff",
         "d": "",
-        "p": "R$ 2.600",
+        "p": "R$ 26",
         "img": "images/cardapio/baa44c60-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Grey Goose",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/d61a7af0-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Cirôc",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/ead1fa40-5bb2-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Belvedere",
         "d": "",
-        "p": "R$ 4.500",
+        "p": "R$ 45",
         "img": "images/cardapio/08cf6ff0-5bb3-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Pravda",
         "d": "",
-        "p": "R$ 4.300",
+        "p": "R$ 43",
         "img": "images/cardapio/c9dc3e40-5bd5-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Absolut Elyx",
         "d": "",
-        "p": "R$ 4.000",
+        "p": "R$ 40",
         "img": "images/cardapio/f28f3fe0-5bd5-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Amarula",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/432cd7f0-5bb3-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Licor 43",
         "d": "",
-        "p": "R$ 4.490",
+        "p": "R$ 44,90",
         "img": "images/cardapio/dec2dc50-5bb3-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Cointreau",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/f490fbc0-5bb3-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Drambuie",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/0d4d1360-5bb4-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Baileys",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/28c62820-5bb4-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Limoncello",
         "d": "",
-        "p": "R$ 3.900",
+        "p": "R$ 39",
         "img": "images/cardapio/2cf9a030-5bd6-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Frangélico",
         "d": "",
-        "p": "R$ 4.490",
+        "p": "R$ 44,90",
         "img": "images/cardapio/6b071170-0cb3-11f0-87aa-979aa62eeeb8.jpg"
       },
       {
         "n": "Chartreuse Amarelo",
         "d": "",
-        "p": "R$ 8.900",
+        "p": "R$ 89",
         "img": "images/cardapio/f950bbd0-5bb5-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Chartreuse Verde",
         "d": "",
-        "p": "R$ 9.900",
+        "p": "R$ 99",
         "img": "images/cardapio/19107af0-5bb6-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Anísio Santiago",
         "d": "",
-        "p": "R$ 7.800",
+        "p": "R$ 78",
         "img": "images/cardapio/98440e70-5bd6-11ee-8123-0fcc262027e0.jpg"
       },
       {
         "n": "Cachaça de Banana",
         "d": "",
-        "p": "R$ 3.300",
+        "p": "R$ 33",
         "img": null
       },
       {
         "n": "Sagatiba",
         "d": "",
-        "p": "R$ 2.500",
+        "p": "R$ 25",
         "img": "images/cardapio/bfef15f0-5bd6-11ee-8123-0fcc262027e0.jpg"
       }
     ]
@@ -1122,7 +1153,7 @@
       fullName: 'Bloco C · Asa Sul',
       badge: 'Unidade Matriz · Asa Sul',
       addressShort: 'CLS 211, Bloco C, Lote 17, Loja 17 · Asa Sul',
-      addressHtml: 'CLS 211, Bloco C, Lote 17, Loja 17<br>Asa Sul, Brasília – DF',
+      addressHtml: 'CLS 211, Bloco C, Lote 17, Loja 17<br>Asa Sul, Brasília – DF, CEP 70274-530',
       phoneDisplay: '(61) 99219-3011',
       whatsapp: '5561992193011',
       fixedDisplay: '(61) 3363-3062',
@@ -1142,7 +1173,7 @@
         weekend: { lunch: [720, 960], dinner: [1170, 1500] },
         sunday: null
       },
-      closedMessage: 'O restaurante fecha aos domingos nesta unidade. Escolha outra data.',
+      closedMessage: 'O restaurante fecha aos domingos na Unidade Asa Sul. Convidamos você a conhecer o Bloco C Park Shopping (aberto aos domingos das 12h às 22h) ou escolher outra data.',
       execTag: 'Almoço de Segunda a Sexta · 12h às 15h30',
       execLead: 'A alta gastronomia contemporânea do chef Marcelo Petrarca em uma sequência de três tempos pensada para o seu almoço.',
       execHorario: '12h às 15h30',
@@ -1153,7 +1184,8 @@
       aboutAno: '2015',
       aboutStatement: 'Pratos de inspiração afetiva, no melhor estilo comfort food e contemporâneo, com pitadas de elegância e discreta sofisticação.',
       aboutText: 'Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.',
-      greeting: 'Olá, gostaria de reservar uma mesa no Bloco C Asa Sul.'
+      menuFootNote: 'Asa Sul · Menu Executivo em 3 tempos de segunda a sexta (12h às 15h30). Jantar e fins de semana à la carte. Valores e disponibilidade sujeitos a confirmação.',
+      greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Asa Sul.'
     },
     'park-shopping': {
       id: 'park-shopping',
@@ -1161,7 +1193,7 @@
       fullName: 'Bloco C · Park Shopping',
       badge: 'Nova Unidade · ParkShopping',
       addressShort: 'ParkShopping – 1º Piso, LUC E01-07 · Boulevard Gastronômico',
-      addressHtml: 'ParkShopping – 1º Piso, LUC E01-07<br>Boulevard Gastronômico da Expansão · SAI/SO Área 6580, Brasília – DF',
+      addressHtml: 'ParkShopping – 1º Piso, LUC E01-07<br>Boulevard Gastronômico da 10ª Expansão · SAI/SO Área 6580, Brasília – DF, CEP 71219-900',
       phoneDisplay: '(61) 99219-3011',
       whatsapp: '5561992193011',
       fixedDisplay: '(61) 3362-1301',
@@ -1186,12 +1218,13 @@
       execHorario: 'A partir das 12h',
       execDias: 'Seg a Dom',
       execSeq: 'Antepastos & Cortes',
-      execFootNote: 'No almoço do ParkShopping, desfrute da nossa sofisticada mesa de antepastos e carnes nobres grelhadas, além dos clássicos do chef Marcelo Petrarca. Servido todos os dias a partir das 12h.',
+      execFootNote: 'No almoço do ParkShopping, desfrute da nossa sofisticada mesa de antepastos e carnes nobres grelhadas na parrilla, além dos clássicos do chef Marcelo Petrarca. Servido todos os dias a partir das 12h.',
       aboutTag: 'Nova Unidade · Boulevard Gastronômico',
       aboutAno: '2026',
       aboutStatement: 'A expansão do Bloco C: arquitetura contemporânea, iluminação natural e uma experiência gastronômica completa no ParkShopping.',
       aboutText: 'Localizado no novo Boulevard Gastronômico da 10ª expansão do ParkShopping, o Bloco C chega com salão contemporâneo, lounge integrado e proposta inovadora: no almoço, aclamada mesa de antepastos com cortes nobres; à tarde e no jantar, os consagrados clássicos autorais do chef Marcelo Petrarca e coquetelaria exclusiva.',
-      greeting: 'Olá, gostaria de reservar uma mesa no Bloco C Park Shopping.'
+      menuFootNote: 'Park Shopping · Mesa de antepastos e nobres cortes na brasa no almoço todos os dias. Jantar e serviço contínuo à la carte. Consulte nossa equipe sobre opções do dia.',
+      greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Park Shopping.'
     }
   };
 
@@ -1250,10 +1283,16 @@
     } catch(e) {}
 
     // Atualização de URL
-    if (updateUrl && window.history && window.history.replaceState) {
+    if (updateUrl && window.history) {
       const url = new URL(window.location);
-      url.searchParams.set('unidade', currentUnit);
-      window.history.replaceState({}, '', url);
+      if (url.searchParams.get('unidade') !== currentUnit) {
+        url.searchParams.set('unidade', currentUnit);
+        if (window.history.pushState) {
+          window.history.pushState({ unidade: currentUnit }, '', url);
+        } else if (window.history.replaceState) {
+          window.history.replaceState({}, '', url);
+        }
+      }
     }
 
     // Título e Meta
@@ -1349,14 +1388,21 @@
       updateStatementWords(data.aboutStatement);
     }
 
+    // Cardápio Modal Header & Footnote
+    const menuUnitBadge = $('#menuUnitBadge');
+    if (menuUnitBadge) menuUnitBadge.textContent = `Unidade ${data.name}`;
+
+    const menuFootNote = $('#menuFootNote');
+    if (menuFootNote && data.menuFootNote) menuFootNote.textContent = data.menuFootNote;
+
     // Atualiza links de WhatsApp com o greeting específico da unidade
     $$('[data-wa]').forEach(a => {
       a.href = waLink(data.greeting, data.whatsapp);
       a.target = '_blank';
       a.rel = 'noopener';
     });
-    // Botões que levam ao formulário de reserva
-    $$('.nav-cta, .hero-actions [data-wa]').forEach(a => {
+    // Botões específicos que rolam para a seção de reserva
+    $$('.nav-cta, .hero-actions a[href="#reservas"], .menu-foot a[href="#reservas"]').forEach(a => {
       a.href = '#reservas';
       a.removeAttribute('target');
     });
@@ -1375,6 +1421,15 @@
     void welcomeScreen.offsetWidth; // Força reflow
     welcomeScreen.classList.remove('is-exiting');
     document.body.classList.add('welcome-open');
+
+    // Ao abrir para trocar unidade, limpa o query param para permitir escolha limpa
+    if (window.history && window.history.pushState) {
+      const url = new URL(window.location);
+      if (url.searchParams.has('unidade')) {
+        url.searchParams.delete('unidade');
+        window.history.pushState({}, '', url);
+      }
+    }
 
     $$('.welcome-panel', welcomeScreen).forEach(p => {
       p.classList.remove('is-selected', 'is-dimmed');
@@ -1411,7 +1466,7 @@
   } catch(e) {}
 
   if (paramUnit && UNIDADES[paramUnit]) {
-    // Acessou com parâmetro direto na URL: abre o site da unidade diretamente
+    // Acesso direto por URL: abre o site da unidade imediatamente sem welcome screen
     applyUnit(paramUnit, false);
     if (welcomeScreen) {
       welcomeScreen.classList.add('is-hidden');
@@ -1426,6 +1481,29 @@
       applyUnit('asa-sul', false);
     }
   }
+
+  // Suporte a Voltar/Avançar no navegador (popstate)
+  window.addEventListener('popstate', () => {
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get('unidade');
+    if (p && UNIDADES[p]) {
+      applyUnit(p, false);
+      if (welcomeScreen) {
+        welcomeScreen.classList.add('is-hidden');
+        document.body.classList.remove('welcome-open');
+      }
+    } else {
+      // Sem parâmetro: exibe a Welcome Screen
+      if (welcomeScreen) {
+        welcomeScreen.classList.remove('is-hidden');
+        welcomeScreen.classList.remove('is-exiting');
+        document.body.classList.add('welcome-open');
+        $$('.welcome-panel', welcomeScreen).forEach(panel => {
+          panel.classList.remove('is-selected', 'is-dimmed');
+        });
+      }
+    }
+  });
 
   // Event Listeners nos Painéis da Welcome Screen
   if (welcomeScreen) {
@@ -1550,77 +1628,58 @@
   let tabsMoved = false;
 
   function updateTabArrows() {
-    if (!tabsEl) return;
-    const maxScroll = Math.max(0, tabsEl.scrollWidth - tabsEl.clientWidth);
-    const sl = tabsEl.scrollLeft;
-    if (tabsContainer) {
-      tabsContainer.style.setProperty('--fade-left', sl > 12 ? '1' : '0');
-      tabsContainer.style.setProperty('--fade-right', sl < maxScroll - 12 ? '1' : '0');
-    }
-    if (tabsPrev) {
-      tabsPrev.classList.toggle('is-visible', sl > 12);
-    }
-    if (tabsNext) {
-      tabsNext.classList.toggle('is-visible', sl < maxScroll - 12);
-    }
+    if (!tabsContainer || !tabsEl) return;
+    const scrollLeft = tabsEl.scrollLeft;
+    const maxScroll = tabsEl.scrollWidth - tabsEl.clientWidth;
+    if (tabsPrev) tabsPrev.classList.toggle('is-visible', scrollLeft > 10);
+    if (tabsNext) tabsNext.classList.toggle('is-visible', scrollLeft < maxScroll - 10);
   }
 
-  MENU.forEach(cat => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'tab';
-    b.id = `tab-${cat.id}`;
-    b.setAttribute('role', 'tab');
-    b.setAttribute('aria-controls', 'menuList');
-    b.textContent = cat.title;
-    b.addEventListener('click', (e) => {
-      if (tabsMoved) {
-        e.preventDefault();
-        return;
-      }
+  // Gera abas
+  MENU.forEach((cat, i) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tab';
+    btn.id = `tab-${cat.id}`;
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-controls', 'menuList');
+    btn.setAttribute('aria-selected', String(i === 0));
+    btn.textContent = cat.title;
+    btn.addEventListener('click', (e) => {
+      if (tabsMoved) return;
       activeTab = cat.id;
       renderMenu(0);
-      b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      setTimeout(updateTabArrows, 350);
     });
-    tabsEl.appendChild(b);
+    tabsEl.appendChild(btn);
   });
 
   if (tabsEl) {
-    // Mouse drag para deslizar as abas no desktop
+    tabsEl.addEventListener('scroll', updateTabArrows, { passive: true });
+    window.addEventListener('resize', updateTabArrows);
+
     tabsEl.addEventListener('mousedown', (e) => {
       isTabsDragging = true;
       tabsMoved = false;
-      tabsEl.classList.add('is-dragging');
       tabsStartX = e.pageX - tabsEl.offsetLeft;
       tabsScrollLeft = tabsEl.scrollLeft;
+      tabsEl.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isTabsDragging) return;
+      const x = e.pageX - tabsEl.offsetLeft;
+      const walk = (x - tabsStartX) * 1.5;
+      if (Math.abs(walk) > 4) tabsMoved = true;
+      tabsEl.scrollLeft = tabsScrollLeft - walk;
     });
 
     window.addEventListener('mouseup', () => {
       if (!isTabsDragging) return;
       isTabsDragging = false;
       tabsEl.classList.remove('is-dragging');
-      setTimeout(() => { tabsMoved = false; }, 60);
     });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isTabsDragging) return;
-      const x = e.pageX - tabsEl.offsetLeft;
-      const walk = (x - tabsStartX) * 1.4;
-      if (Math.abs(walk) > 4) tabsMoved = true;
-      tabsEl.scrollLeft = tabsScrollLeft - walk;
-      updateTabArrows();
-    });
-
-    // Converte roda do mouse vertical para deslizamento horizontal
-    tabsEl.addEventListener('wheel', (e) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        tabsEl.scrollLeft += e.deltaY * 0.9;
-        updateTabArrows();
-      }
-    }, { passive: false });
-
-    tabsEl.addEventListener('scroll', updateTabArrows);
   }
 
   if (tabsPrev) {
@@ -1640,6 +1699,14 @@
     listEl.setAttribute('aria-labelledby', `tab-${activeTab}`);
     listEl.style.setProperty('--base', `${baseDelay}ms`);
     listEl.textContent = '';
+
+    if (cat.desc) {
+      const descLi = document.createElement('li');
+      descLi.className = 'menu-category-header';
+      descLi.innerHTML = `<p class="menu-category-desc">${cat.desc}</p>`;
+      listEl.appendChild(descLi);
+    }
+
     cat.items.forEach((it, i) => {
       const li = document.createElement('li');
       li.className = 'item';
@@ -1674,6 +1741,13 @@
       }
 
       info.appendChild(top);
+
+      if (it.badge) {
+        const badge = document.createElement('span');
+        badge.className = 'item-badge';
+        badge.textContent = it.badge;
+        info.appendChild(badge);
+      }
 
       if (it.d) {
         const d = document.createElement('span');
@@ -1752,23 +1826,31 @@
 
   function dayOf(value) { return new Date(`${value}T12:00:00`).getDay(); }
 
-  function slotsFor(day) {
+  function slotsFor(day, dateStr) {
     const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+    let slots = [];
     if (day === 0) {
       if (!unit.service.sunday) return [];
       const s = unit.service.sunday;
-      const out = [];
       [s.lunch, s.dinner].forEach(([start, end]) => {
-        for (let t = start; t <= end - LAST_SEATING_BEFORE_CLOSE; t += 30) out.push(t);
+        for (let t = start; t <= end - LAST_SEATING_BEFORE_CLOSE; t += 30) slots.push(t);
       });
-      return out;
+    } else {
+      const s = day >= 5 ? unit.service.weekend : unit.service.week;
+      [s.lunch, s.dinner].forEach(([start, end]) => {
+        for (let t = start; t <= end - LAST_SEATING_BEFORE_CLOSE; t += 30) slots.push(t);
+      });
     }
-    const s = day >= 5 ? unit.service.weekend : unit.service.week;
-    const out = [];
-    [s.lunch, s.dinner].forEach(([start, end]) => {
-      for (let t = start; t <= end - LAST_SEATING_BEFORE_CLOSE; t += 30) out.push(t);
-    });
-    return out;
+
+    if (dateStr) {
+      const bsbNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+      const todayStr = `${bsbNow.getFullYear()}-${pad2(bsbNow.getMonth() + 1)}-${pad2(bsbNow.getDate())}`;
+      if (dateStr === todayStr) {
+        const currentMinutes = bsbNow.getHours() * 60 + bsbNow.getMinutes();
+        slots = slots.filter(t => t > currentMinutes + 45);
+      }
+    }
+    return slots;
   }
 
   dateEl.addEventListener('change', () => {
@@ -1780,12 +1862,16 @@
       return;
     }
     const day = dayOf(dateEl.value);
-    const slots = slotsFor(day);
+    const slots = slotsFor(day, dateEl.value);
     if (!slots.length) {
       timeEl.disabled = true;
-      timeEl.add(new Option('Fechado neste dia', ''));
+      timeEl.add(new Option('Fechado / Indisponível', ''));
       const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
-      noteEl.textContent = unit.closedMessage || 'O restaurante não abre neste dia. Escolha outra data.';
+      if (day === 0 && !unit.service.sunday) {
+        noteEl.textContent = unit.closedMessage || 'O restaurante não abre neste dia. Escolha outra data.';
+      } else {
+        noteEl.textContent = 'Horários para reservas antecipadas hoje esgotados. Para consultar encaixes de mesa, fale diretamente com a equipe pelo WhatsApp.';
+      }
       return;
     }
     timeEl.disabled = false;
@@ -1799,17 +1885,17 @@
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const nome = $('#nome').value.trim();
-    if (!nome) { noteEl.textContent = 'Informe seu nome.'; $('#nome').focus(); return; }
-    if (!dateEl.value) { noteEl.textContent = 'Escolha a data.'; dateEl.focus(); return; }
+    if (!nome) { noteEl.textContent = 'Por favor, informe seu nome completo.'; $('#nome').focus(); return; }
+    if (!dateEl.value) { noteEl.textContent = 'Escolha a data da reserva.'; dateEl.focus(); return; }
     const day = dayOf(dateEl.value);
-    const slots = slotsFor(day);
+    const slots = slotsFor(day, dateEl.value);
     if (!slots.length) {
       const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
-      noteEl.textContent = unit.closedMessage || 'O restaurante não abre neste dia. Escolha outra data.';
+      noteEl.textContent = unit.closedMessage || 'Horários indisponíveis para esta data. Escolha outro dia.';
       dateEl.focus();
       return;
     }
-    if (!timeEl.value) { noteEl.textContent = 'Escolha o horário.'; timeEl.focus(); return; }
+    if (!timeEl.value) { noteEl.textContent = 'Escolha o horário desejado.'; timeEl.focus(); return; }
     noteEl.textContent = '';
 
     const dateLabel = new Date(`${dateEl.value}T12:00:00`).toLocaleDateString('pt-BR', {
@@ -1818,21 +1904,21 @@
     const obs = $('#obs').value.trim();
     const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
     const lines = [
-      unit.greeting,
+      `*Solicitação de Reserva · Bloco C*`,
+      `Unidade: ${unit.fullName}`,
       '',
-      `Unidade: ${unit.name}`,
-      `Nome: ${nome}`,
-      `Data: ${dateLabel}`,
-      `Horário: ${timeEl.value}`,
-      `Pessoas: ${people}`
+      `• *Nome:* ${nome}`,
+      `• *Data:* ${dateLabel}`,
+      `• *Horário:* ${timeEl.value}`,
+      `• *Pessoas:* ${people} pessoa${people > 1 ? 's' : ''}`
     ];
-    if (obs) lines.push(`Observações: ${obs}`);
+    if (obs) lines.push(`• *Observações:* ${obs}`);
+    lines.push('');
+    lines.push(`_Solicitação enviada pelo site. Aguardo confirmação de disponibilidade de mesa pela equipe do Bloco C._`);
+
     window.open(waLink(lines.join('\n'), unit.whatsapp), '_blank', 'noopener');
   });
 
-  /* ------------------------------------------------------------------
-     GooeyNav (React Bits) - Apenas Desktop
-  ------------------------------------------------------------------ */
   const gooeyContainer = $('#gooeyNavContainer');
   if (gooeyContainer && typeof window.createGooeyNav === 'function') {
     const gooeyItems = [

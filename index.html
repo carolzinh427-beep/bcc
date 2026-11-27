@@ -157,7 +157,7 @@
           <div class="hero-unit-tag" id="heroUnitTag" data-reveal style="--d:.4s">Unidade Matriz · Asa Sul</div>
           <p id="heroSubtitle" data-reveal style="--d:.5s">Cozinha contemporânea de inspiração afetiva.<br>CLS 211 Sul, Brasília.</p>
           <div class="hero-actions" data-reveal style="--d:.65s">
-            <a class="btn btn-light" href="#reservas" data-wa>Reservar pelo WhatsApp</a>
+            <a class="btn btn-light" href="#reservas" data-wa>Solicitar reserva</a>
             <button class="btn btn-line" type="button" data-open-menu>Ver cardápio completo</button>
           </div>
         </div>
@@ -338,7 +338,10 @@
             <img src="images/pratos/file-crosta.jpg" alt="Filé em crosta de cebola caramelizada" loading="lazy">
           </div>
           <span class="dish-name">Filé em crosta de cebola caramelizada</span>
-          <span class="dish-desc">Risoto de queijo brie</span>
+          <div class="dish-detail">
+            <span class="dish-desc">Risoto de queijo brie</span>
+            <span class="dish-badge">Clássico Autoral</span>
+          </div>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">02</span>
@@ -346,7 +349,10 @@
             <img src="images/pratos/mignon-roquefort.jpg" alt="Mignon" loading="lazy">
           </div>
           <span class="dish-name">Mignon</span>
-          <span class="dish-desc">Polenta, pipoca e roquefort</span>
+          <div class="dish-detail">
+            <span class="dish-desc">Polenta, pipoca e roquefort</span>
+            <span class="dish-badge">Assinatura do Chef</span>
+          </div>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">03</span>
@@ -354,7 +360,10 @@
             <img src="images/pratos/milanese-aligot.jpg" alt="Milanese, pomodoro & aligot" loading="lazy">
           </div>
           <span class="dish-name">Milanese, pomodoro &amp; aligot</span>
-          <span class="dish-desc">Boa Lembrança 2025</span>
+          <div class="dish-detail">
+            <span class="dish-desc">Aligot cremoso e pomodoro fresco</span>
+            <span class="dish-badge dish-badge-gold">Boa Lembrança · 2025</span>
+          </div>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">04</span>
@@ -362,7 +371,10 @@
             <img src="images/pratos/riso-maremonti.jpg" alt="Riso Maremonti" loading="lazy">
           </div>
           <span class="dish-name">Riso Maremonti</span>
-          <span class="dish-desc">Boa Lembrança 2026</span>
+          <div class="dish-detail">
+            <span class="dish-desc">Camarões selecionados e cogumelos da terra</span>
+            <span class="dish-badge dish-badge-gold">Boa Lembrança · 2026</span>
+          </div>
         </li>
         <li class="dish" data-reveal>
           <span class="dish-n">05</span>
@@ -370,7 +382,10 @@
             <img src="images/pratos/carbonara.jpg" alt="Carbonara" loading="lazy">
           </div>
           <span class="dish-name">Carbonara</span>
-          <span class="dish-desc">Creme de queijo, farofinha de pancetta e ovo de gema mole</span>
+          <div class="dish-detail">
+            <span class="dish-desc">Creme de queijo, farofinha de pancetta e ovo de gema mole</span>
+            <span class="dish-badge">Receita Tradicional</span>
+          </div>
         </li>
       </ul>
       <div class="center" data-reveal>
@@ -416,8 +431,8 @@
     <section class="section dark" id="reservas">
       <div class="reserve-grid">
         <div>
-          <h2 class="display" data-reveal>Reservas</h2>
-          <p class="lead" id="reserveLead" data-reveal style="--d:.1s">Escolha data, horário e número de pessoas. Você será direcionado ao WhatsApp do restaurante com a mensagem pronta para enviar.</p>
+          <h2 class="display" data-reveal>Solicitação de Reserva</h2>
+          <p class="lead" id="reserveLead" data-reveal style="--d:.1s">Escolha sua data, horário e quantidade de convidados. Sua solicitação é enviada diretamente ao WhatsApp da unidade para validação e confirmação de mesa pela equipe do Bloco C.</p>
           <div class="reserve-unit-pill" data-reveal style="--d:.14s">
             <span class="reserve-unit-label">Unidade selecionada:</span>
             <span class="reserve-unit-val" id="reserveUnitName">Asa Sul</span>
@@ -426,12 +441,12 @@
         </div>
         <form class="form" id="reserveForm" novalidate data-reveal style="--d:.15s">
           <div class="field">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como prefere ser chamado">
           </div>
           <div class="row">
             <div class="field">
-              <label for="data">Data</label>
+              <label for="data">Data da reserva</label>
               <input id="data" name="data" type="date" required>
             </div>
             <div class="field">
@@ -442,7 +457,7 @@
             </div>
           </div>
           <div class="field">
-            <label id="pessoasLabel">Pessoas</label>
+            <label id="pessoasLabel">Número de pessoas</label>
             <div class="stepper" role="group" aria-labelledby="pessoasLabel">
               <button type="button" id="minus" aria-label="Diminuir">−</button>
               <output id="pessoas" aria-live="polite">2</output>
@@ -450,11 +465,12 @@
             </div>
           </div>
           <div class="field">
-            <label for="obs">Observações (opcional)</label>
-            <textarea id="obs" name="obs" rows="2"></textarea>
+            <label for="obs">Observações especiais (opcional)</label>
+            <textarea id="obs" name="obs" rows="2" placeholder="Ex: comemoração, restrição alimentar, mesa interna..."></textarea>
           </div>
           <p class="form-note" id="formNote" role="alert"></p>
-          <button class="btn btn-light btn-block" type="submit">Enviar reserva pelo WhatsApp</button>
+          <button class="btn btn-light btn-block" type="submit">Solicitar reserva pelo WhatsApp</button>
+          <p class="reserve-disclaimer" id="reserveDisclaimer">As solicitações estão sujeitas à confirmação de disponibilidade de mesa pelo restaurante.</p>
         </form>
       </div>
     </section>
@@ -488,8 +504,9 @@
     <a class="ulink" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener">@restauranteblococ</a>
   </footer>
 
-  <a class="fab" id="fab" href="#reservas" data-wa aria-label="Falar pelo WhatsApp">
+  <a class="fab" id="fab" href="#reservas" data-wa aria-label="Solicitar reserva pelo WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="fab-label">Reservar</span>
   </a>
 
   <!-- Cardápio completo -->
@@ -499,7 +516,10 @@
         <span class="logo">Bloco C</span>
         <button class="close" id="menuClose" type="button" aria-label="Fechar cardápio"><span>Fechar</span><i></i></button>
       </div>
-      <h2 class="display menu-title" id="menuTitle">Cardápio</h2>
+      <div class="menu-title-wrap">
+        <span class="menu-unit-badge" id="menuUnitBadge">Unidade Asa Sul</span>
+        <h2 class="display menu-title" id="menuTitle">Cardápio</h2>
+      </div>
       <div class="tabs-container" id="tabsContainer">
         <button class="tabs-arrow tabs-arrow-prev" id="tabsPrev" type="button" aria-label="Ver categorias anteriores">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
@@ -511,8 +531,8 @@
       </div>
       <ul class="menu-list" id="menuList" role="tabpanel"></ul>
       <div class="menu-foot">
-        <p>Itens sujeitos a alteração conforme a estação. Consulte o restaurante sobre valores e disponibilidade.</p>
-        <a class="btn btn-light" href="#reservas" data-wa data-close-menu>Reservar pelo WhatsApp</a>
+        <p id="menuFootNote">Itens sujeitos a alteração conforme a estação. Consulte o restaurante sobre valores e disponibilidade.</p>
+        <a class="btn btn-light" href="#reservas" data-wa data-close-menu>Solicitar reserva pelo WhatsApp</a>
       </div>
     </div>
   </div>

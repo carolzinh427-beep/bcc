@@ -478,6 +478,28 @@ ul { list-style: none; }
 }
 .dish-name { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3.2vw, 2.7rem); line-height: 1.15; }
 .dish-desc { color: rgba(243, 240, 234, 0.62); font-size: 0.98rem; }
+.dish-detail { display: flex; flex-direction: column; gap: 0.4rem; }
+.dish-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(200, 183, 155, 0.12);
+  border: 1px solid rgba(200, 183, 155, 0.28);
+  color: var(--sand);
+  transition: all 0.3s ease;
+}
+.dish-badge-gold {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: #f0cf65;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.12);
+}
 
 /* Visite */
 .visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(2.5rem, 6vw, 6rem); margin-top: clamp(3rem, 7vw, 6rem); align-items: stretch; }
@@ -532,6 +554,13 @@ ul { list-style: none; }
 .stepper button:active { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 .stepper output { font-family: var(--serif); font-size: 2rem; min-width: 2ch; text-align: center; }
 .form-note { min-height: 1.5rem; margin-bottom: 1rem; color: var(--sand); font-size: 0.92rem; }
+.reserve-disclaimer {
+  font-size: 0.8rem;
+  color: rgba(243, 240, 234, 0.58);
+  line-height: 1.5;
+  margin-top: 0.75rem;
+  text-align: center;
+}
 
 /* Rodapé */
 .footer {
@@ -540,17 +569,31 @@ ul { list-style: none; }
   font-size: 0.88rem; color: rgba(243, 240, 234, 0.65);
 }
 
-/* WhatsApp flutuante */
+/* WhatsApp flutuante / Acesso rápido de reserva */
 .fab {
-  position: fixed; right: 1.4rem; bottom: calc(1.4rem + env(safe-area-inset-bottom)); z-index: 80; width: 3.5rem; height: 3.5rem; border-radius: 50%;
-  display: grid; place-items: center; background: var(--paper); color: var(--ink); border: 1px solid var(--ink);
-  opacity: 0; transform: scale(0.6); pointer-events: none;
-  transition: opacity 0.5s, transform 0.7s var(--ease-out), background 0.4s, color 0.4s;
+  position: fixed; right: 1.4rem; bottom: calc(1.4rem + env(safe-area-inset-bottom)); z-index: 80;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+  padding: 0.72rem 1.25rem; border-radius: 999px;
+  background: var(--paper); color: var(--ink); border: 1px solid rgba(10, 10, 10, 0.15);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.45);
+  font-family: var(--sans); font-size: 0.76rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  opacity: 0; transform: translateY(12px) scale(0.92); pointer-events: none;
+  transition: opacity 0.5s, transform 0.6s var(--ease-out), background 0.3s, color 0.3s, box-shadow 0.3s;
 }
-.fab svg { width: 1.45rem; height: 1.45rem; }
+.fab svg { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+.fab-label { white-space: nowrap; }
 .fab.is-visible { opacity: 1; transform: none; pointer-events: auto; }
 @media (hover: hover) {
-  .fab:hover { background: var(--ink); color: var(--paper); border-color: var(--paper); transform: scale(1.06); }
+  .fab:hover { background: var(--ink); color: var(--paper); border-color: var(--sand); transform: translateY(-2px) scale(1.03); box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.6); }
+}
+@media (max-width: 600px) {
+  .fab {
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    padding: 0.68rem 1.15rem;
+    font-size: 0.72rem;
+    box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.65);
+  }
 }
 
 /* Cardápio completo */
@@ -574,9 +617,30 @@ ul { list-style: none; }
   .close:hover i { transform: rotate(90deg); }
 }
 .close { min-height: 2.75rem; }
-.menu-title { margin: clamp(2rem, 6vw, 4rem) 0 clamp(2rem, 5vw, 3.5rem); }
-.menu .menu-title, .menu .tabs-container, .menu .menu-foot { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.9s, transform 1s var(--ease-out); }
-.menu.is-open .menu-title { opacity: 1; transform: none; transition-delay: 0.5s; }
+.menu-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: clamp(2rem, 6vw, 4rem) 0 clamp(1.8rem, 4vw, 2.8rem);
+}
+.menu-unit-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(200, 183, 155, 0.14);
+  border: 1px solid rgba(200, 183, 155, 0.35);
+  color: var(--sand);
+}
+.menu-title-wrap .menu-title { margin: 0 !important; }
+.menu .menu-title-wrap, .menu .tabs-container, .menu .menu-foot { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.9s, transform 1s var(--ease-out); }
+.menu.is-open .menu-title-wrap { opacity: 1; transform: none; transition-delay: 0.5s; }
 .menu.is-open .tabs-container { opacity: 1; transform: none; transition-delay: 0.62s; }
 .menu.is-open .menu-foot { opacity: 1; transform: none; transition-delay: 0.9s; }
 
@@ -676,6 +740,33 @@ ul { list-style: none; }
 .tab[aria-selected="true"]::after { transform: scaleX(1); }
 
 .menu-list { margin-top: 0.5rem; }
+.menu-category-header {
+  list-style: none;
+  padding: 0.2rem 0 1.2rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(243, 240, 234, 0.1);
+}
+.menu-category-desc {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-style: italic;
+  color: rgba(243, 240, 234, 0.72);
+  line-height: 1.4;
+  max-width: 46rem;
+}
+.item-badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand);
+  background: rgba(200, 183, 155, 0.1);
+  border: 1px solid rgba(200, 183, 155, 0.25);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-top: 0.25rem;
+}
 .item {
   display: flex; align-items: center; gap: 1.6rem;
   padding: 1.4rem 0; border-bottom: 1px solid var(--line-d);
@@ -726,7 +817,8 @@ ul { list-style: none; }
     width: 5rem;
     height: 4rem;
   }
-  .dish-desc {
+  .dish-desc,
+  .dish-detail {
     grid-column: 2 / span 2;
     margin-top: -0.2rem;
   }
