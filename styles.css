@@ -50,9 +50,12 @@ ul { list-style: none; }
 .logo {
   font-family: var(--sans);
   font-weight: 500;
-  font-size: 0.8rem;
-  letter-spacing: 0.42em;
+  font-size: 0.82rem;
+  letter-spacing: 0.36em;
   text-transform: uppercase;
+  white-space: nowrap !important;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 /* Navegação */
@@ -73,8 +76,8 @@ ul { list-style: none; }
     right: auto;
     bottom: auto;
     transform: translateX(-50%);
-    width: min(1180px, calc(100vw - 3.5rem));
-    padding: 0.55rem 1.6rem;
+    width: min(1220px, calc(100vw - 3rem));
+    padding: 0.55rem 1.8rem;
     border-radius: 999px;
     background: rgba(10, 10, 10, 0.45);
     backdrop-filter: blur(20px) saturate(1.4);
@@ -89,7 +92,7 @@ ul { list-style: none; }
     -webkit-backdrop-filter: blur(24px) saturate(1.5);
     border-color: rgba(243, 240, 234, 0.15);
     box-shadow: 0 20px 42px -12px rgba(0, 0, 0, 0.75), 0 2px 8px rgba(0, 0, 0, 0.3);
-    padding: 0.45rem 1.5rem;
+    padding: 0.45rem 1.7rem;
     transform: translateX(-50%) !important;
   }
   .nav.is-hidden {
@@ -1209,7 +1212,17 @@ body.welcome-open {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 1.4vw, 1.35rem);
+  gap: clamp(1rem, 2vw, 1.8rem);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav .logo {
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-block;
+  letter-spacing: 0.38em;
+  padding-right: 0.2rem;
 }
 
 /* Pílula de Unidade na Navbar */
