@@ -2152,7 +2152,7 @@
     const gooeyItems = [
       { label: 'Executivo', href: '#executivo' },
       { label: 'Pratos', href: '#pratos' },
-      { label: 'Cardápio', href: '#', attrs: { 'data-open-menu': '' } },
+      { label: 'Cardápio', href: '#cardapio' },
       { label: 'Visite', href: '#visite' },
       { label: 'Reservas', href: '#reservas' },
       { label: 'Restaurante', href: '#restaurante' }
@@ -2180,11 +2180,6 @@
         ignoreScroll = true;
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => { ignoreScroll = false; }, 900);
-
-        if (item.label === 'Cardápio') {
-          if (e) e.preventDefault();
-          openMenu();
-        }
       }
     });
 
@@ -2192,6 +2187,7 @@
     const navSections = [
       { id: 'executivo', idx: 0 },
       { id: 'pratos', idx: 1 },
+      { id: 'cardapio', idx: 2 },
       { id: 'visite', idx: 3 },
       { id: 'reservas', idx: 4 },
       { id: 'restaurante', idx: 5 }
@@ -2199,7 +2195,7 @@
 
     window.addEventListener('scroll', () => {
       if (ignoreScroll || window.innerWidth <= 900) return;
-      const pos = window.scrollY + 200;
+      const pos = window.scrollY + 220;
       for (let i = navSections.length - 1; i >= 0; i--) {
         const el = document.getElementById(navSections[i].id);
         if (el && pos >= el.offsetTop) {
