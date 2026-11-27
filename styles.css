@@ -412,13 +412,111 @@ ul { list-style: none; }
 }
 .statement .w { opacity: 0.16; transition: opacity 0.6s; }
 .statement .w.on { opacity: 1; }
-.about-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3rem 2rem; margin-top: clamp(4rem, 9vw, 8rem); align-items: start; }
-.facts { grid-column: 1 / span 4; display: grid; }
-.facts div { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line-l); }
-.facts div:last-child { border-bottom: 1px solid var(--line-l); }
-.facts dt { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); }
-.facts dd { font-family: var(--serif); font-size: 1.5rem; }
-.about-text { grid-column: 7 / span 6; font-size: 1.08rem; color: #3b3832; max-width: 36rem; }
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem) 2.5rem;
+  margin-top: clamp(3.2rem, 7vw, 5.5rem);
+  align-items: start;
+}
+.chef-profile-card {
+  grid-column: 1 / span 5;
+  display: flex;
+  flex-direction: column;
+}
+.chef-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #dcd8cf;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.2);
+}
+.chef-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.8s var(--ease-out);
+}
+@media (hover: hover) {
+  .chef-profile-card:hover .chef-media img {
+    transform: scale(1.04);
+  }
+}
+.chef-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.2rem 1.4rem 1.2rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.85) 60%, rgba(10, 10, 10, 0.96) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.chef-role {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+.chef-name {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  color: var(--paper);
+  font-weight: 400;
+  line-height: 1.15;
+}
+.chef-caption {
+  font-size: 0.88rem;
+  color: #6a655c;
+  line-height: 1.54;
+  margin-top: 0.85rem;
+  padding-left: 0.1rem;
+}
+
+.about-story {
+  grid-column: 7 / span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.facts {
+  display: grid;
+  width: 100%;
+}
+.facts div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line-l);
+}
+.facts div:last-child {
+  border-bottom: 1px solid var(--line-l);
+}
+.facts dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.facts dd {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+.about-text {
+  font-size: 1.05rem;
+  color: #3b3832;
+  line-height: 1.65;
+  max-width: 36rem;
+}
 
 /* Redução refinada das letras na seção O Restaurante (após Reservas) no Desktop */
 @media (min-width: 901px) {
@@ -1234,8 +1332,9 @@ ul { list-style: none; }
   .exec-foot { flex-direction: column; align-items: flex-start; }
   .exec-actions { width: 100%; }
   .exec-actions .btn { width: 100%; }
-  .about-grid { grid-template-columns: 1fr; }
-  .facts, .about-text { grid-column: auto; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .chef-profile-card, .about-story { grid-column: auto; }
+  .chef-media { max-width: 24rem; margin: 0 auto; aspect-ratio: 4 / 5; }
   .prestige-head, .signature-top {
     flex-wrap: wrap;
     gap: 0.35rem;
