@@ -1825,6 +1825,21 @@ ul {
   resize: none;
 }
 
+.field input::placeholder,
+.field textarea::placeholder {
+  color: transparent !important;
+  opacity: 0 !important;
+}
+
+/* Oculta dd/mm/aaaa enquanto a data estiver vazia e sem foco */
+.field input[type="date"]:not(.has-value):not(:focus)::-webkit-datetime-edit {
+  color: transparent !important;
+}
+.field input[type="date"]:focus::-webkit-datetime-edit,
+.field input[type="date"].has-value::-webkit-datetime-edit {
+  color: var(--paper) !important;
+}
+
 .field input:focus,
 .field select:focus,
 .field textarea:focus {

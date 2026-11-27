@@ -1990,13 +1990,20 @@
   if (plusBtn) plusBtn.addEventListener('click', () => setPeople(people + 1));
 
   // Popula horários agrupados por Almoço e Jantar
+  const updateDateVal = () => {
+    dateEl.classList.toggle('has-value', Boolean(dateEl.value));
+  };
+  dateEl.addEventListener('input', updateDateVal);
+  dateEl.addEventListener('change', updateDateVal);
+  updateDateVal();
+
   dateEl.addEventListener('change', () => {
     noteEl.textContent = '';
     timeEl.innerHTML = '';
 
     if (!dateEl.value) {
       timeEl.disabled = true;
-      timeEl.add(new Option('Escolha a data', ''));
+      timeEl.add(new Option('', ''));
       return;
     }
 
@@ -2028,7 +2035,7 @@
     }
 
     timeEl.disabled = false;
-    timeEl.add(new Option('Selecione o horário', ''));
+    timeEl.add(new Option('', ''));
 
     const lunchSlots = slots.filter(t => t < 17 * 60);
     const dinnerSlots = slots.filter(t => t >= 17 * 60);

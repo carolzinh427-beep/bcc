@@ -639,11 +639,11 @@
         <form class="form" id="reserveForm" novalidate data-reveal style="--d:.15s">
           <div class="field">
             <label for="nome">Nome completo</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como prefere ser chamado">
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
           </div>
           <div class="field">
             <label for="telefone">WhatsApp / Telefone para confirmação</label>
-            <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(61) 99999-9999">
+            <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required>
           </div>
           <div class="row">
             <div class="field">
@@ -653,7 +653,7 @@
             <div class="field">
               <label for="hora">Horário</label>
               <select id="hora" name="hora" required disabled>
-                <option value="">Escolha a data</option>
+                <option value=""></option>
               </select>
             </div>
           </div>
@@ -670,7 +670,7 @@
           </div>
           <div class="field">
             <label for="obs">Observações especiais (opcional)</label>
-            <textarea id="obs" name="obs" rows="2" placeholder="Ex: comemoração de aniversário, restrição alimentar, mesa interna ou varanda..."></textarea>
+            <textarea id="obs" name="obs" rows="2"></textarea>
           </div>
           <p class="form-note" id="formNote" role="alert"></p>
           <button class="btn btn-light btn-block" type="submit">Solicitar reserva pelo WhatsApp</button>
