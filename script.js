@@ -27,7 +27,6 @@
         "d": "Cubos de filé mignon ao molho demi-glace especial, ovo pochê, banana caramelizada, arroz e farofinha crocante",
         "p": "",
         "img": "images/pratos/picadinho.jpg",
-        "badge": "Clássico da Casa"
       },
       {
         "n": "Peixe do Dia Grelhado",
@@ -52,7 +51,6 @@
         "d": "Churros artesanais crocantes com doce de leite caseiro cremoso morno",
         "p": "",
         "img": "images/pratos/churros.jpg",
-        "badge": "Sobremesa Clássica"
       }
     ],
     "desc": "Almoço executivo em 3 tempos exclusivo para dias úteis · Entrada, Prato Principal e Sobremesa"
@@ -66,14 +64,12 @@
         "d": "Com molho de mostarda, Grana Padano e alcaparras",
         "p": "R$ 96",
         "img": "images/cardapio/f2368cd0-7a11-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Clássico"
       },
       {
         "n": "Carpaccio de Filé da Casa",
         "d": "Com molho de mostarda, Grana Padano, alcaparras e mel trufado",
         "p": "R$ 99",
         "img": "images/cardapio/103a9230-7a12-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Favorito da Casa"
       },
       {
         "n": "Cubos de Filé",
@@ -86,7 +82,6 @@
         "d": "com pesto de manjericão e redução citríca",
         "p": "R$ 96",
         "img": "images/cardapio/2208c770-5c6f-11ee-8123-0fcc262027e0.jpg",
-        "badge": "La Bufalina"
       },
       {
         "n": "Burrata ao Forno ( La Bufalina )",
@@ -105,7 +100,6 @@
         "d": "com caramelo de nuts",
         "p": "R$ 99",
         "img": "images/cardapio/aa868a60-7a12-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Destaque"
       },
       {
         "n": "Bruschettas da Casa",
@@ -124,14 +118,12 @@
         "d": "Com Aioli Secreto",
         "p": "R$ 89",
         "img": "images/cardapio/01175670-7a13-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Para Compartilhar"
       },
       {
         "n": "Bacalhau Desfiado, ovas",
         "d": "E fondue de grana padano trufado",
         "p": "R$ 129",
         "img": "images/cardapio/03a5a2a0-7a38-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Destaque"
       },
       {
         "n": "Seleção de Queijos do Chef",
@@ -150,7 +142,6 @@
         "d": "e fonduta de grana padano e azeite verde",
         "p": "R$ 129",
         "img": "images/cardapio/5808b910-7a13-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Destaque"
       }
     ],
     "desc": "Seleção para iniciar a experiência: carpaccios, queijos nobres e antepastos autorais"
@@ -201,28 +192,24 @@
         "d": "Com nhoque frito, mel e grana padano",
         "p": "R$ 165",
         "img": null,
-        "badge": "Favorito"
       },
       {
         "n": "Polvo Grelhado",
         "d": "com arroz negro e aioli",
         "p": "R$ 199",
         "img": null,
-        "badge": "Destaque"
       },
       {
         "n": "Camarão na Fonduta de Brie",
         "d": "Com risoto de banana caramelizada",
         "p": "R$ 220",
         "img": "images/cardapio/be791bb0-5c6e-11ee-8123-0fcc262027e0.jpg",
-        "badge": "Clássico da Casa"
       },
       {
         "n": "Bacalhau em crosta de doce de leite",
         "d": "Com aligot de mandioquinha",
         "p": "R$ 199",
         "img": null,
-        "badge": "Autoral do Chef"
       },
       {
         "n": "Bacalhoada do Chef",
@@ -254,7 +241,6 @@
         "d": "Com ovo pochê, arroz branco, farofa crocante e banana caramelizada",
         "p": "R$ 98",
         "img": "images/cardapio/e0bd4060-7a44-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Clássico da Casa"
       },
       {
         "n": "Denver Steak, Vinagrete de tomate",
@@ -340,14 +326,12 @@
         "d": "Ao molho roti e risoto de Grana Padano com rapadura",
         "p": "R$ 155",
         "img": "images/cardapio/4919d8e0-5c6f-11ee-8123-0fcc262027e0.jpg",
-        "badge": "Autoral do Chef"
       },
       {
         "n": "Filet em Crosta de Pão",
         "d": "com cebola caramelizada e risoto de brie",
         "p": "R$ 159",
         "img": "images/cardapio/510c3bb0-7a4e-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Assinatura do Chef"
       },
       {
         "n": "Camarão Spicy",
@@ -360,7 +344,6 @@
         "d": "Com presunto de parma, parmesão e risoto de basilico",
         "p": "R$ 159",
         "img": "images/cardapio/52ee13b0-7a51-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Especialidade"
       },
       {
         "n": "Ancho em Crosta de Roquefort",
@@ -421,7 +404,6 @@
         "d": "com nhoque ao pomodoro",
         "p": "R$ 189",
         "img": null,
-        "badge": "Especialidade"
       },
       {
         "n": "Baby beef ao poivre",
@@ -459,7 +441,6 @@
         "d": "Spaguetti na manteiga, ovo frito, pecorino e pimenta do reino",
         "p": "R$ 98",
         "img": "images/cardapio/3a4e8190-7a4d-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Receita do Chef"
       },
       {
         "n": "Spaguetti ao Limone",
@@ -539,14 +520,12 @@
         "d": "Com doce de leite caseiro ou brigadeiro de leite ninho",
         "p": "R$ 49",
         "img": "images/cardapio/b0423bc0-5c6f-11ee-8123-0fcc262027e0.jpg",
-        "badge": "Sobremesa Clássica"
       },
       {
         "n": "Crostata de Amêndoas",
         "d": "Com sorvete de pistache e calda de chocolate",
         "p": "R$ 49",
         "img": "images/cardapio/469a0f70-7a50-11f1-88c0-3350d9e629f0.jpg",
-        "badge": "Favorito"
       },
       {
         "n": "Bolinho de Chuva de Cenoura",
@@ -1742,12 +1721,7 @@
 
       info.appendChild(top);
 
-      if (it.badge) {
-        const badge = document.createElement('span');
-        badge.className = 'item-badge';
-        badge.textContent = it.badge;
-        info.appendChild(badge);
-      }
+
 
       if (it.d) {
         const d = document.createElement('span');

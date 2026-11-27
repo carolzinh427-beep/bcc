@@ -478,28 +478,6 @@ ul { list-style: none; }
 }
 .dish-name { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3.2vw, 2.7rem); line-height: 1.15; }
 .dish-desc { color: rgba(243, 240, 234, 0.62); font-size: 0.98rem; }
-.dish-detail { display: flex; flex-direction: column; gap: 0.4rem; }
-.dish-badge {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 0.22rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(200, 183, 155, 0.12);
-  border: 1px solid rgba(200, 183, 155, 0.28);
-  color: var(--sand);
-  transition: all 0.3s ease;
-}
-.dish-badge-gold {
-  background: rgba(212, 175, 55, 0.14);
-  border-color: rgba(212, 175, 55, 0.45);
-  color: #f0cf65;
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.12);
-}
 
 /* Visite */
 .visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(2.5rem, 6vw, 6rem); margin-top: clamp(3rem, 7vw, 6rem); align-items: stretch; }
@@ -754,19 +732,6 @@ ul { list-style: none; }
   line-height: 1.4;
   max-width: 46rem;
 }
-.item-badge {
-  display: inline-block;
-  width: fit-content;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sand);
-  background: rgba(200, 183, 155, 0.1);
-  border: 1px solid rgba(200, 183, 155, 0.25);
-  padding: 0.15rem 0.5rem;
-  border-radius: 999px;
-  margin-top: 0.25rem;
-}
 .item {
   display: flex; align-items: center; gap: 1.6rem;
   padding: 1.4rem 0; border-bottom: 1px solid var(--line-d);
@@ -817,8 +782,7 @@ ul { list-style: none; }
     width: 5rem;
     height: 4rem;
   }
-  .dish-desc,
-  .dish-detail {
+  .dish-desc {
     grid-column: 2 / span 2;
     margin-top: -0.2rem;
   }
