@@ -519,6 +519,7 @@ ul {
   margin-bottom: clamp(2rem, 6vh, 4rem);
   padding-bottom: 0.06em;
 }
+
 .hero-foot {
   display: flex;
   justify-content: space-between;
@@ -1555,6 +1556,15 @@ ul {
 ------------------------------------------------------------------ */
 #galeria {
   border-top: 1px solid var(--line-d);
+}
+
+.taggbox-wrap {
+  width: 100%;
+  min-height: 480px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
 }
 
 .gallery-header {
