@@ -1650,8 +1650,9 @@
     const drawerOpen = drawer.classList.contains('is-open');
     if (!drawerOpen) {
       if (window.innerWidth <= 900) {
-        if (y > 500 && y > lastY + 6) nav.classList.add('is-hidden');
-        else if (y < lastY - 6 || y <= 500) nav.classList.remove('is-hidden');
+        const delta = y - lastY;
+        if (y > 450 && delta > 22) nav.classList.add('is-hidden');
+        else if (delta < -16 || y <= 450) nav.classList.remove('is-hidden');
       } else {
         nav.classList.remove('is-hidden');
       }
@@ -2222,13 +2223,17 @@
     const items = track ? track.querySelectorAll('.timeline-item') : [];
     const dots = document.querySelectorAll('.timeline-dot');
     const counterEl = document.getElementById('timelineCurrent');
+    const viewport = document.getElementById('timelineViewport');
     if (!track || items.length <= 1) return;
 
     let currentIndex = 0;
     let timer = null;
     let isTouching = false;
+    let isVisible = false;
     let startX = 0;
+    let startY = 0;
     let diffX = 0;
+    let diffY = 0;
 
     function goToSlide(idx) {
       if (window.innerWidth > 900) {
@@ -2245,12 +2250,12 @@
 
     function startAutoPlay() {
       stopAutoPlay();
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 900 && isVisible) {
         timer = setInterval(() => {
           if (!isTouching) {
             goToSlide(currentIndex + 1);
           }
-        }, 3600);
+        }, 4200);
       }
     }
 
@@ -2268,35 +2273,55 @@
       });
     });
 
-    // Touch swipe
-    const viewport = document.getElementById('timelineViewport');
+    // Touch swipe horizontal suave sem travar ou balançar scroll vertical
     if (viewport) {
       viewport.addEventListener('touchstart', (e) => {
         if (window.innerWidth > 900) return;
         isTouching = true;
         stopAutoPlay();
         startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
         diffX = 0;
+        diffY = 0;
       }, { passive: true });
 
       viewport.addEventListener('touchmove', (e) => {
         if (!isTouching || window.innerWidth > 900) return;
         diffX = e.touches[0].clientX - startX;
+        diffY = e.touches[0].clientY - startY;
       }, { passive: true });
 
       viewport.addEventListener('touchend', () => {
         if (!isTouching || window.innerWidth > 900) return;
         isTouching = false;
-        if (diffX < -35) {
-          goToSlide(currentIndex + 1);
-        } else if (diffX > 35) {
-          goToSlide(currentIndex - 1);
+        // Só avança se o gesto foi predominantemente horizontal
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 38) {
+          if (diffX < 0) {
+            goToSlide(currentIndex + 1);
+          } else {
+            goToSlide(currentIndex - 1);
+          }
         }
         startAutoPlay();
       });
 
       viewport.addEventListener('mouseenter', stopAutoPlay);
       viewport.addEventListener('mouseleave', startAutoPlay);
+
+      // Inicia o autoplay apenas quando a seção estiver visível no viewport
+      if (window.IntersectionObserver) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            isVisible = entry.isIntersecting;
+            if (isVisible) startAutoPlay();
+            else stopAutoPlay();
+          });
+        }, { threshold: 0.15 });
+        obs.observe(viewport);
+      } else {
+        isVisible = true;
+        startAutoPlay();
+      }
     }
 
     window.addEventListener('resize', () => {
@@ -2308,7 +2333,49 @@
         startAutoPlay();
       }
     }, { passive: true });
+  })();
 
-    startAutoPlay();
+  /* Remoção Contínua do Símbolo / Marca d'água do Taggbox */
+  (function initTaggboxSanitizer() {
+    function purgeTaggboxBranding() {
+      const selectors = [
+        '[style*="taggbox-small_logo"]',
+        'a[href*="taggbox.com"]',
+        'a[title*="Taggbox" i]',
+        'a[aria-label*="Taggbox" i]',
+        'a[href*="tagembed.com"]',
+        '[style*="tagembed-new"]',
+        '.tb_branding',
+        '.tb-branding',
+        '.tb_powered',
+        '.tb-powered'
+      ];
+      selectors.forEach(sel => {
+        const elements = document.querySelectorAll(sel);
+        elements.forEach(el => {
+          try {
+            const parent = el.closest('div');
+            if (parent && parent.parentElement && (
+              parent.parentElement.classList.contains('taggbox') ||
+              parent.parentElement.classList.contains('taggbox-wrap') ||
+              (parent.parentElement.id && parent.parentElement.id.startsWith('root_')) ||
+              parent.parentElement.id === 'taggbox_main'
+            )) {
+              parent.remove();
+            } else {
+              el.remove();
+            }
+          } catch (e) {
+            el.style.setProperty('display', 'none', 'important');
+          }
+        });
+      });
+    }
+
+    purgeTaggboxBranding();
+    if (window.MutationObserver) {
+      const observer = new MutationObserver(purgeTaggboxBranding);
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
   })();
 })();

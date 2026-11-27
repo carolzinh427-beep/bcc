@@ -25,6 +25,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
@@ -36,6 +39,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
 }
 
 body.is-locked {
@@ -1588,11 +1594,58 @@ ul {
 
 .taggbox-wrap {
   width: 100%;
+  max-width: 100%;
   min-height: 480px;
   position: relative;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden !important;
   margin-top: 1rem;
+  contain: paint;
+}
+
+.taggbox {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* ==========================================================================
+   Remover Marcação / Símbolo / Watermark do Taggbox
+   ========================================================================== */
+.taggbox a[href*="taggbox"],
+.taggbox a[href*="tagembed"],
+.taggbox a[title*="Taggbox" i],
+.taggbox a[aria-label*="Taggbox" i],
+.taggbox [style*="taggbox-small_logo"],
+.taggbox [style*="tagembed"],
+[style*="taggbox-small_logo"],
+[style*="taggbox"],
+.taggbox div:has(> a[href*="taggbox"]),
+.taggbox div:has(> a[aria-label*="Taggbox" i]),
+.taggbox div:has(span[style*="taggbox-small_logo"]),
+#taggbox_main div:has(span[style*="taggbox-small_logo"]),
+.tb_branding,
+.tb-branding,
+.tb_powered,
+.tb-powered,
+.taggbox-socialwall a[href*="taggbox"],
+a[href*="taggbox.com"],
+a[title*="Taggbox" i],
+a[aria-label*="Taggbox" i] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
 }
 
 .gallery-header {
@@ -2706,6 +2759,28 @@ ul {
 /* Responsivo */
 @media (max-width: 900px) {
 
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    position: relative;
+    overscroll-behavior-x: none;
+  }
+
+  main {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  .section {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+
   .nav-links,
   .nav-cta {
     display: none;
@@ -2745,13 +2820,23 @@ ul {
   }
 
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 2.5rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   /* Oculta texto histórico descritivo no mobile a pedido do usuário */
   .about-text {
     display: none !important;
+  }
+
+  .timeline-block {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
   }
 
   /* Trajetória em carrossel deslizante automático no mobile */
@@ -2765,10 +2850,14 @@ ul {
 
   .timeline-viewport {
     width: 100%;
-    overflow: hidden;
+    max-width: 100%;
+    overflow: hidden !important;
     position: relative;
     border-radius: 8px;
     padding: 0.2rem 0;
+    min-width: 0;
+    touch-action: pan-y;
+    contain: paint;
   }
 
   .timeline-grid {
@@ -2776,6 +2865,7 @@ ul {
     flex-wrap: nowrap !important;
     gap: 0 !important;
     width: 100%;
+    max-width: 100%;
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform;
   }
