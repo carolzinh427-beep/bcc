@@ -2160,9 +2160,9 @@
       { label: 'Executivo', href: '#executivo' },
       { label: 'Pratos', href: '#pratos' },
       { label: 'Cardápio', href: '#cardapio' },
-      { label: 'Visite', href: '#visite' },
       { label: 'Reservas', href: '#reservas' },
-      { label: 'Restaurante', href: '#restaurante' }
+      { label: 'Restaurante', href: '#restaurante' },
+      { label: 'Visite', href: '#visite' }
     ];
 
     let ignoreScroll = false;
@@ -2195,19 +2195,22 @@
       { id: 'executivo', idx: 0 },
       { id: 'pratos', idx: 1 },
       { id: 'cardapio', idx: 2 },
-      { id: 'visite', idx: 3 },
-      { id: 'reservas', idx: 4 },
-      { id: 'restaurante', idx: 5 }
+      { id: 'reservas', idx: 3 },
+      { id: 'restaurante', idx: 4 },
+      { id: 'visite', idx: 5 }
     ];
 
     window.addEventListener('scroll', () => {
       if (ignoreScroll || window.innerWidth <= 900) return;
-      const pos = window.scrollY + 220;
+      const threshold = window.innerHeight * 0.38;
       for (let i = navSections.length - 1; i >= 0; i--) {
         const el = document.getElementById(navSections[i].id);
-        if (el && pos >= el.offsetTop) {
-          gooeyNav?.setActive(navSections[i].idx);
-          break;
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= threshold) {
+            gooeyNav?.setActive(navSections[i].idx);
+            break;
+          }
         }
       }
     }, { passive: true });

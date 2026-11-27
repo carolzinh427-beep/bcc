@@ -1123,7 +1123,8 @@ ul {
 .prestige-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
+  max-height: 200px;
   overflow: hidden;
   background: var(--ink-2);
 }
@@ -1258,7 +1259,8 @@ ul {
 .signature-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 9;
+  max-height: 180px;
   overflow: hidden;
   background: var(--ink-2);
 }
@@ -1385,7 +1387,8 @@ ul {
 .category-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
+  max-height: 160px;
   overflow: hidden;
   background: var(--ink-2);
 }
@@ -1425,7 +1428,13 @@ ul {
   padding: clamp(1.2rem, 2vw, 1.5rem);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
   flex-grow: 1;
+}
+
+#cardapio {
+  scroll-margin-top: 5rem;
 }
 
 .category-name {
@@ -3049,10 +3058,10 @@ body.welcome-open {
   background:
     /* Sombra editorial da esquerda para a direita (legibilidade perfeita de leitura) */
     linear-gradient(to right,
-      rgba(10, 10, 10, 0.90) 0%,
-      rgba(10, 10, 10, 0.74) 32%,
-      rgba(10, 10, 10, 0.38) 62%,
-      rgba(10, 10, 10, 0.12) 100%),
+      rgba(10, 10, 10, 0.95) 0%,
+      rgba(10, 10, 10, 0.82) 35%,
+      rgba(10, 10, 10, 0.45) 65%,
+      rgba(10, 10, 10, 0.15) 100%),
     /* Sombra da base para o topo para ancoragem */
     linear-gradient(to top,
       rgba(10, 10, 10, 0.96) 0%,
