@@ -1176,7 +1176,37 @@
       aboutStatement: 'Pratos de inspiração afetiva, no melhor estilo comfort food e contemporâneo, com pitadas de elegância e discreta sofisticação.',
       aboutText: 'Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.',
       menuFootNote: 'Asa Sul · Menu Executivo em 3 tempos de segunda a sexta (12h às 15h30). Jantar e fins de semana à la carte. Valores e disponibilidade sujeitos a confirmação.',
-      greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Asa Sul.'
+      greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Asa Sul.',
+      pageTitle: 'Bloco C Restaurante · Asa Sul | Alta Gastronomia em Brasília · Chef Marcelo Petrarca',
+      metaDesc: 'Restaurante Bloco C na CLS 211 Sul, Brasília. Cozinha contemporânea de inspiração afetiva do Chef Marcelo Petrarca. Menu executivo, Boa Lembrança e reservas.',
+      ogImage: 'images/unidade-asa-sul.jpg',
+      accessText: 'Localizado na tradicional quadra gastronômica da CLS 211 Sul, em frente à praça arborizada e com fácil acesso pela via L2 Sul ou Eixinho L.',
+      parkingText: 'Amplo estacionamento público na entrequadra 211/212 Sul. Serviço de manobrista/valet disponível nos horários de almoço e jantar.',
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Bloco C · Asa Sul",
+        "image": "images/unidade-asa-sul.jpg",
+        "servesCuisine": ["Cozinha Contemporânea", "Comfort Food", "Alta Gastronomia Brasileira"],
+        "telephone": "+55 61 99219-3011",
+        "priceRange": "$$$",
+        "hasMenu": "https://restauranteblococ.com.br/?unidade=asa-sul#pratos",
+        "founder": { "@type": "Person", "name": "Marcelo Petrarca" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "CLS 211, Bloco C, Lote 17, Loja 17",
+          "addressLocality": "Brasília",
+          "addressRegion": "DF",
+          "postalCode": "70274-530",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "12:00", "closes": "15:30" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "19:30", "closes": "00:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:00", "closes": "16:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "19:30", "closes": "01:00" }
+        ]
+      }
     },
     'park-shopping': {
       id: 'park-shopping',
@@ -1215,7 +1245,35 @@
       aboutStatement: 'A expansão do Bloco C: arquitetura contemporânea, iluminação natural e uma experiência gastronômica completa no ParkShopping.',
       aboutText: 'Localizado no novo Boulevard Gastronômico da 10ª expansão do ParkShopping, o Bloco C chega com salão contemporâneo, lounge integrado e proposta inovadora: no almoço, aclamada mesa de antepastos com cortes nobres; à tarde e no jantar, os consagrados clássicos autorais do chef Marcelo Petrarca e coquetelaria exclusiva.',
       menuFootNote: 'Park Shopping · Mesa de antepastos e nobres cortes na brasa no almoço todos os dias. Jantar e serviço contínuo à la carte. Consulte nossa equipe sobre opções do dia.',
-      greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Park Shopping.'
+      greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Park Shopping.',
+      pageTitle: 'Bloco C Restaurante · Park Shopping | Boulevard Gastronômico Brasília',
+      metaDesc: 'Bloco C no ParkShopping Brasília. Boulevard Gastronômico da 10ª expansão, cortes nobres na brasa, mesa de antepastos e clássicos do Chef Marcelo Petrarca.',
+      ogImage: 'images/unidade-park-shopping.jpg',
+      accessText: 'No novo Boulevard Gastronômico da 10ª expansão do ParkShopping (1º Piso, LUC E01-07), próximo ao Espaço Gourmet.',
+      parkingText: 'Estacionamento coberto do shopping com serviço de valet exclusivo no Boulevard Gastronômico e vagas preferenciais.',
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Bloco C · Park Shopping",
+        "image": "images/unidade-park-shopping.jpg",
+        "servesCuisine": ["Cozinha Contemporânea", "Carnes Nobres & Parrilla", "Alta Gastronomia Brasileira"],
+        "telephone": "+55 61 99219-3011",
+        "priceRange": "$$$",
+        "hasMenu": "https://restauranteblococ.com.br/?unidade=park-shopping#pratos",
+        "founder": { "@type": "Person", "name": "Marcelo Petrarca" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ParkShopping – 1º Piso, LUC E01-07, Boulevard Gastronômico",
+          "addressLocality": "Brasília",
+          "addressRegion": "DF",
+          "postalCode": "71219-900",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "12:00", "closes": "23:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "12:00", "closes": "22:00" }
+        ]
+      }
     }
   };
 
@@ -1364,6 +1422,38 @@
 
     const mapIframe = $('#mapIframe');
     if (mapIframe) mapIframe.src = data.mapsEmbed;
+
+    // Como Chegar e Estacionamento
+    const visiteAccess = $('#visiteAccess');
+    if (visiteAccess && data.accessText) visiteAccess.textContent = data.accessText;
+
+    const visiteParking = $('#visiteParking');
+    if (visiteParking && data.parkingText) visiteParking.textContent = data.parkingText;
+
+    // SEO Dinâmico e Meta Tags
+    if (data.pageTitle) {
+      document.title = data.pageTitle;
+      const ogTitle = $('#ogTitle');
+      if (ogTitle) ogTitle.setAttribute('content', data.pageTitle);
+    }
+    if (data.metaDesc) {
+      const pageDesc = $('#pageDescription');
+      if (pageDesc) pageDesc.setAttribute('content', data.metaDesc);
+      const ogDesc = $('#ogDescription');
+      if (ogDesc) ogDesc.setAttribute('content', data.metaDesc);
+    }
+    const ogUrl = $('#ogUrl');
+    if (ogUrl) ogUrl.setAttribute('content', `https://restauranteblococ.com.br/?unidade=${data.id}`);
+    const canonicalLink = $('#canonicalLink');
+    if (canonicalLink) canonicalLink.setAttribute('href', `https://restauranteblococ.com.br/?unidade=${data.id}`);
+    const ogImage = $('#ogImage');
+    if (ogImage && data.ogImage) ogImage.setAttribute('content', data.ogImage);
+
+    // Schema.org JSON-LD
+    const restaurantSchema = $('#restaurantSchema');
+    if (restaurantSchema && data.schema) {
+      restaurantSchema.textContent = JSON.stringify(data.schema, null, 2);
+    }
 
     // Restaurante / História
     const aboutTag = $('#aboutTag');

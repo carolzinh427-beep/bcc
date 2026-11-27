@@ -3,36 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bloco C Restaurante | CLS 211 Sul, Brasília</title>
-  <meta name="description" content="Bloco C, restaurante do chef Marcelo Petrarca na CLS 211 Sul, Asa Sul, Brasília. Cozinha contemporânea de inspiração afetiva. Cardápio, localização e reservas pelo WhatsApp.">
+  <title id="pageTitle">Bloco C Restaurante | Alta Gastronomia em Brasília · Asa Sul</title>
+  <meta name="description" id="pageDescription" content="Restaurante Bloco C do chef Marcelo Petrarca na CLS 211 Sul, Brasília. Cozinha contemporânea de inspiração afetiva. Menu executivo, Boa Lembrança, localização e reservas pelo WhatsApp.">
   <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" id="canonicalLink" href="https://restauranteblococ.com.br/?unidade=asa-sul">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="manifest" href="site.webmanifest">
-  <meta property="og:title" content="Bloco C Restaurante">
-  <meta property="og:description" content="Cozinha contemporânea do chef Marcelo Petrarca. CLS 211 Sul, Brasília.">
+  <meta property="og:title" id="ogTitle" content="Bloco C Restaurante · Asa Sul | Alta Gastronomia em Brasília">
+  <meta property="og:description" id="ogDescription" content="Cozinha contemporânea de inspiração afetiva comandada pelo chef Marcelo Petrarca. CLS 211 Sul, Brasília.">
   <meta property="og:type" content="restaurant">
+  <meta property="og:url" id="ogUrl" content="https://restauranteblococ.com.br/?unidade=asa-sul">
+  <meta property="og:image" id="ogImage" content="images/unidade-asa-sul.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="gooey-nav.css">
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="restaurantSchema">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "Bloco C",
-    "servesCuisine": "Culinária contemporânea",
-    "telephone": "+55 61 3363-3062",
+    "name": "Bloco C · Asa Sul",
+    "image": "images/unidade-asa-sul.jpg",
+    "servesCuisine": ["Cozinha Contemporânea", "Comfort Food", "Alta Gastronomia Brasileira"],
+    "telephone": "+55 61 99219-3011",
+    "priceRange": "$$$",
+    "hasMenu": "https://restauranteblococ.com.br/?unidade=asa-sul#pratos",
+    "founder": {
+      "@type": "Person",
+      "name": "Marcelo Petrarca"
+    },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "CLS 211, Bloco C, Lote 17, Loja 17 - Asa Sul",
+      "streetAddress": "CLS 211, Bloco C, Lote 17, Loja 17",
       "addressLocality": "Brasília",
       "addressRegion": "DF",
+      "postalCode": "70274-530",
       "addressCountry": "BR"
     },
     "openingHoursSpecification": [
@@ -139,12 +151,16 @@
     </div>
     <nav aria-label="Menu móvel">
       <a href="#executivo">Menu Executivo</a>
-      <a href="#pratos">Pratos</a>
-      <button type="button" data-open-menu>Cardápio</button>
-      <a href="#visite">Visite</a>
+      <a href="#pratos">Assinaturas do Chef</a>
+      <button type="button" data-open-menu>Cardápio Completo</button>
+      <a href="#visite">Visite &amp; Como Chegar</a>
       <a href="#reservas">Reservas</a>
-      <a href="#restaurante">Restaurante</a>
+      <a href="#restaurante">O Restaurante &amp; o Chef</a>
+      <a href="#galeria">Galeria &amp; Instagram</a>
     </nav>
+    <div class="drawer-cta-wrap">
+      <a class="btn btn-light btn-block" href="#reservas">Solicitar Reserva</a>
+    </div>
   </div>
 
   <main>
@@ -589,7 +605,15 @@
               <div class="hrow" data-days="0"><span>Domingo</span><span>Fechado</span></div>
             </div>
           </div>
-          <div class="btn-row" data-reveal style="--d:.3s">
+          <div data-reveal style="--d:.24s">
+            <h3>Como Chegar &amp; Acesso</h3>
+            <p id="visiteAccess" style="color: #4a453e; font-size: 0.95rem; line-height: 1.55;">Localizado na tradicional quadra gastronômica da CLS 211 Sul, em frente à praça arborizada e com fácil acesso pela via L2 Sul ou Eixinho L.</p>
+          </div>
+          <div data-reveal style="--d:.28s">
+            <h3>Estacionamento &amp; Valet</h3>
+            <p id="visiteParking" style="color: #4a453e; font-size: 0.95rem; line-height: 1.55;">Amplo estacionamento público na entrequadra 211/212 Sul. Serviço de manobrista/valet disponível nos horários de almoço e jantar.</p>
+          </div>
+          <div class="btn-row" data-reveal style="--d:.32s">
             <a class="btn btn-dark" id="mapsLink" href="https://www.google.com/maps/search/?api=1&amp;query=Bloco+C+Restaurante+CLS+211+Asa+Sul+Brasilia" target="_blank" rel="noopener">Abrir no Maps</a>
             <a class="btn btn-ghost" href="#reservas" data-wa>Falar no WhatsApp</a>
           </div>
@@ -698,6 +722,124 @@
           </dl>
           <p class="about-text" id="aboutText">Inaugurado em 2015 na CLS 211 Sul, o Bloco C é comandado pelo chef Marcelo Petrarca, com passagens por cozinhas da Espanha e da Itália. O nome e o espaço dialogam com a arquitetura modernista de Brasília, entre cobogós, concreto aparente e luz acolhedora.</p>
         </div>
+
+        <!-- Linha do Tempo / Trajetória desde 2015 -->
+        <div class="timeline-block" data-reveal style="--d:.2s">
+          <h3 class="timeline-heading">Nossa Trajetória</h3>
+          <div class="timeline-grid">
+            <div class="timeline-item">
+              <span class="timeline-year">2015</span>
+              <strong class="timeline-title">Nascimento na 211 Sul</strong>
+              <p class="timeline-desc">Abertura da matriz na CLS 211 Sul pelo Chef Marcelo Petrarca, com estética brutalista inspirada em Brasília.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2018</span>
+              <strong class="timeline-title">Consagração dos Clássicos</strong>
+              <p class="timeline-desc">Filé em crosta, Mignon ao roquefort e Picadinho consolidam a culinária autoral e afetiva do Bloco C.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2025</span>
+              <strong class="timeline-title">Boa Lembrança 2025</strong>
+              <p class="timeline-desc">Entrada oficial na seleta Associação da Boa Lembrança com o Milanese com Aligot e cerâmica colecionável.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2026</span>
+              <strong class="timeline-title">Expansão ParkShopping</strong>
+              <p class="timeline-desc">Chegada ao Boulevard Gastronômico da 10ª expansão e lançamento do Riso Maremonti (Boa Lembrança 2026).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria & Instagram -->
+    <section class="section dark" id="galeria">
+      <div class="gallery-header" data-reveal>
+        <span class="eyebrow">Redes Sociais &amp; Atmosfera</span>
+        <h2 class="display">Momentos no Bloco C</h2>
+        <p class="section-lead">Acompanhe a rotina da nossa cozinha, a adega de vinhos, a atmosfera acolhedora e os bastidores das nossas duas unidades em Brasília.</p>
+        <a class="gallery-instagram-pill" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>@restauranteblococ no Instagram</span>
+        </a>
+      </div>
+
+      <div class="gallery-grid" data-reveal style="--d:.15s">
+        <!-- Foto 1: Varanda Asa Sul -->
+        <a class="gallery-item" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener" aria-label="Ver no Instagram: Varanda arborizada na CLS 211 Sul">
+          <div class="gallery-media">
+            <img src="images/unidade-asa-sul.jpg" alt="Almoço na varanda arborizada da Asa Sul" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Varanda · Asa Sul</span>
+            <span class="gallery-caption">Aconchego sob a sombra das árvores na 211 Sul</span>
+          </div>
+        </a>
+
+        <!-- Foto 2: Adega Park Shopping -->
+        <a class="gallery-item" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener" aria-label="Ver no Instagram: Adega e salão contemporâneo no ParkShopping">
+          <div class="gallery-media">
+            <img src="images/unidade-park-shopping.jpg" alt="Adega e salão contemporâneo no ParkShopping" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Adega &amp; Salão</span>
+            <span class="gallery-caption">Rótulos nobres e arquitetura contemporânea no ParkShopping</span>
+          </div>
+        </a>
+
+        <!-- Foto 3: Chef Marcelo Petrarca -->
+        <a class="gallery-item" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener" aria-label="Ver no Instagram: Chef Marcelo Petrarca na cozinha autoral">
+          <div class="gallery-media">
+            <img src="images/chef-marcelo-petrarca.jpg" alt="Chef Marcelo Petrarca no Bloco C" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Cozinha Autoral</span>
+            <span class="gallery-caption">Chef Marcelo Petrarca finalizando criações exclusivas</span>
+          </div>
+        </a>
+
+        <!-- Foto 4: Milanese Boa Lembrança -->
+        <a class="gallery-item" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener" aria-label="Ver no Instagram: Milanese com aligot da Boa Lembrança">
+          <div class="gallery-media">
+            <img src="images/pratos/milanese-aligot.jpg" alt="Milanese com aligot e cerâmica da Boa Lembrança" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Boa Lembrança</span>
+            <span class="gallery-caption">Milanese com aligot e prato cerâmico colecionável</span>
+          </div>
+        </a>
+
+        <!-- Foto 5: Camarão na Fonduta -->
+        <a class="gallery-item" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener" aria-label="Ver no Instagram: Camarão na Fonduta de Brie">
+          <div class="gallery-media">
+            <img src="images/pratos/camarao-fonduta.jpg" alt="Camarão na fonduta de brie e risoto" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Clássicos do Chef</span>
+            <span class="gallery-caption">Camarão crocante em fonduta aveludada de brie</span>
+          </div>
+        </a>
+
+        <!-- Foto 6: Mini Churros -->
+        <a class="gallery-item" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener" aria-label="Ver no Instagram: Mini churros com doce de leite morno">
+          <div class="gallery-media">
+            <img src="images/pratos/churros.jpg" alt="Mini churros com doce de leite artesanal" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Sobremesa</span>
+            <span class="gallery-caption">Churros quentinhos com doce de leite artesanal morno</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="gallery-foot" data-reveal style="--d:.2s">
+        <p class="gallery-foot-text">Compartilhe sua experiência marcando <strong>#RestauranteBlocoC</strong> e <strong>@restauranteblococ</strong>.</p>
+        <a class="btn btn-ghost" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener">
+          <span>Acompanhar no Instagram</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
       </div>
     </section>
   </main>

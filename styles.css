@@ -135,9 +135,14 @@ ul { list-style: none; }
 .drawer.is-open { clip-path: inset(0); visibility: visible; transition: clip-path 0.9s var(--ease), visibility 0s; }
 .drawer nav { display: grid; gap: 0.35rem; }
 .drawer nav a, .drawer nav button {
-  font-family: var(--serif); font-weight: 300; font-size: clamp(2.5rem, 11vw, 3.6rem); text-align: left; line-height: 1.15;
-  padding: 0.15rem 0;
+  font-family: var(--serif); font-weight: 300; font-size: clamp(1.75rem, 6.2vw, 2.4rem); text-align: left; line-height: 1.2;
+  padding: 0.25rem 0;
   opacity: 0; transform: translateY(1.5rem); transition: opacity 0.6s, transform 0.8s var(--ease-out);
+}
+.drawer-cta-wrap {
+  margin-top: 1.4rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line-d);
 }
 .drawer.is-open nav a, .drawer.is-open nav button { opacity: 1; transform: none; }
 .drawer.is-open nav > :nth-child(1) { transition-delay: 0.35s; }
@@ -545,6 +550,55 @@ ul { list-style: none; }
     margin-top: clamp(2.6rem, 5vw, 4.2rem);
     gap: 2.5rem 2rem;
   }
+}
+
+/* Trajetória & Linha do Tempo desde 2015 */
+.timeline-block {
+  grid-column: 1 / -1;
+  margin-top: clamp(2.8rem, 5vw, 4.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--line-l);
+}
+.timeline-heading {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--ink);
+}
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--sand);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.timeline-year {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+.timeline-title {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.timeline-desc {
+  font-size: 0.88rem;
+  color: #555047;
+  line-height: 1.52;
+  margin: 0;
 }
 
 /* ------------------------------------------------------------------
@@ -1030,6 +1084,123 @@ ul { list-style: none; }
     width: 100%;
   }
   .callout-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ------------------------------------------------------------------
+   GALERIA VIVA & INSTAGRAM (@restauranteblococ)
+------------------------------------------------------------------ */
+#galeria {
+  border-top: 1px solid var(--line-d);
+}
+.gallery-header {
+  max-width: 50rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.8rem);
+}
+.gallery-instagram-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(200, 183, 155, 0.12);
+  border: 1px solid rgba(200, 183, 155, 0.35);
+  color: var(--sand);
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 1.3rem;
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .gallery-instagram-pill:hover {
+    background: var(--sand);
+    color: var(--ink);
+    border-color: var(--sand);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: clamp(1.2rem, 2vw, 1.8rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3.8rem);
+}
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--ink-2);
+  border: 1px solid var(--line-d);
+  display: block;
+}
+.gallery-media {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gallery-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease-out);
+}
+@media (hover: hover) {
+  .gallery-item:hover .gallery-media img {
+    transform: scale(1.08);
+  }
+}
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 10, 0.92) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.4rem;
+  transition: background 0.4s;
+}
+.gallery-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sand);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.gallery-caption {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+  color: var(--paper);
+  line-height: 1.25;
+}
+.gallery-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--line-d);
+}
+.gallery-foot-text {
+  color: rgba(243, 240, 234, 0.72);
+  font-size: 0.94rem;
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .gallery-foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .gallery-foot .btn {
     width: 100%;
   }
 }
