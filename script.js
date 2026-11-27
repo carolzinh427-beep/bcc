@@ -1152,7 +1152,7 @@
       mapsSearch: 'https://www.google.com/maps/search/?api=1&query=Bloco+C+Restaurante+CLS+211+Asa+Sul+Brasilia',
       mapsEmbed: 'https://www.google.com/maps?q=Bloco+C+Restaurante+CLS+211+Asa+Sul+Brasilia&output=embed',
       heroTag: 'Unidade Matriz · Asa Sul',
-      heroSubtitle: 'Cozinha contemporânea de inspiração afetiva.<br>CLS 211 Sul, Brasília.',
+      heroSubtitle: 'Uma cozinha de personalidade. Uma experiência para lembrar.<br>Cozinha contemporânea, pratos de inspiração afetiva e a assinatura do chef Marcelo Petrarca.',
       visiteTitle: 'Visite o Bloco C · Asa Sul',
       hoursRows: [
         { label: 'Segunda a quinta', time: '12h às 15h30 · 19h30 às 00h', dataDays: '1 2 3 4' },
@@ -1178,7 +1178,7 @@
       menuFootNote: 'Asa Sul · Menu Executivo em 3 tempos de segunda a sexta (12h às 15h30). Jantar e fins de semana à la carte. Valores e disponibilidade sujeitos a confirmação.',
       greeting: 'Olá! Gostaria de solicitar uma reserva para o Bloco C Asa Sul.',
       pageTitle: 'Bloco C Restaurante · Asa Sul | Alta Gastronomia em Brasília · Chef Marcelo Petrarca',
-      metaDesc: 'Restaurante Bloco C na CLS 211 Sul, Brasília. Cozinha contemporânea de inspiração afetiva do Chef Marcelo Petrarca. Menu executivo, Boa Lembrança e reservas.',
+      metaDesc: 'Restaurante Bloco C na CLS 211 Sul, Brasília. Uma cozinha de personalidade, uma experiência para lembrar. Menu executivo, Boa Lembrança e reservas.',
       ogImage: 'images/unidade-asa-sul.jpg',
       accessText: 'Localizado na tradicional quadra gastronômica da CLS 211 Sul, em frente à praça arborizada e com fácil acesso pela via L2 Sul ou Eixinho L.',
       parkingText: 'Amplo estacionamento público na entrequadra 211/212 Sul. Serviço de manobrista/valet disponível nos horários de almoço e jantar.',
@@ -1222,7 +1222,7 @@
       mapsSearch: 'https://www.google.com/maps/search/?api=1&query=ParkShopping+Brasilia+SAI+SO+Area+6580',
       mapsEmbed: 'https://www.google.com/maps?q=ParkShopping+Brasilia+SAI+SO+Area+6580&output=embed',
       heroTag: 'Nova Unidade · ParkShopping',
-      heroSubtitle: 'A nova atmosfera do Bloco C na expansão do ParkShopping.<br>Boulevard Gastronômico, 1º Piso.',
+      heroSubtitle: 'Uma cozinha de personalidade. Uma experiência para lembrar.<br>Cozinha contemporânea, cortes nobres na brasa e a assinatura do chef Marcelo Petrarca.',
       visiteTitle: 'Visite o Bloco C · Park Shopping',
       hoursRows: [
         { label: 'Segunda a sábado', time: '12h às 23h (ininterrupto)', dataDays: '1 2 3 4 5 6' },

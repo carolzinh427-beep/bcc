@@ -223,7 +223,7 @@ ul { list-style: none; }
   line-height: 0.88; letter-spacing: -0.025em; margin-bottom: clamp(2rem, 6vh, 4rem); padding-bottom: 0.06em;
 }
 .hero-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; border-top: 1px solid var(--line-d); padding-top: 1.8rem; }
-.hero-foot p { max-width: 26rem; color: rgba(243, 240, 234, 0.72); font-size: 1rem; }
+.hero-foot p { max-width: 32rem; color: rgba(243, 240, 234, 0.78); font-size: 0.98rem; line-height: 1.55; }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
 /* Seções */
