@@ -1788,8 +1788,16 @@
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      if (menu.classList.contains('is-open')) closeMenu();
-      else if (drawer.classList.contains('is-open')) setDrawer(false);
+      const resModal = $('#reserveModal');
+      if (resModal && resModal.classList.contains('is-open')) {
+        resModal.classList.remove('is-open');
+        resModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('is-locked');
+      } else if (menu.classList.contains('is-open')) {
+        closeMenu();
+      } else if (drawer.classList.contains('is-open')) {
+        setDrawer(false);
+      }
     }
     if (e.key === 'Tab' && menu.classList.contains('is-open')) {
       const f = $$('button, a[href]', menu).filter(el => el.offsetParent !== null);
@@ -1815,14 +1823,24 @@
   const dateEl = $('#data');
   const timeEl = $('#hora');
   const peopleEl = $('#pessoas');
+  const phoneEl = $('#telefone');
   const noteEl = $('#formNote');
+  const reserveModal = $('#reserveModal');
+  const reserveModalSummary = $('#reserveModalSummary');
+  const reserveModalReopenBtn = $('#reserveModalReopenBtn');
   let people = 2;
 
   const pad2 = (n) => String(n).padStart(2, '0');
   const fmt = (t) => `${pad2(Math.floor(t / 60) % 24)}:${pad2(t % 60)}`;
 
-  const now = new Date();
-  dateEl.min = `${now.getFullYear()}-${pad2(now.getMonth() + 1)}-${pad2(now.getDate())}`;
+  // Horário oficial de Brasília
+  const bsbNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+  const todayStr = `${bsbNow.getFullYear()}-${pad2(bsbNow.getMonth() + 1)}-${pad2(bsbNow.getDate())}`;
+  const maxDate = new Date(bsbNow.getTime() + 60 * 24 * 60 * 60 * 1000);
+  const maxStr = `${maxDate.getFullYear()}-${pad2(maxDate.getMonth() + 1)}-${pad2(maxDate.getDate())}`;
+
+  dateEl.min = todayStr;
+  dateEl.max = maxStr;
 
   function dayOf(value) { return new Date(`${value}T12:00:00`).getDay(); }
 
@@ -1843,54 +1861,174 @@
     }
 
     if (dateStr) {
-      const bsbNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
-      const todayStr = `${bsbNow.getFullYear()}-${pad2(bsbNow.getMonth() + 1)}-${pad2(bsbNow.getDate())}`;
-      if (dateStr === todayStr) {
-        const currentMinutes = bsbNow.getHours() * 60 + bsbNow.getMinutes();
+      const nowBsb = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+      const currentToday = `${nowBsb.getFullYear()}-${pad2(nowBsb.getMonth() + 1)}-${pad2(nowBsb.getDate())}`;
+      if (dateStr === currentToday) {
+        const currentMinutes = nowBsb.getHours() * 60 + nowBsb.getMinutes();
         slots = slots.filter(t => t > currentMinutes + 45);
       }
     }
     return slots;
   }
 
+  // Máscara e validação de telefone brasileiro
+  if (phoneEl) {
+    phoneEl.addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 6) {
+        e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+      } else if (v.length > 2) {
+        e.target.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+      } else if (v.length > 0) {
+        e.target.value = `(${v}`;
+      } else {
+        e.target.value = '';
+      }
+    });
+  }
+
+  // Seletor visual de quantidade de pessoas
+  function setPeople(count) {
+    people = Math.max(1, Math.min(20, count));
+    if (peopleEl) peopleEl.textContent = people;
+    $$('.people-pill').forEach(btn => {
+      const val = btn.dataset.people;
+      if (val === 'custom') {
+        btn.classList.toggle('is-active', people >= 7);
+      } else {
+        btn.classList.toggle('is-active', Number(val) === people);
+      }
+    });
+  }
+
+  $$('.people-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.people;
+      if (val === 'custom') {
+        setPeople(Math.max(7, people));
+      } else {
+        setPeople(Number(val));
+      }
+    });
+  });
+
+  $('#minus').addEventListener('click', () => setPeople(people - 1));
+  $('#plus').addEventListener('click', () => setPeople(people + 1));
+
+  // Popula horários agrupados por Almoço e Jantar
   dateEl.addEventListener('change', () => {
     noteEl.textContent = '';
     timeEl.innerHTML = '';
+
     if (!dateEl.value) {
       timeEl.disabled = true;
       timeEl.add(new Option('Escolha a data', ''));
       return;
     }
+
+    // Bloqueia datas passadas
+    if (dateEl.value < dateEl.min) {
+      dateEl.value = dateEl.min;
+      noteEl.textContent = 'Datas anteriores a hoje não são permitidas. Ajustado para a data atual.';
+    }
+
     const day = dayOf(dateEl.value);
     const slots = slotsFor(day, dateEl.value);
+    const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+
     if (!slots.length) {
       timeEl.disabled = true;
       timeEl.add(new Option('Fechado / Indisponível', ''));
-      const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
       if (day === 0 && !unit.service.sunday) {
-        noteEl.textContent = unit.closedMessage || 'O restaurante não abre neste dia. Escolha outra data.';
+        noteEl.innerHTML = `A unidade <strong>${unit.fullName}</strong> não abre aos domingos. <button type="button" class="switch-link-inline" id="switchUnitOnClosed">Trocar para Park Shopping (aberto aos domingos)</button> ou escolha outra data.`;
+        const switchBtn = $('#switchUnitOnClosed');
+        if (switchBtn) {
+          switchBtn.addEventListener('click', () => {
+            switchUnit(currentUnit === 'asa-sul' ? 'park-shopping' : 'asa-sul');
+          });
+        }
       } else {
         noteEl.textContent = 'Horários para reservas antecipadas hoje esgotados. Para consultar encaixes de mesa, fale diretamente com a equipe pelo WhatsApp.';
       }
       return;
     }
+
     timeEl.disabled = false;
-    timeEl.add(new Option('Selecione', ''));
-    slots.forEach(t => timeEl.add(new Option(fmt(t), fmt(t))));
+    timeEl.add(new Option('Selecione o horário', ''));
+
+    const lunchSlots = slots.filter(t => t < 17 * 60);
+    const dinnerSlots = slots.filter(t => t >= 17 * 60);
+
+    if (lunchSlots.length) {
+      const groupLunch = document.createElement('optgroup');
+      groupLunch.label = 'Almoço';
+      lunchSlots.forEach(t => groupLunch.appendChild(new Option(fmt(t), fmt(t))));
+      timeEl.appendChild(groupLunch);
+    }
+    if (dinnerSlots.length) {
+      const groupDinner = document.createElement('optgroup');
+      groupDinner.label = 'Jantar';
+      dinnerSlots.forEach(t => groupDinner.appendChild(new Option(fmt(t), fmt(t))));
+      timeEl.appendChild(groupDinner);
+    }
   });
 
-  $('#minus').addEventListener('click', () => { people = Math.max(1, people - 1); peopleEl.textContent = people; });
-  $('#plus').addEventListener('click', () => { people = Math.min(20, people + 1); peopleEl.textContent = people; });
+  // Modal de Confirmação da Solicitação de Reserva
+  function openReserveModal(data) {
+    if (!reserveModal) return;
+    if (reserveModalSummary) {
+      reserveModalSummary.innerHTML = `
+        <div class="reserve-summary-row"><span class="reserve-summary-label">Unidade:</span><span class="reserve-summary-val highlight">${data.unitName}</span></div>
+        <div class="reserve-summary-row"><span class="reserve-summary-label">Cliente:</span><span class="reserve-summary-val">${data.nome}</span></div>
+        <div class="reserve-summary-row"><span class="reserve-summary-label">WhatsApp:</span><span class="reserve-summary-val">${data.telefone}</span></div>
+        <div class="reserve-summary-row"><span class="reserve-summary-label">Data:</span><span class="reserve-summary-val">${data.dateLabel}</span></div>
+        <div class="reserve-summary-row"><span class="reserve-summary-label">Horário:</span><span class="reserve-summary-val highlight">${data.hora}</span></div>
+        <div class="reserve-summary-row"><span class="reserve-summary-label">Convidados:</span><span class="reserve-summary-val highlight">${data.people} pessoa${data.people > 1 ? 's' : ''}</span></div>
+        ${data.obs ? `<div class="reserve-summary-row"><span class="reserve-summary-label">Observações:</span><span class="reserve-summary-val">${data.obs}</span></div>` : ''}
+      `;
+    }
+    if (reserveModalReopenBtn) {
+      reserveModalReopenBtn.href = data.waUrl;
+    }
+    reserveModal.classList.add('is-open');
+    reserveModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('is-locked');
+  }
+
+  function closeReserveModal() {
+    if (!reserveModal) return;
+    reserveModal.classList.remove('is-open');
+    reserveModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('is-locked');
+  }
+
+  $$('[data-close-reserve-modal]').forEach(b => b.addEventListener('click', closeReserveModal));
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const nome = $('#nome').value.trim();
     if (!nome) { noteEl.textContent = 'Por favor, informe seu nome completo.'; $('#nome').focus(); return; }
+
+    const rawPhone = phoneEl ? phoneEl.value.replace(/\D/g, '') : '';
+    if (!rawPhone || rawPhone.length < 10) {
+      noteEl.textContent = 'Por favor, informe um telefone/WhatsApp válido com DDD.';
+      if (phoneEl) phoneEl.focus();
+      return;
+    }
+
     if (!dateEl.value) { noteEl.textContent = 'Escolha a data da reserva.'; dateEl.focus(); return; }
+    if (dateEl.value < dateEl.min) {
+      noteEl.textContent = 'Selecione a data de hoje ou uma data futura.';
+      dateEl.focus();
+      return;
+    }
+
     const day = dayOf(dateEl.value);
     const slots = slotsFor(day, dateEl.value);
+    const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+
     if (!slots.length) {
-      const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
       noteEl.textContent = unit.closedMessage || 'Horários indisponíveis para esta data. Escolha outro dia.';
       dateEl.focus();
       return;
@@ -1902,21 +2040,38 @@
       weekday: 'long', day: '2-digit', month: 'long', year: 'numeric'
     });
     const obs = $('#obs').value.trim();
-    const unit = UNIDADES[currentUnit] || UNIDADES['asa-sul'];
+    const phoneFormatted = phoneEl ? phoneEl.value.trim() : '';
+
     const lines = [
       `*Solicitação de Reserva · Bloco C*`,
       `Unidade: ${unit.fullName}`,
       '',
       `• *Nome:* ${nome}`,
+      `• *WhatsApp:* ${phoneFormatted}`,
       `• *Data:* ${dateLabel}`,
       `• *Horário:* ${timeEl.value}`,
       `• *Pessoas:* ${people} pessoa${people > 1 ? 's' : ''}`
     ];
     if (obs) lines.push(`• *Observações:* ${obs}`);
     lines.push('');
-    lines.push(`_Solicitação enviada pelo site. Aguardo confirmação de disponibilidade de mesa pela equipe do Bloco C._`);
+    lines.push(`_Solicitação enviada pelo site oficial. Aguardo validação da equipe do Bloco C para confirmação de mesa._`);
 
-    window.open(waLink(lines.join('\n'), unit.whatsapp), '_blank', 'noopener');
+    const waUrl = waLink(lines.join('\n'), unit.whatsapp);
+
+    // Abre o WhatsApp
+    window.open(waUrl, '_blank', 'noopener');
+
+    // Abre o modal de confirmação no site
+    openReserveModal({
+      unitName: unit.fullName,
+      nome,
+      telefone: phoneFormatted,
+      dateLabel,
+      hora: timeEl.value,
+      people,
+      obs,
+      waUrl
+    });
   });
 
   const gooeyContainer = $('#gooeyNavContainer');

@@ -618,6 +618,10 @@
             <label for="nome">Nome completo</label>
             <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como prefere ser chamado">
           </div>
+          <div class="field">
+            <label for="telefone">WhatsApp / Telefone para confirmação</label>
+            <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(61) 99999-9999">
+          </div>
           <div class="row">
             <div class="field">
               <label for="data">Data da reserva</label>
@@ -631,20 +635,36 @@
             </div>
           </div>
           <div class="field">
-            <label id="pessoasLabel">Número de pessoas</label>
-            <div class="stepper" role="group" aria-labelledby="pessoasLabel">
-              <button type="button" id="minus" aria-label="Diminuir">−</button>
-              <output id="pessoas" aria-live="polite">2</output>
-              <button type="button" id="plus" aria-label="Aumentar">+</button>
+            <label id="pessoasLabel">Quantidade de pessoas</label>
+            <div class="people-selector" role="group" aria-labelledby="pessoasLabel">
+              <div class="people-pills" id="peoplePills">
+                <button type="button" class="people-pill is-active" data-people="2">2 pessoas</button>
+                <button type="button" class="people-pill" data-people="3">3 pessoas</button>
+                <button type="button" class="people-pill" data-people="4">4 pessoas</button>
+                <button type="button" class="people-pill" data-people="5">5 pessoas</button>
+                <button type="button" class="people-pill" data-people="6">6 pessoas</button>
+                <button type="button" class="people-pill" data-people="custom">7+ pessoas</button>
+              </div>
+              <div class="stepper" id="peopleStepper">
+                <span class="stepper-label">Número de convidados:</span>
+                <div class="stepper-controls">
+                  <button type="button" id="minus" aria-label="Diminuir convidados">−</button>
+                  <output id="pessoas" aria-live="polite">2</output>
+                  <button type="button" id="plus" aria-label="Aumentar convidados">+</button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="field">
             <label for="obs">Observações especiais (opcional)</label>
-            <textarea id="obs" name="obs" rows="2" placeholder="Ex: comemoração, restrição alimentar, mesa interna..."></textarea>
+            <textarea id="obs" name="obs" rows="2" placeholder="Ex: comemoração de aniversário, restrição alimentar, mesa interna ou varanda..."></textarea>
           </div>
           <p class="form-note" id="formNote" role="alert"></p>
           <button class="btn btn-light btn-block" type="submit">Solicitar reserva pelo WhatsApp</button>
-          <p class="reserve-disclaimer" id="reserveDisclaimer">As solicitações estão sujeitas à confirmação de disponibilidade de mesa pelo restaurante.</p>
+          <p class="reserve-disclaimer" id="reserveDisclaimer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Importante: Esta é uma <strong>solicitação prévia</strong>. A reserva só será oficializada após validação e resposta da equipe do Bloco C via WhatsApp.</span>
+          </p>
         </form>
       </div>
     </section>
@@ -723,6 +743,37 @@
       <div class="menu-foot">
         <p id="menuFootNote">Itens sujeitos a alteração conforme a estação. Consulte o restaurante sobre valores e disponibilidade.</p>
         <a class="btn btn-light" href="#reservas" data-wa data-close-menu>Solicitar reserva pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Confirmação de Envio da Solicitação de Reserva -->
+  <div class="reserve-modal" id="reserveModal" role="dialog" aria-modal="true" aria-labelledby="reserveModalTitle" aria-hidden="true">
+    <div class="reserve-modal-backdrop" data-close-reserve-modal></div>
+    <div class="reserve-modal-dialog">
+      <button class="reserve-modal-close" type="button" data-close-reserve-modal aria-label="Fechar confirmação">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="reserve-modal-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+
+      <span class="reserve-modal-badge">Solicitação Transmitida</span>
+      <h3 class="reserve-modal-title" id="reserveModalTitle">Solicitação Enviada com Sucesso</h3>
+
+      <div class="reserve-modal-summary" id="reserveModalSummary">
+        <!-- Preenchido dinamicamente via JavaScript -->
+      </div>
+
+      <div class="reserve-modal-alert">
+        <strong>Atenção: sua mesa ainda NÃO está confirmada.</strong>
+        <p>Sua solicitação foi enviada para o WhatsApp da equipe do Bloco C. Aguarde a validação no mapa de mesas e a confirmação oficial da nossa equipe.</p>
+      </div>
+
+      <div class="reserve-modal-actions">
+        <a class="btn btn-light" id="reserveModalReopenBtn" href="#" target="_blank" rel="noopener">Abrir conversa no WhatsApp</a>
+        <button class="btn btn-ghost" type="button" data-close-reserve-modal>Voltar ao site</button>
       </div>
     </div>
   </div>
