@@ -2212,4 +2212,100 @@
       }
     }, { passive: true });
   }
+
+  /* Trajetória Mobile: Carrossel com transição automática */
+  (function initTimelineCarousel() {
+    const track = document.getElementById('timelineTrack');
+    const items = track ? track.querySelectorAll('.timeline-item') : [];
+    const dots = document.querySelectorAll('.timeline-dot');
+    const counterEl = document.getElementById('timelineCurrent');
+    if (!track || items.length <= 1) return;
+
+    let currentIndex = 0;
+    let timer = null;
+    let isTouching = false;
+    let startX = 0;
+    let diffX = 0;
+
+    function goToSlide(idx) {
+      if (window.innerWidth > 900) {
+        track.style.transform = '';
+        return;
+      }
+      currentIndex = (idx + items.length) % items.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      if (counterEl) counterEl.textContent = currentIndex + 1;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === currentIndex);
+      });
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      if (window.innerWidth <= 900) {
+        timer = setInterval(() => {
+          if (!isTouching) {
+            goToSlide(currentIndex + 1);
+          }
+        }, 3600);
+      }
+    }
+
+    function stopAutoPlay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+        startAutoPlay();
+      });
+    });
+
+    // Touch swipe
+    const viewport = document.getElementById('timelineViewport');
+    if (viewport) {
+      viewport.addEventListener('touchstart', (e) => {
+        if (window.innerWidth > 900) return;
+        isTouching = true;
+        stopAutoPlay();
+        startX = e.touches[0].clientX;
+        diffX = 0;
+      }, { passive: true });
+
+      viewport.addEventListener('touchmove', (e) => {
+        if (!isTouching || window.innerWidth > 900) return;
+        diffX = e.touches[0].clientX - startX;
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', () => {
+        if (!isTouching || window.innerWidth > 900) return;
+        isTouching = false;
+        if (diffX < -35) {
+          goToSlide(currentIndex + 1);
+        } else if (diffX > 35) {
+          goToSlide(currentIndex - 1);
+        }
+        startAutoPlay();
+      });
+
+      viewport.addEventListener('mouseenter', stopAutoPlay);
+      viewport.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        stopAutoPlay();
+        track.style.transform = '';
+      } else {
+        goToSlide(currentIndex);
+        startAutoPlay();
+      }
+    }, { passive: true });
+
+    startAutoPlay();
+  })();
 })();

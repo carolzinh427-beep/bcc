@@ -710,28 +710,42 @@
 
         <!-- Linha do Tempo / Trajetória desde 2015 -->
         <div class="timeline-block" data-reveal style="--d:.2s">
-          <h3 class="timeline-heading">Nossa Trajetória</h3>
-          <div class="timeline-grid">
-            <div class="timeline-item">
-              <span class="timeline-year">2015</span>
-              <strong class="timeline-title">Nascimento na 211 Sul</strong>
-              <p class="timeline-desc">Abertura da matriz na CLS 211 Sul pelo Chef Marcelo Petrarca, com estética brutalista inspirada em Brasília.</p>
+          <div class="timeline-header-wrap">
+            <h3 class="timeline-heading">Nossa Trajetória</h3>
+            <div class="timeline-mobile-counter" id="timelineCounter" aria-live="polite">
+              <span id="timelineCurrent">1</span> / 4
             </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2018</span>
-              <strong class="timeline-title">Consagração dos Clássicos</strong>
-              <p class="timeline-desc">Filé em crosta, Mignon ao roquefort e Picadinho consolidam a culinária autoral e afetiva do Bloco C.</p>
+          </div>
+          <div class="timeline-viewport" id="timelineViewport">
+            <div class="timeline-grid" id="timelineTrack">
+              <div class="timeline-item" data-index="0">
+                <span class="timeline-year">2015</span>
+                <strong class="timeline-title">Nascimento na 211 Sul</strong>
+                <p class="timeline-desc">Abertura da matriz na CLS 211 Sul pelo Chef Marcelo Petrarca, com estética brutalista inspirada em Brasília.</p>
+              </div>
+              <div class="timeline-item" data-index="1">
+                <span class="timeline-year">2018</span>
+                <strong class="timeline-title">Consagração dos Clássicos</strong>
+                <p class="timeline-desc">Filé em crosta, Mignon ao roquefort e Picadinho consolidam a culinária autoral e afetiva do Bloco C.</p>
+              </div>
+              <div class="timeline-item" data-index="2">
+                <span class="timeline-year">2025</span>
+                <strong class="timeline-title">Boa Lembrança 2025</strong>
+                <p class="timeline-desc">Entrada oficial na seleta Associação da Boa Lembrança com o Milanese com Aligot e cerâmica colecionável.</p>
+              </div>
+              <div class="timeline-item" data-index="3">
+                <span class="timeline-year">2026</span>
+                <strong class="timeline-title">Expansão ParkShopping</strong>
+                <p class="timeline-desc">Chegada ao Boulevard Gastronômico da 10ª expansão e lançamento do Riso Maremonti (Boa Lembrança 2026).</p>
+              </div>
             </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2025</span>
-              <strong class="timeline-title">Boa Lembrança 2025</strong>
-              <p class="timeline-desc">Entrada oficial na seleta Associação da Boa Lembrança com o Milanese com Aligot e cerâmica colecionável.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2026</span>
-              <strong class="timeline-title">Expansão ParkShopping</strong>
-              <p class="timeline-desc">Chegada ao Boulevard Gastronômico da 10ª expansão e lançamento do Riso Maremonti (Boa Lembrança 2026).</p>
-            </div>
+          </div>
+          <!-- Indicadores de Navegação no Mobile -->
+          <div class="timeline-dots" id="timelineDots" role="tablist" aria-label="Navegar marcos da trajetória">
+            <button type="button" class="timeline-dot is-active" data-slide="0" aria-label="Marco 2015"></button>
+            <button type="button" class="timeline-dot" data-slide="1" aria-label="Marco 2018"></button>
+            <button type="button" class="timeline-dot" data-slide="2" aria-label="Marco 2025"></button>
+            <button type="button" class="timeline-dot" data-slide="3" aria-label="Marco 2026"></button>
           </div>
         </div>
       </div>
