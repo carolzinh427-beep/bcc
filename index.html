@@ -660,22 +660,12 @@
           </div>
           <div class="field">
             <label id="pessoasLabel">Quantidade de pessoas</label>
-            <div class="people-selector" role="group" aria-labelledby="pessoasLabel">
-              <div class="people-pills" id="peoplePills">
-                <button type="button" class="people-pill is-active" data-people="2">2 pessoas</button>
-                <button type="button" class="people-pill" data-people="3">3 pessoas</button>
-                <button type="button" class="people-pill" data-people="4">4 pessoas</button>
-                <button type="button" class="people-pill" data-people="5">5 pessoas</button>
-                <button type="button" class="people-pill" data-people="6">6 pessoas</button>
-                <button type="button" class="people-pill" data-people="custom">7+ pessoas</button>
-              </div>
-              <div class="stepper" id="peopleStepper">
-                <span class="stepper-label">Número de convidados:</span>
-                <div class="stepper-controls">
-                  <button type="button" id="minus" aria-label="Diminuir convidados">−</button>
-                  <output id="pessoas" aria-live="polite">2</output>
-                  <button type="button" id="plus" aria-label="Aumentar convidados">+</button>
-                </div>
+            <div class="stepper" id="peopleStepper">
+              <span class="stepper-label">Número de convidados:</span>
+              <div class="stepper-controls">
+                <button type="button" id="minus" aria-label="Diminuir convidados">−</button>
+                <output id="pessoas" aria-live="polite">2</output>
+                <button type="button" id="plus" aria-label="Aumentar convidados">+</button>
               </div>
             </div>
           </div>
@@ -685,10 +675,6 @@
           </div>
           <p class="form-note" id="formNote" role="alert"></p>
           <button class="btn btn-light btn-block" type="submit">Solicitar reserva pelo WhatsApp</button>
-          <p class="reserve-disclaimer" id="reserveDisclaimer">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <span>Importante: Esta é uma <strong>solicitação prévia</strong>. A reserva só será oficializada após validação e resposta da equipe do Bloco C via WhatsApp.</span>
-          </p>
         </form>
       </div>
     </section>
@@ -833,7 +819,6 @@
       </div>
 
       <div class="gallery-foot" data-reveal style="--d:.2s">
-        <p class="gallery-foot-text">Compartilhe sua experiência marcando <strong>#RestauranteBlocoC</strong> e <strong>@restauranteblococ</strong>.</p>
         <a class="btn btn-ghost" href="https://www.instagram.com/restauranteblococ" target="_blank" rel="noopener">
           <span>Acompanhar no Instagram</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>

@@ -1982,29 +1982,12 @@
   function setPeople(count) {
     people = Math.max(1, Math.min(20, count));
     if (peopleEl) peopleEl.textContent = people;
-    $$('.people-pill').forEach(btn => {
-      const val = btn.dataset.people;
-      if (val === 'custom') {
-        btn.classList.toggle('is-active', people >= 7);
-      } else {
-        btn.classList.toggle('is-active', Number(val) === people);
-      }
-    });
   }
 
-  $$('.people-pill').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const val = btn.dataset.people;
-      if (val === 'custom') {
-        setPeople(Math.max(7, people));
-      } else {
-        setPeople(Number(val));
-      }
-    });
-  });
-
-  $('#minus').addEventListener('click', () => setPeople(people - 1));
-  $('#plus').addEventListener('click', () => setPeople(people + 1));
+  const minusBtn = $('#minus');
+  if (minusBtn) minusBtn.addEventListener('click', () => setPeople(people - 1));
+  const plusBtn = $('#plus');
+  if (plusBtn) plusBtn.addEventListener('click', () => setPeople(people + 1));
 
   // Popula horários agrupados por Almoço e Jantar
   dateEl.addEventListener('change', () => {
